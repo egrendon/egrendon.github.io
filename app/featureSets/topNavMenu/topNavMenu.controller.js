@@ -2,12 +2,12 @@
 	'use strict';
 
 	angular
-		.module('myFirstApp.topNavModule')
-		.controller('TopNavCtrlAs', TopNavCtrlAs);
+		.module('myFirstApp.topNavMenuModule')
+		.controller('TopNavMenuCtrlAs', TopNavMenuCtrlAs);
 
-	TopNavCtrlAs.$inject = ['homeService'];
+	TopNavMenuCtrlAs.$inject = ['homeService'];
 
-	function HomeCtrlAs(homeService) {
+	function TopNavMenuCtrlAs(homeService) {
 		var vm = this;
 		vm.resultData = null;
 	
