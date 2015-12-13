@@ -18,38 +18,32 @@
     	// Define routes
     	//
         $stateProvider
-            .state('/', {
-                url:'/home',
-                templateUrl: '/my-first-portlet/app/featureSets/home/home.html',
-                controller: 'HomeCtrlAs',
-                controllerAs: 'vm'
-            })
 			.state('home', {
 				url:'/home',
-				templateUrl: '/my-first-portlet/app/featureSets/home/home.html',
+				templateUrl: '/app/featureSets/home/home.html',
 				controller: 'HomeCtrlAs',
 				controllerAs: 'vm'
 			})
             .state('/globalWeather', {
                 url: '/globalWeather',
-                templateUrl: '/my-first-portlet/app/featureSets/globalWeather/global-weather.html',
+                templateUrl: '/app/featureSets/globalWeather/global-weather.html',
                 controller: 'GlobalWeatherCtrlAs',
                 controllerAs: 'vm'
             })
             .state('/globalWeather/:countryName/:cityName', {
                 url: '/globalWeather/:countryName/:cityName',
-                templateUrl: '/my-first-portlet/app/featureSets/globalWeather/city-weather.html',
+                templateUrl: '/app/featureSets/globalWeather/city-weather.html',
                 controller: 'CityWeatherCtrlAs',
                 controllerAs: 'vm'
             })
             .state('sell', {
                 url: '/sell',
-                templateUrl: '/my-first-portlet/app/featureSets/sell.html',
+                templateUrl: '/app/featureSets/sell.html',
                 controller: 'SellController'
             })
             .state('sell.lemonade', {
                 url: '/lemonade',
-                templateUrl: '/my-first-portlet/app/featureSets/sell-lemonade.html',
+                templateUrl: '/app/featureSets/sell-lemonade.html',
                 controller: function($scope) {
                     $scope.info = {
                         description: 'I love drinking this stuff',
