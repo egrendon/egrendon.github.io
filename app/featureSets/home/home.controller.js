@@ -5,9 +5,9 @@
 		.module('myFirstApp.homeModule')
 		.controller('HomeCtrlAs', HomeCtrlAs);
 
-	HomeCtrlAs.$inject = ['homeService'];
+	//HomeCtrlAs.$inject = ['homeService'];
 
-	function HomeCtrlAs(homeService) {
+	function HomeCtrlAs() {
 		var vm = this;
 		vm.resultData = null;
 	
