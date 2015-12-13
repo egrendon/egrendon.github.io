@@ -1,0 +1,9 @@
+
+
+// Command to Install
+1) sudo npm install -g live-server
+
+// STEPS to RUN
+Go to some folder that has a <SOME_PATH> index.html
+// STEPS to RUN
+then run command 'live-server'
