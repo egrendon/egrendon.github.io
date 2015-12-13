@@ -3,7 +3,7 @@
 
     angular
         .module('myFirstApp.core')
-        .constant('toastr', toastr)
+        //.constant('toastr', toastr)
 		.constant('serviceConfigObject', {
 			'get': {
 				method: 'GET',

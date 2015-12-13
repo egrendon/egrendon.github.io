@@ -18,6 +18,12 @@
     	// Define routes
     	//
         $stateProvider
+            .state('/', {
+                url:'/home',
+                templateUrl: '/my-first-portlet/app/featureSets/home/home.html',
+                controller: 'HomeCtrlAs',
+                controllerAs: 'vm'
+            })
 			.state('home', {
 				url:'/home',
 				templateUrl: '/my-first-portlet/app/featureSets/home/home.html',
