@@ -1,0 +1,48 @@
+<md-toolbar layout="row">
+    <div class="md-toolbar-tools">
+        <h1>Weather</h1>
+    </div>
+</md-toolbar>
+<div class="view-container" ng-init="vm.loadDataAction()">
+    <div egr-loader ng-hide="vm.contentLoaded"></div>
+    <div ng-cloak class="ng-cloak ng-hide" ng-show="vm.contentLoaded">
+    	<!-- message panel -->
+        <div message-panel message-obj="vm.messageObj" messages="vm.messages"></div> 
+        <h3 class="text-right">Weather Cities for {{vm.countryName}}</h3>
+        <br />
+        <div class="table-container">
+            <table st-safe-src="rowCollection" st-table="displayed" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="border: 0px;">
+                        	<input st-search placeholder="global search..." class="form-control input-lg" type="search"/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th st-sort="Country">Country</th>
+                        <th st-sort="City">City</th>
+                        <th>Weather</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in displayed">
+                        <td>{{row.Country | uppercase}}</td>
+                        <td>{{row.City}}</td>
+                        <td>
+                            <button type="button" ng-click="vm.getWeatherForCity(row)" class="btn btn-sm btn-success">
+                                <i class="glyphicon glyphicon-eye-open"></i>&nbsp;Get Temp...
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <div st-pagination="" st-items-by-page="10" class="text-center"></div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
