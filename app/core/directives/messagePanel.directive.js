@@ -16,11 +16,11 @@
 
     angular
         .module('myFirstApp.directives')
-        .directive('messagePanel', messagePanel);
+        .directive('egrMessagePanel', egrMessagePanel);
 
-    messagePanel.$inject = ['nextMessageService'];
+    egrMessagePanel.$inject = ['nextMessageService'];
 
-    function messagePanel(nextMessageService) {
+    function egrMessagePanel(nextMessageService) {
         var directive = {
             restrict: 'AE',
             "scope": {
