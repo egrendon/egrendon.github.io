@@ -16,11 +16,21 @@
 		return directive;
 
 		function link(scope, element, attrs, ngModel) {
-			skrollr.init().refresh();
+			if (jQuery.browser.mobile === false) {
+				// This is for parallax using Skrollr
+				var s = skrollr.init({
+					forceHeight: false
+				});
+
+				// Refresh skrollr after resizing our sections
+				s.refresh($('.parallax'));
+
+				//skrollr.init().refresh();
+			}
 		}
 
-//        function controller($scope) {
-//        	
-//        }
+//      function controller($scope) {
+//	
+//		}
 	}
 })(skrollr);
