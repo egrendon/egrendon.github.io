@@ -285,29 +285,4 @@ $(function(){
     });
     
     
-    /*-------------------------------------------------------------------*/
-    /*  14. Milestones counter.
-    /*-------------------------------------------------------------------*/
-    var counter = function (){
-        var number = $('.milestones').find('.number');
-        
-        if ($.fn.countTo){
-            number.countTo({
-                speed: 3000
-            });
-        }
-    };
-    
-    if (jQuery.browser.mobile === false){
-        var number = $('.milestones .number');
-        
-        number.one('inview', function(isInView) {
-            if (isInView){
-                counter();
-            }
-        });
-    }
-    else{
-        counter();
-    }
 });
