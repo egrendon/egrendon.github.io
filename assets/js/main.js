@@ -24,15 +24,6 @@ $(function(){
     });
     
     
-    /*-------------------------------------------------------------------*/
-    /*  3. Just did another hack of dropdown menu for Bootstrap scrollspy.
-    /*-------------------------------------------------------------------*/
-    $('body').on('activate.bs.scrollspy', function(){
-        $('.page-scroll.dropdown > .dropdown-toggle').each(function(){
-            $(this).attr('data-target', '#');
-        });
-    });
-    
     
     /*-------------------------------------------------------------------*/
     /*  4. Page scrolling feature, requires jQuery Easing plugin.
