@@ -23,9 +23,7 @@ $(function(){
         /*-------------------------------------------------------------------*/
         /*  4. Section - Strengths
         /*-------------------------------------------------------------------*/
-        $('.legend-left', '#strengths').find('.legend-title').css('opacity', 0).one('inview', function(isInView){
-            if (isInView) {$(this).addClass('animated bounceInLeft').css('opacity', 1);}
-        });
+
         
         $('.legend-right', '#strengths').find('.item').each(function(i){
             var element = $(this),
