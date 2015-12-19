@@ -198,28 +198,7 @@ $(function(){
     $(window).smartresize(function(){
         resumeCollapse();
     });
-    
-    
-    /*-------------------------------------------------------------------*/
-    /*	11. References slider. Requires Flexslider plugin.
-    /*-------------------------------------------------------------------*/
-    $(window).smartload(function(){
-        if ($.fn.flexslider){
-            var flex = $('.flexslider.references');
-    
-            flex.flexslider({
-                selector: ".slides > .item",
-                manualControls: ".flex-control-nav li",
-                directionNav : false,
-                slideshowSpeed: 4000,
-                after: function(slider){
-                    if (!slider.playing) {
-                        slider.play();
-                    }
-                }
-            }); 
-        }
-    });
+
     
     $('a.flex-prev').on('click', function(e){
         e.preventDefault();

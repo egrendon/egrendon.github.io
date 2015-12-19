@@ -23,8 +23,6 @@
 
         6.5. SECTION - RESUME
 
-        6.6. SECTION - REFERENCES
-
         6.7. SECTION - SKILLS
 
         6.8. SECTION - KNOWLEDGE
@@ -162,14 +160,6 @@ span.divider {
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
 .panel-group.resume .resume-item .resume-year {
-  background-color: #00a69a;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  6.6. SECTION - REFERENCES
-/*---------------------------------------------------------------------*/
-#references .flexslider.references > .slides > .item .profile:before {
   background-color: #00a69a;
 }
 
