@@ -8,9 +8,8 @@
     function egrAnimateInView($window) {
         var directive = {
             restrict: 'AE',
-            scope: {
-                animateCss: "@animateCss",
-                animateOpacity: "@animateOpacity"
+            "scope": {
+                "animateCss": "@",
             },
             //template: '',
             link: link,
@@ -19,13 +18,10 @@
 
         return directive;
 
-        function link(scope, element, attrs, ngModel) {
+        function link(scope, element, attrs) {
             //IF the element is viewable then add a class
             if (element[0].y < $window.innerHeight) {
                 angular.element(element).addClass(scope.animateCss);
-                if (scope.animateOpacity === 'true') {
-                    angular.element(element).css('opacity', 1);
-                }
             }
 
 
@@ -34,9 +30,6 @@
                 if (element[0].getBoundingClientRect().top < $window.innerHeight) {
 
                     angular.element(element).addClass(scope.animateCss);
-                    if (scope.animateOpacity === 'true') {
-                        angular.element(element).css('opacity', 1);
-                    }
                     scope.$apply();
                 }
             });
