@@ -18,14 +18,7 @@ $(function(){
             if (isInView) {$(this).addClass('animated bounceInUp').css('opacity', 1);}
         });*/
         
-        
-        /*-------------------------------------------------------------------*/
-        /*  3. Section - Services
-        /*-------------------------------------------------------------------*/
-        $('.inner-content', '#services').find('h4').css('opacity', 0).one('inview', function(isInView){
-            if (isInView) {$(this).addClass('animated fadeInUp').css('opacity', 1);}
-        });
-        
+
         
         /*-------------------------------------------------------------------*/
         /*  4. Section - Strengths
