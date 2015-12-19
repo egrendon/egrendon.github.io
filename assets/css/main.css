@@ -1389,7 +1389,6 @@ button.mfp-arrow:active {
 .services .item > .inner-content {
   position: relative;
   padding: 25px 15px 15px 15px;
-  text-align: justify;
 }
 
 @media (min-width: 480px) {
@@ -1401,12 +1400,6 @@ button.mfp-arrow:active {
 @media (min-width: 640px) {
   .services .item > .inner-content {
     padding: 25px 118px 15px 118px;
-  }
-}
-
-@media (max-width: 767px) {
-  .services .item > .inner-content {
-    text-align: center;
   }
 }
 
