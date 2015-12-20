@@ -1,6 +1,6 @@
 /**
  * Directive used to circle charts. 
- * 
+ * NOTE: Assumes the project is using Animation.css framework.
  */
 (function() {
     'use strict';

@@ -1,3 +1,7 @@
+/**
+ * Directive used to inject animation styles into the DOM when an element comes into view. 
+ * NOTE: Assumes the project is using Animation.css framework.
+ */
 (function() {
     'use strict';
 
