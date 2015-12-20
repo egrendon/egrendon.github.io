@@ -1,6 +1,7 @@
 /**
  * Directive used to circle charts. 
  * NOTE: Assumes the project is using Animation.css framework.
+ * Optionally you can disable for mobile mode. See commented out code.
  */
 (function() {
     'use strict';
@@ -37,6 +38,12 @@
             var itemElement = angular.element(bascisElement);
             var maxHeight = 108;
             var newHeight = maxHeight * (scope.percent / 100);
+
+            // // Disable all animation effects for mobile
+            // if (jQuery.browser.mobile === true) {
+            //     addStylesToElement();
+            //     return;
+            // }
 
             //IF the element is viewable then add a class
             if (itemElement[0].y < $window.innerHeight) {
