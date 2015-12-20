@@ -189,17 +189,5 @@ $(function(){
     $(window).smartresize(function(){
         resumeCollapse();
     });
-
-    
-    $('a.flex-prev').on('click', function(e){
-        e.preventDefault();
-        $('.flexslider').flexslider('prev');
-    });
-    
-    $('a.flex-next').on('click', function(e){
-        e.preventDefault();
-        $('.flexslider').flexslider('next');
-    });
-    
         
 });
