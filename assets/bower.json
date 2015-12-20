@@ -26,6 +26,10 @@
     "angular-resource": "~1.4.8",
     "angular-aria": "~1.4.8",
     "skrollr": "~0.6.30",
-    "animate.css": "~3.5.0"
+    "animate.css": "~3.5.0",
+    "font-awesome": "~4.5.0",
+    "jquery-sticky": "sticky#~1.0.3",
+    "jquery.matchheights": "~0.0.2",
+    "detect-mobile-browser": "~0.0.1"
   }
 }
