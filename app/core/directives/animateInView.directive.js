@@ -30,28 +30,25 @@
 
             //IF the element is viewable then add a class
             if (itemElement[0].y < $window.innerHeight) {
-                itemElement.addClass(scope.animateCss);
-                itemElement.css('opacity', 1);
-                
+                addStylesToElement();
             }
 
 
             // Bind the window scroll event
             angular.element($window).bind("scroll", function() {
                 if (itemElement[0].getBoundingClientRect().top < $window.innerHeight) {
-
                     if (scope.animateDelay) {
-                        $timeout(callAtTimeout, scope.animateDelay);
+                        $timeout(addStylesToElement, scope.animateDelay);
                     } else {
-                        callAtTimeout();
+                        addStylesToElement();
                     }
+                    scope.$apply();
                 }
             });
 
-            function callAtTimeout() {
+            function addStylesToElement() {
                 itemElement.addClass(scope.animateCss);
                 itemElement.css('opacity', 1);
-                scope.$apply();
             }
         }
 

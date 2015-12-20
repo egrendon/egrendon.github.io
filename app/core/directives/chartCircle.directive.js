@@ -40,19 +40,22 @@
 
             //IF the element is viewable then add a class
             if (itemElement[0].y < $window.innerHeight) {
-                itemElement.addClass('animated fadeIn ');
-                itemElement.css('height', newHeight+"px");
+                addStylesToElement();
             }
-
 
             // Bind the window scroll event
             angular.element($window).bind("scroll", function() {
                 if (itemElement[0].getBoundingClientRect().top < $window.innerHeight) {
-                    itemElement.addClass('animated fadeIn');
-                    itemElement.css('height', newHeight+"px");
+                    addStylesToElement();
                     scope.$apply();
                 }
             });
+
+
+           function addStylesToElement() {
+                itemElement.addClass('animated fadeIn ');
+                itemElement.css('height', newHeight+"px");
+            }
         }
     }
 })();
