@@ -55,7 +55,7 @@ $(function(){
     
     /*-------------------------------------------------------------------*/
     /*  5. Make navigation menu on your page always stay visible.
-    /*  Requires jQuery Sticky plugin.
+    /*  Requires jQuery-Sticky plugin.
     /*-------------------------------------------------------------------*/
     var stickyMenu = function(){
         var ww = Math.max($(window).width(), window.innerWidth),
