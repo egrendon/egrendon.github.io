@@ -25,19 +25,20 @@
 
         function link(scope, element, attrs) {
             //hide the element
-            angular.element(element).css('opacity', 0);
+            var itemElement = angular.element(element);
+            itemElement.css('opacity', 0);
 
             //IF the element is viewable then add a class
-            if (element[0].y < $window.innerHeight) {
-                angular.element(element).addClass(scope.animateCss);
-                angular.element(element).css('opacity', 1);
+            if (itemElement[0].y < $window.innerHeight) {
+                itemElement.addClass(scope.animateCss);
+                itemElement.css('opacity', 1);
                 
             }
 
 
             // Bind the window scroll event
             angular.element($window).bind("scroll", function() {
-                if (element[0].getBoundingClientRect().top < $window.innerHeight) {
+                if (itemElement[0].getBoundingClientRect().top < $window.innerHeight) {
 
                     if (scope.animateDelay) {
                         $timeout(callAtTimeout, scope.animateDelay);
@@ -48,8 +49,8 @@
             });
 
             function callAtTimeout() {
-                angular.element(element).addClass(scope.animateCss);
-                angular.element(element).css('opacity', 1);
+                itemElement.addClass(scope.animateCss);
+                itemElement.css('opacity', 1);
                 scope.$apply();
             }
         }

@@ -33,22 +33,23 @@
 
         function link(scope, element, attrs) {
             // initialize
-            var itemProgressElement = element[0].querySelector('.item-progress');
+            var bascisElement = element[0].querySelector('.item-progress');
+            var itemElement = angular.element(bascisElement);
             var maxHeight = 108;
             var newHeight = maxHeight * (scope.percent / 100);
 
             //IF the element is viewable then add a class
-            if (element[0].y < $window.innerHeight) {
-                angular.element(itemProgressElement).addClass('animated fadeIn ');
-                itemProgressElement.style.height=newHeight+"px";
+            if (itemElement[0].y < $window.innerHeight) {
+                itemElement.addClass('animated fadeIn ');
+                itemElement.css('height', newHeight+"px");
             }
 
 
             // Bind the window scroll event
             angular.element($window).bind("scroll", function() {
-                if (element[0].getBoundingClientRect().top < $window.innerHeight) {
-                    angular.element(itemProgressElement).addClass('animated fadeIn');
-                    itemProgressElement.style.height=newHeight+"px";
+                if (itemElement[0].getBoundingClientRect().top < $window.innerHeight) {
+                    itemElement.addClass('animated fadeIn');
+                    itemElement.css('height', newHeight+"px");
                     scope.$apply();
                 }
             });
