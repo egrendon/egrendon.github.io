@@ -59,7 +59,7 @@ $(function(){
     /*-------------------------------------------------------------------*/
     var stickyMenu = function(){
         var ww = Math.max($(window).width(), window.innerWidth),
-        nav = $('.navbar.navbar-fixed-top');
+        nav = $('#navigation');
 
         if ($.fn.unstick){
             nav.unstick();
