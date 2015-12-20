@@ -37,9 +37,6 @@
             var maxHeight = 108;
             var newHeight = maxHeight * (scope.percent / 100);
 
-            //hide the element
-            //angular.element(itemProgressElement).css('opacity', 0);
-
             //IF the element is viewable then add a class
             if (element[0].y < $window.innerHeight) {
                 angular.element(itemProgressElement).addClass('animated fadeIn ');
