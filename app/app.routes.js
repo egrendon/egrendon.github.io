@@ -24,6 +24,18 @@
 				controller: 'HomeCtrlAs',
 				controllerAs: 'vm'
 			})
+            .state('single-portfolio-1', {
+                url:'/single-portfolio-1',
+                templateUrl: '/app/featureSets/portfolio/single-portfolio-1.html',
+               // controller: 'TopNavMenuCtrlAs',
+              //  controllerAs: 'vm'
+            })
+          .state('single-portfolio-2', {
+                url:'/single-portfolio-2',
+                templateUrl: '/app/featureSets/portfolio/single-portfolio-2.html',
+               // controller: 'TopNavMenuCtrlAs',
+              //  controllerAs: 'vm'
+            })
             .state('topNavMenu', {
                 url:'/topNavMenu',
                 templateUrl: '/app/featureSets/topNavMenu/topNavMenu.html',
