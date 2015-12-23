@@ -30,6 +30,7 @@
     "font-awesome": "~4.5.0",
     "jquery-sticky": "sticky#~1.0.3",
     "jquery.matchheights": "~0.0.2",
-    "detect-mobile-browser": "~0.0.1"
+    "detect-mobile-browser": "~0.0.1",
+    "magnific-popup": "~1.0.0"
   }
 }
