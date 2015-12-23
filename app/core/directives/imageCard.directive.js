@@ -1,3 +1,7 @@
+/**
+ * Directive used to display a Image in card layout
+ * Requires jQuery Magnific Popup plugin.
+ */
 (function(skrollr) {
 	'use strict';
 
@@ -35,8 +39,34 @@
 		return directive;
 
 		function link(scope, element, attrs, ngModel) {
+			//TODO: I know that i am initalizing the magnificPopup multiple times 
+			//(ever time this directive is declared). But as of right now this is the 
+			//only quick way to make this work. If i have time I will revist this later.
+		    if ($.fn.magnificPopup){
+		        $("#portfolio-gallery").magnificPopup({
+		            delegate: 'a.zoom',
+		            type: 'image',
+		            fixedContentPos: false,
 
+		            // Delay in milliseconds before popup is removed
+		            removalDelay: 300,
+
+		            // Class that is added to popup wrapper and background
+		            mainClass: 'mfp-fade',
+
+		            gallery: {
+		                enabled: true,
+		                preload: [0,2],
+		                arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+		                tPrev: 'Previous Project',
+		                tNext: 'Next Project'
+		            }
+		        });
+		    }
+		    else 
+		    	throw new Error("unable to detected the need framework 'magnificPopup' please check included libs");
 		}
+
 
 		//      function controller($scope) {
 		//	
