@@ -18,7 +18,7 @@
 			},
 
 			template: '<div class="item col-sm-6 col-md-3">' +
-                        '<div class="project-wrapper">' +
+                        '<div class="project-wrapper dark-bg">' +
                             '<div class="project-link">' +
                                 '<a href="{{imageSrc}}" class="zoom" title="{{title}}">' +
                                     '<i class="icon-Full-Screen"></i>' +
@@ -28,10 +28,10 @@
                                 '</a>' +
                             '</div>' +
                             '<div class="project-title"><h4>{{title}}</h4></div>'+
-                            '<img src="{{imageSrc}}" alt="" class="img-responsive small-thumnail" />'+
-                            '<div style="padding:10px 15px; margin-bottom:10px; background-color:red;">'+
+                            '<img src="{{imageSrc}}" class="img-responsive small-thumnail" />'+
+                            '<div style="padding:15px 0px; margin-bottom:10px;">'+
                             	'<h3 class="text-center">{{title}}</h3>'+
-                            	'<div ng-transclude></div>'+
+                            	// '<div ng-transclude></div>'+
                         	'</div>'+
                         '</div>' +
                     '</div>',

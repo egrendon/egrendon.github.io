@@ -68,7 +68,7 @@
             	adjustHeight();
             });
 
-            // On any browser window resize
+            // On browser window resize event
             angular.element($window).bind('resize', function(){
             	// first remove style attribute from monitored elements
             	var myElements = element[0].children;
