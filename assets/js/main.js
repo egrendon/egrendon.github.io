@@ -11,17 +11,7 @@ $(function(){
             });
         }
     });
-    
 
-    /*-------------------------------------------------------------------*/
-    /*  2. Makes the height of all selected elements (".match-height")
-    /*  exactly equal. Requires jQuery matchHeight plugin.
-    /*-------------------------------------------------------------------*/
-    $(window).smartload(function(){
-        if ($.fn.matchHeight){
-            $('.match-height').matchHeight();
-        }
-    });
     
     
     /*-------------------------------------------------------------------*/

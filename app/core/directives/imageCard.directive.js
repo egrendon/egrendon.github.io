@@ -2,7 +2,7 @@
  * Directive used to display a Image in card layout
  * Requires jQuery Magnific Popup plugin.
  */
-(function(skrollr) {
+(function() {
 	'use strict';
 
 	angular
@@ -28,10 +28,15 @@
                                 '</a>' +
                             '</div>' +
                             '<div class="project-title"><h4>{{title}}</h4></div>'+
-                            '<img src="{{imageSrc}}" alt="" class="img-responsive" />'+
+                            '<img src="{{imageSrc}}" alt="" class="img-responsive small-thumnail" />'+
+                            '<div style="padding:10px 15px; margin-bottom:10px; background-color:red;">'+
+                            	'<h3 class="text-center">{{title}}</h3>'+
+                            	'<div ng-transclude></div>'+
+                        	'</div>'+
                         '</div>' +
                     '</div>',
             replace: true, //element to which the directive declared should be replaced with template        
+			transclude: true, //allow HTML into angular directive 
 			link: link,
 			//controller: controller
 		};
@@ -72,4 +77,4 @@
 		//	
 		//		}
 	}
-})(skrollr);
+})();
