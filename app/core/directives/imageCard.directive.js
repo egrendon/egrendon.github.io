@@ -20,12 +20,12 @@
 			template: '<div class="item col-sm-6 col-md-3">' +
                         '<div class="project-wrapper dark-bg">' +
                             '<div class="project-link">' +
-                                '<a href="{{imageSrc}}" class="zoom" title="{{title}}">' +
+                                '<a href="{{imageSrc}}" class="zoom text-center" title="{{title}}">' +
                                     '<i class="icon-Full-Screen"></i>' +
                                 '</a>' +
-                                '<a href="#/single-portfolio-1" class="external-link">' +
-                                    '<i class="icon-Link"></i>' +
-                                '</a>' +
+                                // '<a href="#/single-portfolio-1" class="external-link">' +
+                                //     '<i class="icon-Link"></i>' +
+                                // '</a>' +
                             '</div>' +
                             '<div class="project-title"><h4>{{title}}</h4></div>'+
                             '<img src="{{imageSrc}}" class="img-responsive small-thumnail" />'+
