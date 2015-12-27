@@ -49,7 +49,7 @@
 			//only quick way to make this work. If i have time I will revist this later.
 		    if ($.fn.magnificPopup){
 		        $("#portfolio-gallery").magnificPopup({
-		            delegate: 'a.zoom',
+		            delegate: 'a.zoom',  // child item selector, by clicking on it popup will open
 		            type: 'image',
 		            fixedContentPos: false,
 
