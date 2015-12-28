@@ -89,29 +89,29 @@ $(function(){
     /*-------------------------------------------------------------------*/
     /*  10. Section - My Resume
     /*-------------------------------------------------------------------*/
-    var resumeCollapse = function (){
-        var ww = Math.max($(window).width(), window.innerWidth),
-        workItem = $('.collapse:not(:first)', '#work'),
-        educationItem = $('.collapse:not(:first)', '#education');
+    // var resumeCollapse = function (){
+    //     var ww = Math.max($(window).width(), window.innerWidth),
+    //     workItem = $('.collapse:not(:first)', '#work'),
+    //     educationItem = $('.collapse:not(:first)', '#education');
         
-        if (ww < 768){
-            workItem.collapse('show');
-            educationItem.collapse('show');
-        }
-        else{
-            workItem.collapse('hide');
-            educationItem.collapse('hide');
-        }
-    };
+    //     if (ww < 768){
+    //         workItem.collapse('show');
+    //         educationItem.collapse('show');
+    //     }
+    //     else{
+    //         workItem.collapse('hide');
+    //         educationItem.collapse('hide');
+    //     }
+    // };
     
-    // Call resumeCollapse() when window is loaded.
-    $(window).smartload(function(){
-        resumeCollapse();
-    });
+    // // Call resumeCollapse() when window is loaded.
+    // $(window).smartload(function(){
+    //     resumeCollapse();
+    // });
     
-    // Call resumeCollapse() when window is resized.
-    $(window).smartresize(function(){
-        resumeCollapse();
-    });
+    // // Call resumeCollapse() when window is resized.
+    // $(window).smartresize(function(){
+    //     resumeCollapse();
+    // });
         
 });
