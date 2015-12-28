@@ -1,14 +1,14 @@
 /*-------------------------------------------------------------------*/
-/*  Directive does the parallax background effect. Requires skrollr js.
+/*  Directive does the parallax background effect. Requires skrollr js library.
 /*-------------------------------------------------------------------*/
 (function(skrollr) {
 	'use strict';
 
 	angular
 		.module('myFirstApp.directives')
-		.directive('egrSkroller', egrSkroller);
+		.directive('egrParallax', egrParallax);
 
-	function egrSkroller() {
+	function egrParallax() {
 		var directive = {
 			restrict: 'AE',
 			//template: '',

@@ -24,12 +24,6 @@
 				controller: 'HomeCtrlAs',
 				controllerAs: 'vm'
 			})
-            .state('topNavMenu', {
-                url:'/topNavMenu',
-                templateUrl: '/app/featureSets/topNavMenu/topNavMenu.html',
-                controller: 'TopNavMenuCtrlAs',
-                controllerAs: 'vm'
-            })
             .state('/globalWeather', {
                 url: '/globalWeather',
                 templateUrl: '/app/featureSets/globalWeather/global-weather.html',
