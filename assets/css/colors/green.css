@@ -96,6 +96,7 @@ span.divider {
 /*---------------------------------------------------------------------*/
 .navbar.navbar-fixed-top .navbar-nav > li.active > a {
   color: #00a69a;
+  border-bottom: 1px solid #00a69a;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.active > a:hover {
