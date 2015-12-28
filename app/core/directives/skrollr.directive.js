@@ -1,3 +1,6 @@
+/*-------------------------------------------------------------------*/
+/*  Directive does the parallax background effect. Requires skrollr js.
+/*-------------------------------------------------------------------*/
 (function(skrollr) {
 	'use strict';
 
