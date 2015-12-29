@@ -357,9 +357,7 @@ span.divider.center {
 
 
 /*---------------------------------------------------------------------*/
-
-
-/*  3. PRELOADER
+/*  3. jQuery jpreloader plugin PRELOADER
 /*---------------------------------------------------------------------*/
 
 #jpreOverlay {
@@ -368,11 +366,15 @@ span.divider.center {
 
 #jpreLoader {
     width: 100%;
-    height: 5px;
+    height: 20px;
 }
 
 #jpreBar {
     background-color: #c80a48;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 
