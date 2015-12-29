@@ -1,5 +1,6 @@
 /*-------------------------------------------------------------------*/
-/*  Directive creates the page smooth scrolling feature, requires jQuery Easing plugin. */
+/*  Directive creates a docked naviaton menu. The navigation menu stays always visible.
+/*  Requires jQuery-Sticky plugin.
 /*-------------------------------------------------------------------*/
 (function() {
 	'use strict';
