@@ -19,8 +19,6 @@
 
         6.2. SECTION - PORTFOLIO
 
-        6.4. SECTION - STRENGHTS
-
         6.5. SECTION - RESUME
 
         6.7. SECTION - SKILLS
@@ -135,14 +133,6 @@ span.divider {
 /*  6.2. SECTION - PORTFOLIO
 /*---------------------------------------------------------------------*/
 .portfolio .item > .project-wrapper > .project-link > a.external-link {
-  background-color: #00a69a;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  6.4. SECTION - STRENGHTS
-/*---------------------------------------------------------------------*/
-.column-chart > .chart > .item > .bar > .item-progress {
   background-color: #00a69a;
 }
 

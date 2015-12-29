@@ -40,22 +40,22 @@ $(function(){
     
 
   
-    /*-------------------------------------------------------------------*/
-    /*  9. Column Chart (Section - My Strengths)
-    /*-------------------------------------------------------------------*/
-    var columnChart = function (){
-        $('.column-chart').find('.item-progress').each(function(){
-            var item = $(this);
-            var newHeight = $(this).parent().height() * ($(this).data('percent') / 100);
+    // /*-------------------------------------------------------------------*/
+    // /*  9. Column Chart (Section - My Strengths)
+    // /*-------------------------------------------------------------------*/
+    // var columnChart = function (){
+    //     $('.column-chart').find('.item-progress').each(function(){
+    //         var item = $(this);
+    //         var newHeight = $(this).parent().height() * ($(this).data('percent') / 100);
             
-            item.css('height', newHeight);
-        });
-    };
+    //         item.css('height', newHeight);
+    //     });
+    // };
     
-    // Call columnChart() when window is loaded.
-    $(window).smartload(function(){
-        columnChart();
-    });
+    // // Call columnChart() when window is loaded.
+    // $(window).smartload(function(){
+    //     columnChart();
+    // });
     
     
     /*-------------------------------------------------------------------*/
