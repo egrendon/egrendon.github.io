@@ -13,9 +13,7 @@ $(function(){
         if ($.fn.jpreLoader){
             $('body').jpreLoader({
                 showPercentage: false,
-                loaderVPos: '50%',
-                autoClose: false,
-                showSplash: true,
+                loaderVPos: '50%'
             });
         }
     });
