@@ -1,7 +1,7 @@
 /*-------------------------------------------------------------------*/
 /*  Directive creates the page smooth scrolling feature, requires jQuery Easing plugin. */
 /*-------------------------------------------------------------------*/
-(function(skrollr) {
+(function() {
 	'use strict';
 
 	angular
@@ -69,4 +69,4 @@
 //	
 //		}
 	}
-})(skrollr);
+})();

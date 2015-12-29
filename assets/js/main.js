@@ -14,29 +14,29 @@ $(function(){
 
     
     
-    /*-------------------------------------------------------------------*/
-    /*  5. Make navigation menu on your page always stay visible.
-    /*  Requires jQuery-Sticky plugin.
-    /*-------------------------------------------------------------------*/
-    var stickyMenu = function(){
-        var ww = Math.max($(window).width(), window.innerWidth),
-        nav = $('#navigation');
+    // /*-------------------------------------------------------------------*/
+    // /*  5. Make navigation menu on your page always stay visible.
+    // /*  Requires jQuery-Sticky plugin.
+    // /*-------------------------------------------------------------------*/
+    // var stickyMenu = function(){
+    //     var ww = Math.max($(window).width(), window.innerWidth),
+    //     nav = $('#navigation');
 
-        if ($.fn.unstick){
-            nav.unstick();
-        }
+    //     if ($.fn.unstick){
+    //         nav.unstick();
+    //     }
         
-        if ($.fn.sticky && ww >= 992){
-            nav.sticky({topSpacing: 0});
-        }
-    };
+    //     if ($.fn.sticky && ww >= 992){
+    //         nav.sticky({topSpacing: 0});
+    //     }
+    // };
     
-    stickyMenu();
+    // stickyMenu();
     
-    // Call stickyMenu() when window is resized.
-    $(window).smartresize(function(){
-        stickyMenu();
-    });
+    // // Call stickyMenu() when window is resized.
+    // $(window).smartresize(function(){
+    //     stickyMenu();
+    // });
     
 
   
