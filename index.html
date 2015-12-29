@@ -42,26 +42,25 @@
 
 </head>
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="66">
     <!--[if lt IE 10]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 
+
     <!-- HERO START -->
-    <header id="home" class="hero parallax-yes">
+    <header egr-parallax  id="home" class="hero parallax-yes">
         <div id="parallax-1" class="parallax">
             <div class="bcg skrollable skrollable-between" 
                 data-anchor-target="#parallax-1" 
                 data-center="background-position: 50% 0px;" 
                 data-top-bottom="background-position: 50% -100px;" 
                 data-bottom-top="background-position: 50% 100px;">
+                <!-- style="min-height:1920px;"> -->
                 <div class="hero-body">
                     <div class="hero-text text-center">
-                        <h1>
-                                I'm Ernesto Rendon <span class="blinker"></span>
-                            </h1>
+                        <h1>I'm Ernesto Rendon</h1>
                         <h1 class="small">Software Developer</h1>
                         <p>front, middle, and backend development</p>
                         <div class="page-scroll">
@@ -80,8 +79,6 @@
         <!-- //.parallax -->
     </header>
     <!-- //HERO END -->
-
-
 
 	<div ng-app="myFirstApp">
         <section ui-view></section>
