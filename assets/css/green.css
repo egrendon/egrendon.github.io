@@ -141,7 +141,15 @@ span.divider {
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
 .panel-group.resume .resume-item .resume-year {
-  background-color: #00a69a;
+  background-color: #2e2e2e;
+}
+
+.panel-group.resume .resume-item .resume-btn > a:hover {
+    background-color: #00a69a;
+}
+
+.panel-group.resume .resume-item .resume-btn > a:hover {
+    background-color: #008d82;
 }
 
 
