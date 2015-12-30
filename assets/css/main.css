@@ -918,7 +918,11 @@ header.hero.parallax-yes > .parallax > .bcg {
     #profile .profile-text {
         padding-top: 100px;
     }
+    #profile .profile-picture {
+        padding-top: 100px;
+    }
 }
+
 
 #profile .profile-text h2 {
     text-transform: uppercase;
