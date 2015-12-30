@@ -192,7 +192,7 @@ span.divider {
     /*background-color: #c80a48;*/
 }
 
-span.divider-center {
+span.divider.center {
     margin-right: auto;
     margin-left: auto;
 }
