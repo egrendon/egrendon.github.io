@@ -18,9 +18,7 @@
 3. PRELOADER
 
 4. HOME
-        4.1. TEXT SLIDER
-        4.2. SLIDESHOW
-        4.3. PARALLAX
+        4.1.  HERO Background Text
 
 5. NAVIGATION
         5.1. NAVIGATION - CENTER MENU
@@ -382,10 +380,8 @@ span.divider.center {
 /*  4. HOME
 /*---------------------------------------------------------------------*/
 
-header.hero {
-    display: table;
-    position: relative;
-    z-index: 5;
+header.hero {    
+    display: block;
     width: 100%;
     height: 100%;
     background-image: url('../images/bg-hero.png');
@@ -395,6 +391,7 @@ header.hero {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-attachment: fixed;
 }
 
 @media (max-width: 991px) {
@@ -506,58 +503,15 @@ header.hero .hero-body .hero-text .page-scroll {
 
 
 /*---------------------------------------------------------------------*/
-/*  4.1. TEXT SLIDER
+/*  4.1. HERO Background Text
 /*---------------------------------------------------------------------*/
 
-#text-slider .carousel-inner {
-    padding-bottom: 3px;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  4.2. SLIDESHOW
-/*---------------------------------------------------------------------*/
-
-@media (min-width: 1280px) {
-    header.hero.bg-slideshow-yes {
-        background: transparent;
-    }
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  4.3. PARALLAX
-/*---------------------------------------------------------------------*/
-
-header.hero.parallax-yes {
-    display: block;
-    background: none;
-}
-
-header.hero.parallax-yes > .parallax {
-    width: 100%;
-    height: 100%;
-}
-
-header.hero.parallax-yes > .parallax > .bcg {
+header.hero .bcg {
     display: table;
     width: 100%;
     height: 100%;
-    background-image: url('../images/bg-hero.png');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    padding-top: 100px;
 }
-
-@media (min-width: 1280px) {
-    header.hero.parallax-yes > .parallax > .bcg {
-        background-attachment: fixed;
-    }
-}
-
 
 /*---------------------------------------------------------------------*/
 /*  5. NAVIGATION

@@ -12,7 +12,9 @@ $(function(){
         else {
             $('body').jpreLoader({
                 showPercentage: false,
-                loaderVPos: '50%'
+                loaderVPos: '50%',
+                autoClose: true,
+                debugMode: true
             });
         }
     });
