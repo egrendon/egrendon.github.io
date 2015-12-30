@@ -36,8 +36,6 @@
 
         6.3. SECTION - SERVICES
 
-        6.4. SECTION - STRENGTHS
-
         6.5. SECTION - RESUME
 
         6.7. SECTION - SKILLS
@@ -382,16 +380,6 @@ span.divider.center {
 
 header.hero {    
     display: block;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/bg-hero.png');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-attachment: fixed;
 }
 
 @media (max-width: 991px) {
@@ -506,12 +494,37 @@ header.hero .hero-body .hero-text .page-scroll {
 /*  4.1. HERO Background Text
 /*---------------------------------------------------------------------*/
 
+header.hero.bcg-parent-image {    
+    background-image: url('../images/bg-hero.png');
+}
+
+section#strengths.bcg-parent-image {
+    background-image: url('../images/bg-strengths.png');
+}
+
+.bcg-parent {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+}
+
 header.hero .bcg {
     display: table;
     width: 100%;
     height: 100%;
-    padding-top: 100px;
 }
+
+/*@media (min-width: 1280px) {
+    .bcg-parent {
+        background-attachment: fixed;
+    }
+}*/
 
 /*---------------------------------------------------------------------*/
 /*  5. NAVIGATION
@@ -767,68 +780,6 @@ header.hero .bcg {
 }
 
 .section.bg-image-yes .container-fluid.section-wrapper > .section-content:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.section.parallax-yes > .parallax {
-    width: 100%;
-    height: 100%;
-}
-
-.section.parallax-yes > .parallax > .bcg {
-    display: table;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-@media (min-width: 1280px) {
-    .section.parallax-yes > .parallax > .bcg {
-        background-attachment: fixed;
-    }
-}
-
-.section.parallax-yes .container-fluid.section-wrapper {
-    position: relative;
-}
-
-.section.parallax-yes .container-fluid.section-wrapper > .section-content {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media (min-width: 768px) {
-    .section.parallax-yes .container-fluid.section-wrapper > .section-content {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    .section.parallax-yes .container-fluid.section-wrapper > .section-content {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .section.parallax-yes .container-fluid.section-wrapper > .section-content {
-        width: 1170px;
-    }
-}
-
-.section.parallax-yes .container-fluid.section-wrapper > .section-content:before {
     position: absolute;
     content: '';
     top: 0;
@@ -1341,30 +1292,6 @@ button.mfp-arrow:active {
         background-color: #080708;
     }
 }
-
-
-/*---------------------------------------------------------------------*/
-/*  6.4. SECTION - STRENGTHS
-/*---------------------------------------------------------------------*/
-
-#strengths {
-    background-image: url('../images/bg-strengths.png');
-    background-position: center top;
-}
-
-#strengths .section-wrapper > .section-content {
-    padding-bottom: 0px;
-}
-
-#strengths.parallax-yes {
-    background: none;
-}
-
-#strengths.parallax-yes > .parallax > .bcg {
-    background-image: url('../images/bg-strengths.png');
-}
-
-
 
 
 /*---------------------------------------------------------------------*/
