@@ -9,8 +9,7 @@ $(function(){
         if (!jpreLoaderObj) {
             throw new Error("Unable to find jpreLoader object. Verify that jpreLoader plugin is loaded.");
         }
-
-        if ($.fn.jpreLoader){
+        else {
             $('body').jpreLoader({
                 showPercentage: false,
                 loaderVPos: '50%'
