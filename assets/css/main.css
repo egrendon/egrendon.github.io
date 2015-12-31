@@ -412,55 +412,47 @@ header.hero .pattern-overlay {
     background-repeat: repeat;
 }
 
-header.hero .hero-body {
-    position: relative;
-    z-index: 15;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 80px 30px;
-}
-
 @media (min-width: 480px) {
-    header.hero .hero-body {
+    header.hero .bg-img-table-cell {
         padding: 100px 50px;
     }
 }
 
 @media (min-width: 768px) {
-    header.hero .hero-body {
+    header.hero .bg-img-table-cell {
         padding: 50px;
     }
 }
 
 @media (min-width: 992px) {
-    header.hero .hero-body {
+    header.hero .bg-img-table-cell {
         padding: 0px;
     }
 }
 
-header.hero .hero-body .hero-text {
+header.hero .bg-img-table-cell .hero-text {
     color: rgba(255, 255, 255, 0.9);
 }
 
-header.hero .hero-body .hero-text h1 {
+header.hero .bg-img-table-cell .hero-text h1 {
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -4px;
 }
 
 @media (min-width: 600px) {
-    header.hero .hero-body .hero-text h1 {
+    header.hero .bg-img-table-cell .hero-text h1 {
         font-size: 58px;
     }
 }
 
 @media (min-width: 768px) {
-    header.hero .hero-body .hero-text h1 {
+    header.hero .bg-img-table-cell .hero-text h1 {
         font-size: 68px;
     }
 }
 
-header.hero .hero-body .hero-text h1.small {
+header.hero .bg-img-table-cell .hero-text h1.small {
     color: #ffffff;
     font-size: 45px;
     font-weight: 400;
@@ -468,24 +460,24 @@ header.hero .hero-body .hero-text h1.small {
 }
 
 @media (min-width: 600px) {
-    header.hero .hero-body .hero-text h1.small {
+    header.hero .bg-img-table-cell .hero-text h1.small {
         font-size: 58px;
     }
 }
 
 @media (min-width: 768px) {
-    header.hero .hero-body .hero-text h1.small {
+    header.hero .bg-img-table-cell .hero-text h1.small {
         font-size: 66px;
     }
 }
 
 
-header.hero .hero-body .hero-text p {
+header.hero .bg-img-table-cell .hero-text p {
     margin-top: 10px;
     font-size: 20px;
 }
 
-header.hero .hero-body .hero-text .page-scroll {
+header.hero .bg-img-table-cell .hero-text .page-scroll {
     margin-top: 40px;
 }
 
@@ -494,15 +486,15 @@ header.hero .hero-body .hero-text .page-scroll {
 /*  4.1. HERO Background Text
 /*---------------------------------------------------------------------*/
 
-header.hero.bcg-parent-image {    
+header.hero.bg-img-container-image {    
     background-image: url('../images/bg-hero.png');
 }
 
-section#strengths.bcg-parent-image {
+section#strengths.bg-img-container-image {
     background-image: url('../images/bg-strengths.png');
 }
 
-.bcg-parent {
+.bg-img-container {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -514,14 +506,24 @@ section#strengths.bcg-parent-image {
     background-attachment: fixed;
 }
 
-header.hero .bcg {
+.bg-img-table-container {
     display: table;
     width: 100%;
     height: 100%;
 }
 
-/*@media (min-width: 1280px) {
-    .bcg-parent {
+
+.bg-img-table-cell {
+    position: relative;
+    z-index: 15;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 80px 30px;
+}
+/*
+If u want to to do scroll in desktop mode only then do 'fixed' like this 
+@media (min-width: 768px) {
+    .bg-img-container {
         background-attachment: fixed;
     }
 }*/
