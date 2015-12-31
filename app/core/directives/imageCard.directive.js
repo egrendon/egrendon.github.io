@@ -27,11 +27,11 @@
                                 //     '<i class="icon-Link"></i>' +
                                 // '</a>' +
                             '</div>' +
-                            '<div class="project-title"><h4>{{title}}</h4></div>'+
+                            //'<div class="project-title"><h5>{{title}}</h5></div>'+
                             '<img src="{{imageSrc}}" class="img-responsive small-thumnail" />'+
-                            '<div style="padding:15px 0px; margin-bottom:10px;">'+
-                            	'<h3 class="text-center">{{title}}</h3>'+
-                            	// '<div ng-transclude></div>'+
+                            '<div style="padding:10px 10px; margin-bottom:10px;">'+
+                            	//'<h4 class="text-center">{{title}}</h4>'+
+                            	 '<div ng-transclude egr-match-height>></div>'+
                         	'</div>'+
                         '</div>' +
                     '</div>',
