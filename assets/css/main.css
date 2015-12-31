@@ -1029,7 +1029,7 @@ If u want to to do scroll in desktop mode only then do 'fixed' like this
     left: 50%;
     width: 88px;
     height: 48px;
-    margin-top: -48px;
+    margin-top: -88px;
     /** with 2 icons it is -44px **/
     /*margin-left: -44px;*/
     /** with 1 icon it is -22px **/

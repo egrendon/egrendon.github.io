@@ -31,7 +31,7 @@
                             '<img src="{{imageSrc}}" class="img-responsive small-thumnail" />'+
                             '<div style="padding:10px 10px; margin-bottom:10px;">'+
                             	//'<h4 class="text-center">{{title}}</h4>'+
-                            	 '<div ng-transclude egr-match-height>></div>'+
+                            	 '<div ng-transclude egr-match-height></div>'+
                         	'</div>'+
                         '</div>' +
                     '</div>',
