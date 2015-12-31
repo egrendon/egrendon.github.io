@@ -1,10 +1,13 @@
+/**
+ * This should be used to delcare all constants
+ */
 (function() {
     'use strict';
 
     angular
         .module('myFirstApp.core')
         //.constant('toastr', toastr)
-		.constant('serviceConfigObject', {
+		.constant('serviceConfigConstant', {
 			'get': {
 				method: 'GET',
 				timeout: 120000
