@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+</head>
+<body>
+  <!-- Testing Libs -->
+  <script src="node_modules/mocha/mocha.js"></script>
+  <script src="node_modules/chai/chai.js"></script>
+  <script src="node_modules/sinon-chai/lib/sinon-chai.js"></script>
+  <script src="node_modules/sinon/pkg/sinon.js"></script>
+  <!-- Vendor Libs -->
+  <script src="../../../../my-account-portlet/docroot/lib/jquery/1.11.2/jquery.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/datatables/1.10.9/js/jquery.dataTables.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/angular/1.3.12/angular.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/angular-resource/1.3.12/angular-resource.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/angular-touch/1.3.12/angular-touch.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/moment/2.9.0/min/moment.min.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/toastr/2.1.0/toastr.min.js"></script>
+  <script src="../../../../my-account-portlet/docroot/lib/underscore/1.7.0/underscore-min.js"></script>
+  <div id="mocha"></div>
+
+  <script>
+    mocha.setup('bdd');
+    mocha.reporter('html');
+    var expect = chai.expect;
+  </script>
+  <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+
+  <!-- Bundle of Files to Test -->
+  <script src="target.bundle.js" data-cover></script>
+  <script src="node_modules/blanket/dist/qunit/blanket.js" data-cover-flags="branchTracking debug" data-cover-timeout="3000"></script>
+  <script src="node_modules/blanket/src/adapters/mocha-blanket.js"></script>
+
+  <!-- Test Bundle -->
+  <script src="test.bundle.js"></script>
+
+  <script>
+    // Only tests run in real browser, injected script run if options.run == true
+    if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+      //mocha.checkLeaks();
+      mocha.globals([]);
+      mocha.run();
+    }
+  </script>
+</body>
+</html>
