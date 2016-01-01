@@ -45,7 +45,7 @@ module.exports = function(grunt){
 			// all js files for jenkins build and deploy
 			buildjs: {
 				src: appFiles,
-				dest: '../../app/app.js'
+				dest: '../dist/app.js'
 			}
 		},
 		// register angular templates in the $templateCache
@@ -53,9 +53,10 @@ module.exports = function(grunt){
 			app: {
 				cwd: '../../',
 				src: 'app/**/*.html',
-				dest: '../../app/app.templates.js',
+				dest: '../dist/app.templates.js',
 				options: {
 					module: 'myFirstApp',
+					//prefix: '/agent-portlet'
 				}
 			}
 		},
@@ -66,7 +67,7 @@ module.exports = function(grunt){
 			},
 			app: {
 				files: {
-					'../../app/app.js': ['../../app/app.js']
+					'../dist/app.min.js': ['../../app/app.js']
 				}
 			}
 		},
@@ -77,14 +78,14 @@ module.exports = function(grunt){
 			},
 			my_target: {
 				files: {
-					'../../app/app.min.js': ['../../app/app.js']
+					'../dist/app.min.js': ['../../app/app.js']
 				}
 			}
 		},
 		// replace 'app' refrences with unique guid
 		replace: {
 			view: {
-				src: ['../index.html'],
+				src: ['index.html'],
 				overwrite: true,
 				replacements: [{
 					from: '<!-- TARGET -->',
@@ -118,19 +119,19 @@ module.exports = function(grunt){
 		rename: {
 			app: {
 				src: '../../app/app.js',
-				dest: '../../../docroot/app/'+guid+'.js'
+				dest: '../dist/'+guid+'.js'
 			},
 			appmin: {
 				src: '../../app/app.min.js',
-				dest: '../../app/'+guid+'.min.js'
+				dest: '../dist/'+guid+'.min.js'
 			},
 			map: {
 				src: '../../app/app.min.js.map',
-				dest: '../../app/'+guid+'.min.js.map'
+				dest: '../dist/'+guid+'.min.js.map'
 			},
 			css: {
 				src: '../../assets/css/main.min.css',
-				dest: '../../assets/css/'+guid+'.min.css'
+				dest: '../dist/assets/css/'+guid+'.min.css'
 			}
 		},
 		// remove angular templates file after concatenation
