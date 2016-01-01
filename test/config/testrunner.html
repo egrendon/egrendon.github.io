@@ -1,0 +1,73 @@
+<!-- ********************* READ ME START******************************************* -->
+<!-- This files is configured to run phantom.js and load mocha framework            -->
+<!-- NOTE: Angular-Mocks version MUST EQUAL Angular version (OR TESTS WILL FAIL).   -->
+<!-- ********************* READ ME END*******************************************   -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+</head>
+
+<body>
+    <!-- Testing Libs -->
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="node_modules/chai/chai.js"></script>
+    <script src="node_modules/sinon-chai/lib/sinon-chai.js"></script>
+    <script src="node_modules/sinon/pkg/sinon.js"></script>
+    
+
+    <!-- ********************* LIB START ******************************************* -->
+    <!-- GoogleMap JS -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- Plugins JS -->
+    <script src="../../assets/bower_components/angular/angular.js"></script>
+    <script src="../../assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../../assets/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../../assets/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="../../assets/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="../../assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../../assets/bower_components/underscore/underscore.js"></script>
+    <script src="../../assets/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../assets/bower_components/skrollr/dist/skrollr.min.js"></script>
+    <script src="../../assets/bower_components/jquery-sticky/jquery.sticky.js"></script>
+    <script src="../../assets/bower_components/detect-mobile-browser/detectmobilebrowser.js"></script>
+    <script src="../../assets/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="../../assets/bower_components/jquery.easing/js/jquery.easing.js"></script>
+    
+    <!-- NOTE: because jpreloader plugin affects the PhantomJS testing. We switched to a -->
+    <!-- basic if check in main.js And in the test runner this plugin is diabled on purpose. -->
+    <!-- <script src="../../assets/bower_components/jpreloader/js/jpreloader.js"></script> -->
+    <!-- Main JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- ********************* LIB END ******************************************* -->
+
+
+    <div id="mocha"></div>
+    <script>
+      mocha.setup('bdd');
+      mocha.reporter('html');
+      var expect = chai.expect;
+    </script>
+    <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+    
+    <!-- Bundle of Files to Test -->
+    <script src="target.bundle.js" data-cover></script>
+    <script src="node_modules/blanket/dist/qunit/blanket.js" data-cover-flags="branchTracking debug" data-cover-timeout="3000"></script>
+    <script src="node_modules/blanket/src/adapters/mocha-blanket.js"></script>
+    
+    <!-- Test Bundle -->
+    <script src="test.bundle.js"></script>
+    <script>
+      // Only tests run in real browser, injected script run if options.run == true
+      if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+          //mocha.checkLeaks();
+          mocha.globals([]);
+          mocha.run();
+      }
+    </script>
+</body>
+
+</html>
