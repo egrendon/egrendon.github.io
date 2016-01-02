@@ -82,6 +82,14 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		// minify css
+		cssmin: {
+			target: {
+				files: {
+					'../dist/assets/css/main.min.css': ['../../assets/css/main.css','../../assets/css/green.css']
+				}
+			}
+		},
 		// replace 'app' refrences with unique guid
 		replace: {
 			view: {
@@ -139,15 +147,7 @@ module.exports = function(grunt){
 			options: {
 				force: true
 			},
-			js: ["../../app/app.templates.js"]
-		},
-		// minify css
-		cssmin: {
-			target: {
-				files: {
-					'../../assets/css/main.min.css': ['../../assets/css/main.css']
-				}
-			}
+			js: ["../dist/app.templates.js"]
 		},
 	});
 
