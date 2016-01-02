@@ -67,7 +67,7 @@ module.exports = function(grunt){
 			},
 			app: {
 				files: {
-					'../dist/app.min.js': ['../../app/app.js']
+					'../dist/app.min.js': ['../dist/app.js']
 				}
 			}
 		},
@@ -78,7 +78,7 @@ module.exports = function(grunt){
 			},
 			my_target: {
 				files: {
-					'../dist/app.min.js': ['../../app/app.js']
+					'../dist/app.min.js': ['../dist/app.js']
 				}
 			}
 		},
@@ -126,19 +126,19 @@ module.exports = function(grunt){
 		// rename 'app' file names with unique guid
 		rename: {
 			app: {
-				src: '../../app/app.js',
+				src: '../dist/app.js',
 				dest: '../dist/'+guid+'.js'
 			},
 			appmin: {
-				src: '../../app/app.min.js',
+				src: '../dist/app.min.js',
 				dest: '../dist/'+guid+'.min.js'
 			},
 			map: {
-				src: '../../app/app.min.js.map',
+				src: '../dist/app.min.js.map',
 				dest: '../dist/'+guid+'.min.js.map'
 			},
 			css: {
-				src: '../../assets/css/main.min.css',
+				src: '../dist/assets/css/main.min.css',
 				dest: '../dist/assets/css/'+guid+'.min.css'
 			}
 		},
