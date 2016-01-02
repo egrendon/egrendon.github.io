@@ -37,6 +37,9 @@ module.exports = function(grunt){
 		 '../../app/featureSets/home/home.service.js',
 	];
 
+	var destination_app_file = '../dist/app.js';
+	var cssFiles = ['../../assets/css/main.css','../../assets/css/green.css'];
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
@@ -45,7 +48,7 @@ module.exports = function(grunt){
 			// all js files for jenkins build and deploy
 			buildjs: {
 				src: appFiles,
-				dest: '../dist/app.js'
+				dest: destination_app_file
 			}
 		},
 		// register angular templates in the $templateCache
@@ -68,7 +71,7 @@ module.exports = function(grunt){
 			},
 			app: {
 				files: {
-					'../dist/app.min.js': ['../dist/app.js']
+					'../dist/app.min.js': [destination_app_file]
 				}
 			}
 		},
@@ -79,7 +82,7 @@ module.exports = function(grunt){
 			},
 			my_target: {
 				files: {
-					'../dist/app.min.js': ['../dist/app.js']
+					'../dist/app.min.js': [destination_app_file]
 				}
 			}
 		},
@@ -87,7 +90,7 @@ module.exports = function(grunt){
 		cssmin: {
 			target: {
 				files: {
-					'../dist/assets/css/main.min.css': ['../../assets/css/main.css','../../assets/css/green.css']
+					'../dist/assets/css/main.min.css': cssFiles
 				}
 			}
 		},
@@ -127,7 +130,7 @@ module.exports = function(grunt){
 		// rename 'app' file names with unique guid
 		rename: {
 			app: {
-				src: '../dist/app.js',
+				src: destination_app_file,
 				dest: '../dist/'+guid+'.js'
 			},
 			appmin: {
