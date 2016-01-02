@@ -56,7 +56,8 @@ module.exports = function(grunt){
 				dest: '../dist/app.templates.js',
 				options: {
 					module: 'myFirstApp',
-					//prefix: '/agent-portlet'
+					//String to prefix template URLs with. Defaults to ''
+					//prefix: ''
 				}
 			}
 		},
