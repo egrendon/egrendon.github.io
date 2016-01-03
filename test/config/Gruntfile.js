@@ -1,36 +1,36 @@
 /*jshint scripturl:true */
-module.exports = function(grunt){
+module.exports = function(grunt) {
 
 	var appFiles = [
 		'../../app/app.module.js',
 		'../../app/app.routes.js',
-		 //'../../app/app.templates.js',
-		 '../../app/core/core.module.js',
-		 '../../app/core/constants.js',
-		 '../../app/core/directives/directives.module.js',
-		 '../../app/core/directives/animateInView.directive.js',
-		 '../../app/core/directives/chartCircle.directive.js',
-		 '../../app/core/directives/googleMaps.directive.js',
-		 '../../app/core/directives/imageCard.directive.js',
-		 '../../app/core/directives/loader.directive.js',
-		 '../../app/core/directives/matchHeight.directive.js',
-		 '../../app/core/directives/messagePanel.directive.js',
-		 '../../app/core/directives/pageScroll.directive.js',
-		 '../../app/core/directives/parallax.directive.js',
-		 '../../app/core/directives/stickyMenu.directive.js',
-		
-		 '../../app/core/modelObjects/modelObjects.module.js',
-		 '../../app/core/modelObjects/MessageObj.js',
+		//'../../app/app.templates.js',
+		'../../app/core/core.module.js',
+		'../../app/core/constants.js',
+		'../../app/core/directives/directives.module.js',
+		'../../app/core/directives/animateInView.directive.js',
+		'../../app/core/directives/chartCircle.directive.js',
+		'../../app/core/directives/googleMaps.directive.js',
+		'../../app/core/directives/imageCard.directive.js',
+		'../../app/core/directives/loader.directive.js',
+		'../../app/core/directives/matchHeight.directive.js',
+		'../../app/core/directives/messagePanel.directive.js',
+		'../../app/core/directives/pageScroll.directive.js',
+		'../../app/core/directives/parallax.directive.js',
+		'../../app/core/directives/stickyMenu.directive.js',
 
-		 '../../app/core/services/services.module.js',
-		 '../../app/core/services/globalWeather.service.js',
-		 '../../app/core/services/myFirst.base.service.js',
-		 '../../app/core/services/nextMessage.service.js',
-		 '../../app/core/services/underscore.service.js',
+		'../../app/core/modelObjects/modelObjects.module.js',
+		'../../app/core/modelObjects/MessageObj.js',
 
-		 '../../app/featureSets/home/home.module.js',
-		 '../../app/featureSets/home/home.controller.js',
-		 '../../app/featureSets/home/home.service.js',
+		'../../app/core/services/services.module.js',
+		'../../app/core/services/globalWeather.service.js',
+		'../../app/core/services/myFirst.base.service.js',
+		'../../app/core/services/nextMessage.service.js',
+		'../../app/core/services/underscore.service.js',
+
+		'../../app/featureSets/home/home.module.js',
+		'../../app/featureSets/home/home.controller.js',
+		'../../app/featureSets/home/home.service.js',
 	];
 
 	grunt.initConfig({
