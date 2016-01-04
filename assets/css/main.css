@@ -505,7 +505,16 @@ section#strengths.bg-img-container-image {
     -o-background-size: cover;
     background-attachment: fixed;
 }
-
+/*
+Because of Safari and IOS display issues we need to declare 
+background-attachment: scroll for mobile view. 
+We will only do the fixed background for desktop mode.
+*/
+@media (max-width: 768px) {
+    .bg-img-container {
+        background-attachment: scroll;
+    }
+}
 .bg-img-table-container {
     display: table;
     width: 100%;
@@ -520,13 +529,6 @@ section#strengths.bg-img-container-image {
     vertical-align: middle;
     padding: 80px 30px;
 }
-/*
-If u want to to do scroll in desktop mode only then do 'fixed' like this 
-@media (min-width: 768px) {
-    .bg-img-container {
-        background-attachment: fixed;
-    }
-}*/
 
 /*---------------------------------------------------------------------*/
 /*  5. NAVIGATION
