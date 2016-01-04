@@ -59,7 +59,7 @@
 		             * on one of the menu items.
 		             */
 		            if(!$(this).parent().hasClass('dropdown')){
-		                $('.berg-collapse').collapse('hide');
+		                $('.egr-collapse').collapse('hide');
 		            }
 		        });
 		    };
