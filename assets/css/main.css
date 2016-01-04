@@ -528,6 +528,10 @@ We will only do the fixed background for desktop mode.
     display: table-cell;
     vertical-align: middle;
     padding: 80px 30px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 /*---------------------------------------------------------------------*/
