@@ -4,18 +4,14 @@
 
 1. GLOBAL STYLES (USED IN VARIOUS SECTION OF THE WEBSITE)
         1.1 GENERAL STYLES
-        1.2 TEXT COLOR
         1.3 ANCHOR
         1.4 HEADING
 
 2. COMPONENTS (ELEMENTS USED IN MANY SECTION)
         2.1. BUTTON
         2.2. DIVIDER
-        2.3. SELECT BOXES CUSTOM
-        2.4. RADIO BUTTON CUSTOM
-        2.5. CHECKBOX CUSTOM
 
-3. PRELOADER
+3. PRELOADER - jQuery jpreloader plugin
 
 4. HOME
         4.1.  HERO Background Text
@@ -64,25 +60,10 @@ html {
 }
 
 body {
-    background-color: #0d0c0d;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    color: #ffffff;
     line-height: 25px;
     overflow-x: hidden;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  1.2. TEXT COLOR
-/*---------------------------------------------------------------------*/
-
-.text-grey {
-    color: #a1a1a1;
-}
-
-.colored-text {
-    /*color: #c80a48;*/
 }
 
 
@@ -91,7 +72,6 @@ body {
 /*---------------------------------------------------------------------*/
 
 a {
-    /*color: #c80a48;*/
     outline: none;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -101,7 +81,6 @@ a {
 
 a:hover,
 a:focus {
-    /*color: #c80a48;*/
     outline: none;
     text-decoration: none;
 }
@@ -128,18 +107,11 @@ h6 {
 /*---------------------------------------------------------------------*/
 
 .btn.btn-custom {
-    /*background-color: #c80a48;*/
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ffffff;
     border-radius: 3px;
-    box-shadow: 0 3px 0 #970837;
-}
-
-.btn.btn-custom:hover {
-    background-color: #b0093f;
 }
 
 .btn.btn-custom > i {
@@ -185,7 +157,6 @@ span.divider {
     margin: 35px 0px;
     width: 150px;
     height: 2px;
-    /*background-color: #c80a48;*/
 }
 
 span.divider.center {
@@ -194,170 +165,14 @@ span.divider.center {
 }
 
 
-/*---------------------------------------------------------------------*/
-/*  2.3. SELECT BOXES CUSTOM
-/*---------------------------------------------------------------------*/
-
-.select2-container--default .select2-selection--single.select2-container-custom {
-    background-color: #0d0c0d;
-    height: 46px;
-    padding: 8px;
-    border-color: #3b3b3b;
-    border-radius: 0px;
-}
-
-.select2-container--default .select2-selection--single.select2-container-custom:focus {
-    outline: none;
-}
-
-.select2-container--default .select2-selection--single.select2-container-custom .select2-selection__rendered {
-    color: #a1a1a1;
-}
-
-.select2-container--default .select2-selection--single.select2-container-custom .select2-selection__arrow {
-    height: 46px;
-}
-
-.select2-container--default .select2-selection--single.select2-container-custom .select2-selection__arrow b {
-    border-color: #3b3b3b transparent transparent transparent;
-    border-width: 8px 6px 0 6px;
-    margin-left: -12px;
-    margin-top: -4px;
-}
-
-.select2-dropdown-custom {
-    background-color: #0d0c0d;
-    border-color: #3b3b3b;
-    border-radius: 0px;
-}
-
-.select2-dropdown-custom .select2-results > .select2-results__options {
-    max-height: 400px;
-}
-
-.select2-dropdown-custom .select2-results > .select2-results__options > .select2-results__option {
-    padding: 8px 15px;
-    color: #a1a1a1;
-}
-
-.select2-dropdown-custom .select2-results > .select2-results__options > .select2-results__option:hover {
-    background-color: #212121;
-}
-
-.select2-dropdown-custom .select2-results > .select2-results__options > .select2-results__option--highlighted[aria-selected] {
-    background-color: #212121;
-}
-
-.select2-dropdown-custom .select2-results > .select2-results__options > .select2-results__option[aria-selected=true] {
-    /*background-color: #c80a48;*/
-    color: #ffffff;
-}
 
 
 /*---------------------------------------------------------------------*/
-/*  2.4. RADIO BUTTON CUSTOM
-/*---------------------------------------------------------------------*/
-
-.form-group .radio {
-    margin-bottom: 5px;
-    padding-left: 1px;
-}
-
-.form-group .radio:last-child {
-    margin-bottom: 0px;
-}
-
-.form-group .radio > label {
-    display: inline-block;
-    position: relative;
-    padding-left: 26px;
-    height: 30px;
-    line-height: 30px;
-}
-
-.form-group .radio > label:before {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    margin-top: -9px;
-    border: 1px solid #3b3b3b;
-    border-radius: 50%;
-}
-
-.form-group .radio input[type=radio] {
-    position: absolute;
-    visibility: hidden;
-}
-
-.form-group .radio input[type=radio]:checked + label:before {
-    content: '\f00c';
-    font-family: 'FontAwesome';
-    font-weight: 400;
-    font-size: 10px;
-    color: #555555;
-    text-align: center;
-    line-height: 16px;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  2.5. CHECKBOX CUSTOM
-/*---------------------------------------------------------------------*/
-
-.form-group .checkbox {
-    margin-bottom: 5px;
-    padding-left: 1px;
-}
-
-.form-group .checkbox:last-child {
-    margin-bottom: 0px;
-}
-
-.form-group .checkbox > label {
-    display: inline-block;
-    position: relative;
-    padding-left: 26px;
-    height: 30px;
-    line-height: 30px;
-}
-
-.form-group .checkbox > label:before {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    margin-top: -9px;
-    border: 1px solid #3b3b3b;
-    border-radius: 1px;
-}
-
-.form-group .checkbox input[type=checkbox] {
-    position: absolute;
-    visibility: hidden;
-}
-
-.form-group .checkbox input[type=checkbox]:checked + label:before {
-    content: '\f00c';
-    font-family: 'FontAwesome';
-    font-weight: 400;
-    font-size: 10px;
-    color: #555555;
-    text-align: center;
-    line-height: 16px;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  3. jQuery jpreloader plugin PRELOADER
+/*  3. PRELOADER - jQuery jpreloader plugin
 /*---------------------------------------------------------------------*/
 
 #jpreOverlay {
-    background-color: #0d0c0d;
+    /*background-color: #0d0c0d;*/
 }
 
 #jpreLoader {
@@ -366,7 +181,6 @@ span.divider.center {
 }
 
 #jpreBar {
-    /*background-color: #c80a48;*/
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -430,10 +244,6 @@ header.hero .pattern-overlay {
     }
 }
 
-header.hero .bg-img-table-cell .hero-text {
-    color: rgba(255, 255, 255, 0.9);
-}
-
 header.hero .bg-img-table-cell .hero-text h1 {
     font-size: 48px;
     font-weight: 700;
@@ -453,7 +263,6 @@ header.hero .bg-img-table-cell .hero-text h1 {
 }
 
 header.hero .bg-img-table-cell .hero-text h1.small {
-    color: #ffffff;
     font-size: 45px;
     font-weight: 400;
     letter-spacing: -1px;
@@ -542,8 +351,6 @@ We will only do the fixed background for desktop mode.
     margin: 0;
     border: 0;
     height: 66px;
-    background-color: #171717;
-    border-bottom: 1px solid #282428;
 }
 
 @media (min-width: 992px) {
@@ -552,15 +359,10 @@ We will only do the fixed background for desktop mode.
     }
 }
 
-.navbar.navbar-fixed-top .navbar-container {
-    background-color: #171717;
-}
-
 .navbar.navbar-fixed-top .navbar-brand {
     font-family: 'Raleway', sans-serif;
     font-size: 28px;
     font-weight: 700;
-    color: #a1a1a1;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     height: 65px;
@@ -576,7 +378,6 @@ We will only do the fixed background for desktop mode.
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #a1a1a1;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -588,48 +389,10 @@ We will only do the fixed background for desktop mode.
     }
 }
 
-.navbar.navbar-fixed-top .navbar-nav > li > a:hover {
-    background-color: #171717;
-    color: #ffffff;
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li > a:focus {
-    background-color: #171717;
-    color: #a1a1a1;
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li.active > a {
-    background-color: #171717;
-    /*color: #c80a48;*/
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li.active > a:hover {
-    background-color: #171717;
-    /*color: #c80a48;*/
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li.active > a:focus {
-    background-color: #171717;
-    /*color: #c80a48;*/
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li.dropdown > a:hover {
-    color: #ffffff;
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a {
-    background-color: #171717;
-    color: #ffffff;
-}
-
-.navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a:focus {
-    background-color: #171717;
-}
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu {
     min-width: 180px;
     padding: 10px 0px;
-    background-color: #171717;
 }
 
 @media (max-width: 991px) {
@@ -644,30 +407,8 @@ We will only do the fixed background for desktop mode.
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    color: #a1a1a1;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-
-.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:hover {
-    background-color: #171717;
-    color: #ffffff;
-}
-
-.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:focus {
-    background-color: #171717;
-    color: #a1a1a1;
-}
-
-.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
-    /*color: #c80a48;*/
-    background-color: #171717;
-}
-
-.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:hover,
-.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:focus {
-    /*color: #c80a48;*/
-    background-color: #171717;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .caret {
@@ -675,13 +416,8 @@ We will only do the fixed background for desktop mode.
 }
 
 .navbar.navbar-fixed-top .navbar-toggle {
-    /*background-color: #c80a48;*/
     border-radius: 3px;
     margin-top: 18px;
-}
-
-.navbar.navbar-fixed-top .navbar-toggle .icon-bar {
-    background-color: #fff;
 }
 
 .navbar.navbar-fixed-top .navbar-collapse {
@@ -738,7 +474,6 @@ We will only do the fixed background for desktop mode.
 }
 
 .section .section-subtitle {
-    color: #a1a1a1;
     font-size: 18px;
     font-style: italic;
 }
@@ -801,10 +536,6 @@ We will only do the fixed background for desktop mode.
 /*---------------------------------------------------------------------*/
 /*  6.1. SECTION - PROFILE
 /*---------------------------------------------------------------------*/
-
-#profile {
-    background-color: #0d0c0d;
-}
 
 @media (min-width: 992px) {
     #profile .section-wrapper > .section-content {
@@ -944,7 +675,6 @@ We will only do the fixed background for desktop mode.
     width: 100%;
     height: 55px;
     line-height: 55px;
-    background-color: #2e2e2e;
     font-weight: 700;
     text-align: center;
     letter-spacing: 2px;
@@ -958,7 +688,6 @@ We will only do the fixed background for desktop mode.
 #portfolio {
     position: relative;
     z-index: 5;
-    background-color: #171717;
 }
 
 #portfolio .section-wrapper > .section-content {
@@ -988,19 +717,10 @@ We will only do the fixed background for desktop mode.
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-
-    /** Make wrapper gray before **/
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.portfolio .item > .project-wrapper:hover:before {
-    /** Make wrapper opacity 100% for before **/
-    background-color: rgba(0, 0, 0, 0);
 }
 
 .portfolio .item > .project-wrapper:hover > .project-link {
@@ -1037,7 +757,6 @@ We will only do the fixed background for desktop mode.
     width: 48px;
     height: 48px;
     line-height: 48px;
-    color: #ffffff;
     font-size: 20px;
     text-align: center;
     border-radius: 50%;
@@ -1045,12 +764,10 @@ We will only do the fixed background for desktop mode.
 
 .portfolio .item > .project-wrapper > .project-link > a.zoom {
     left: 40px;
-    background-color: #2e2e2e;
 }
 
 .portfolio .item > .project-wrapper > .project-link > a.external-link {
     left: 0;
-    /*background-color: #c80a48;*/
 }
 
 .portfolio .item > .project-wrapper > img.small-thumnail {
@@ -1074,7 +791,7 @@ We will only do the fixed background for desktop mode.
 /*---------------------------------------------------------------------*/
 
 .mfp-bg {
-    background-color: #0d0c0d;
+    /*background-color: #0d0c0d;*/
 }
 
 button.mfp-arrow {
@@ -1171,10 +888,6 @@ button.mfp-arrow:active {
 /*  6.3. SECTION - SERVICES
 /*---------------------------------------------------------------------*/
 
-#services {
-    background-color: #0d0c0d;
-}
-
 @media (min-width: 768px) {
     .services {
         margin-top: 30px;
@@ -1259,21 +972,10 @@ button.mfp-arrow:active {
     }
 }
 
-@media (min-width: 768px) {
-    .services .item.dark-bg {
-        background-color: #080708;
-    }
-}
-
 
 /*---------------------------------------------------------------------*/
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
-
-#resume {
-    background-color: #171717;
-}
-
 #resume h3 {
     text-align: center;
 }
@@ -1337,7 +1039,6 @@ button.mfp-arrow:active {
     margin-right: auto;
     margin-left: auto;
     line-height: 40px;
-    /*background-color: #c80a48;*/
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
@@ -1360,7 +1061,6 @@ button.mfp-arrow:active {
     left: 150px;
     width: 40px;
     height: 40px;
-    background-color: #00a69a;
     border-radius: 4px;
 }
 
@@ -1390,7 +1090,6 @@ button.mfp-arrow:active {
     width: 40px;
     height: 40px;
     line-height: 38px;
-    color: #ffffff;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
@@ -1450,10 +1149,6 @@ button.mfp-arrow:active {
 /*  6.7. SECTION - SKILLS
 /*---------------------------------------------------------------------*/
 
-#skills {
-    background-color: #0d0c0d;
-}
-
 #skills .section-wrapper > .section-content {
     padding-bottom: 0px;
 }
@@ -1488,7 +1183,6 @@ button.mfp-arrow:active {
     padding: 6px;
     width: 120px;
     height: 120px;
-    background-color: #a1a1a1;
     border-radius: 50%;
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -1508,7 +1202,6 @@ button.mfp-arrow:active {
     content: "";
     width: 108px;
     height: 108px;
-    background-color: #3b3b3b;
     border-radius: 106px;
 }
 
@@ -1541,10 +1234,8 @@ button.mfp-arrow:active {
 /*---------------------------------------------------------------------*/
 
 #contact {
-    background-color: #0d0c0d;
+    /*background-color: #0d0c0d;*/
 }
-
-
 
 
 /*---------------------------------------------------------------------*/
@@ -1567,7 +1258,6 @@ button.mfp-arrow:active {
     display: block;
     position: absolute;
     z-index: 5;
-    color: #a1a1a1;
     font-size: 170px;
 }
 
@@ -1631,7 +1321,6 @@ button.mfp-arrow:active {
 /*---------------------------------------------------------------------*/
 
 footer.footer {
-    background-color: #171717;
     padding-top: 70px;
     padding-bottom: 50px;
 }
@@ -1646,11 +1335,9 @@ footer.footer .page-scroll > a {
     line-height: 48px;
     margin-top: -94px;
     margin-left: -24px;
-    color: #ffffff;
     font-size: 24px;
     text-align: center;
     border-radius: 4px;
-    box-shadow: 0 3px 0 #970837;
 }
 
 footer.footer ul.social-icons {
@@ -1672,8 +1359,6 @@ footer.footer ul.social-icons > li > .item {
     width: 48px;
     height: 48px;
     border-radius: 4px;
-    background-color: #2e2e2e;
-    box-shadow: 0 3px 0 #212121;
 }
 
 footer.footer ul.social-icons > li > .item > a {
@@ -1685,11 +1370,6 @@ footer.footer ul.social-icons > li > .item > a {
     height: 48px;
     line-height: 48px;
     font-size: 25px;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-footer.footer ul.social-icons > li > .item > a:hover {
-    color: rgba(255, 255, 255, 0.7);
 }
 
 footer.footer ul.social-icons > li > .item img {

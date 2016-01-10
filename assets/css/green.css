@@ -3,6 +3,7 @@
 /*-----------------------------------------------------------------------
 
 1. GLOBAL STYLES
+        1.1 GENERAL STYLES
         1.2 TEXT COLOR
         1.3 ANCHOR
 
@@ -11,17 +12,31 @@
         2.2. DIVIDER
         2.4. SELECT BOXES CUSTOM
 
-3. PRELOADER
+3. PRELOADER - jQuery jpreloader plugin
+
+4. HOME
+        4.1.  HERO Background Text
 
 5. NAVIGATION
 
 6. SECTION STYLES & COMPONENTS
+        6.1. SECTION - PROFILE
+        
+        6.1.3. PROFILE PICTURE
 
         6.2. SECTION - PORTFOLIO
+
+        6.2.1. MAGNIFIC POP UP CUSTOM
+
+        6.3. SECTION - SERVICES
 
         6.5. SECTION - RESUME
 
         6.7. SECTION - SKILLS
+
+        6.12. SECTION - CONTACT
+
+        6.12.2. CONTACT DETAILS
 
 7. MAP
 
@@ -30,9 +45,23 @@
 /*---------------------------------------------------------------------*/
 
 
+
+/*---------------------------------------------------------------------*/
+/*  1. GLOBAL STYLES
+/*  1.1 GENERAL STYLES
+/*---------------------------------------------------------------------*/
+body {
+    background-color: #0d0c0d;
+    color: #ffffff;
+}
+
 /*---------------------------------------------------------------------*/
 /*  1.2. TEXT COLOR
 /*---------------------------------------------------------------------*/
+.text-grey {
+    color: #a1a1a1;
+}
+
 .colored-text {
   color: #00a69a;
 }
@@ -57,6 +86,7 @@ a:focus {
 /*---------------------------------------------------------------------*/
 .btn.btn-custom {
   background-color: #00a69a;
+  color: #ffffff;
   box-shadow: 0 3px 0 #00736b;
 }
 
@@ -82,27 +112,80 @@ span.divider {
 
 
 /*---------------------------------------------------------------------*/
-/*  3. PRELOADER
+/*  3. PRELOADER - jQuery jpreloader plugin
 /*---------------------------------------------------------------------*/
+#jpreOverlay {
+    background-color: #0d0c0d;
+}
+
 #jpreBar {
   background-color: #00a69a;
 }
 
+/*---------------------------------------------------------------------*/
+/*  4. HOME
+/*---------------------------------------------------------------------*/
+header.hero .bg-img-table-cell .hero-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+header.hero .bg-img-table-cell .hero-text h1.small {
+    color: #ffffff;
+}
 
 /*---------------------------------------------------------------------*/
 /*  5. NAVIGATION
 /*---------------------------------------------------------------------*/
+.navbar.navbar-fixed-top {
+    background-color: #171717;
+    border-bottom: 1px solid #282428;
+}
+
+.navbar.navbar-fixed-top .navbar-container {
+    background-color: #171717;
+}
+
+.navbar.navbar-fixed-top .navbar-brand {
+    color: #a1a1a1;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li > a {
+    color: #a1a1a1;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li > a:focus,
+.navbar.navbar-fixed-top .navbar-nav > li > a:hover {
+    background-color: #171717;
+    color: #ffffff;
+}
+
 .navbar.navbar-fixed-top .navbar-nav > li.active > a {
+  background-color: #171717;
   color: #00a69a;
   border-bottom: 1px solid #00a69a;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.active > a:hover {
+  background-color: #171717;
   color: #00a69a;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.active > a:focus {
+  background-color: #171717;
   color: #00a69a;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown > a:hover {
+    color: #ffffff;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a {
+    background-color: #171717;
+    color: #ffffff;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a:focus {
+    background-color: #171717;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.active > a,
@@ -115,33 +198,127 @@ span.divider {
   color: #00a69a;
 }
 
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu {
+    background-color: #171717;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a {
+    color: #a1a1a1;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:hover {
+    background-color: #171717;
+    color: #ffffff;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:focus {
+    background-color: #171717;
+    color: #a1a1a1;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
+    background-color: #171717;
+}
+
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
   color: #00a69a;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:hover,
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:focus {
-  color: #00a69a;
+    background-color: #171717;
+    color: #00a69a;
 }
 
 .navbar.navbar-fixed-top .navbar-toggle {
   background-color: #00a69a;
 }
 
+.navbar.navbar-fixed-top .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/*---------------------------------------------------------------------*/
+/* 6. SECTION
+/*---------------------------------------------------------------------*/
+.section .section-subtitle {
+    color: #a1a1a1;
+}
+
+/*---------------------------------------------------------------------*/
+/*  6.1. SECTION - PROFILE
+/*---------------------------------------------------------------------*/
+#profile {
+    background-color: #0d0c0d;
+}
+/*---------------------------------------------------------------------*/
+/*  6.1.3. PROFILE PICTURE
+/*---------------------------------------------------------------------*/
+#profile .pp-wrapper .profile-picture.style-two .title {
+    background-color: #2e2e2e;
+}
 
 /*---------------------------------------------------------------------*/
 /*  6.2. SECTION - PORTFOLIO
 /*---------------------------------------------------------------------*/
+#portfolio {
+    background-color: #171717;
+}
+
+.portfolio .item > .project-wrapper:before {
+    background-color: rgba(0, 0, 0, 0);
+    /** Make wrapper gray before **/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio .item > .project-wrapper:hover:before {
+    /** Make wrapper opacity 100% for before **/
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.portfolio .item > .project-wrapper > .project-link > a {
+    color: #ffffff;
+}
+
 .portfolio .item > .project-wrapper > .project-link > a.external-link {
   background-color: #00a69a;
 }
 
+.portfolio .item > .project-wrapper > .project-link > a.zoom {
+    background-color: #2e2e2e;
+}
 
+/*---------------------------------------------------------------------*/
+/*  6.2.1. MAGNIFIC POP UP CUSTOM
+/*---------------------------------------------------------------------*/
+.mfp-bg {
+    background-color: #0d0c0d;
+}
+
+/*---------------------------------------------------------------------*/
+/*  6.3. SECTION - SERVICES
+/*---------------------------------------------------------------------*/
+#services {
+    background-color: #0d0c0d;
+}
+
+@media (min-width: 768px) {
+    .services .item.dark-bg {
+        background-color: #080708;
+    }
+}
 /*---------------------------------------------------------------------*/
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
+#resume {
+    background-color: #171717;
+}
 .panel-group.resume .resume-item .resume-year {
   background-color: #2e2e2e;
+}
+
+.panel-group.resume .resume-item .resume-btn {
+    background-color: #00a69a;
 }
 
 .panel-group.resume .resume-item .resume-btn > a:hover {
@@ -152,14 +329,44 @@ span.divider {
     background-color: #008d82;
 }
 
+.panel-group.resume .resume-item .resume-btn > a:before {
+    color: #ffffff;
+}
 
 /*---------------------------------------------------------------------*/
 /*  6.7. SECTION - SKILLS
 /*---------------------------------------------------------------------*/
+#skills {
+    background-color: #0d0c0d;
+}
+
 .circle-chart .item > .percent {
   background-color: #00a69a;
 }
 
+.circle-chart .item > .circle {
+    background-color: #a1a1a1;
+}
+
+.circle-chart .item > .circle > .item-progress:before {
+    background-color: #3b3b3b;
+}
+
+/*---------------------------------------------------------------------*/
+/*  6.12. SECTION - CONTACT
+/*---------------------------------------------------------------------*/
+
+#contact {
+    background-color: #0d0c0d;
+}
+
+/*---------------------------------------------------------------------*/
+/*  6.12.2. CONTACT DETAILS
+/*---------------------------------------------------------------------*/
+
+#contact .contact-details .speech-bubble > i {
+    color: #a1a1a1;
+}
 
 /*---------------------------------------------------------------------*/
 /*  7. MAP
@@ -173,7 +380,26 @@ span.divider {
 /*---------------------------------------------------------------------*/
 /*  8. FOOTER
 /*---------------------------------------------------------------------*/
+footer.footer {
+    background-color: #171717;
+}
+
 footer.footer .page-scroll > a {
-  background-color: #00a69a;
-  box-shadow: 0 3px 0 #00736b;
+    background-color: #00a69a;
+    box-shadow: 0 3px 0 #00736b;
+    color: #ffffff;
+}
+
+
+footer.footer ul.social-icons > li > .item {
+    background-color: #2e2e2e;
+    box-shadow: 0 3px 0 #212121;
+}
+
+footer.footer ul.social-icons > li > .item > a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer.footer ul.social-icons > li > .item > a:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
