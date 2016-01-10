@@ -426,12 +426,6 @@ We will only do the fixed background for desktop mode.
     /* default 340px */
 }
 
-@media (max-width: 991px) {
-    .navbar.navbar-fixed-top .navbar-collapse {
-        border-bottom: 1px solid #282428;
-    }
-}
-
 
 /*---------------------------------------------------------------------*/
 /*  5.1. NAVIGATION - CENTER MENU
@@ -912,7 +906,6 @@ button.mfp-arrow:active {
         right: 0;
         width: 1px;
         height: 100%;
-        border-right: 1px solid #3b3b3b;
     }
 }
 
@@ -962,7 +955,6 @@ button.mfp-arrow:active {
         left: 0;
         width: 100%;
         height: 1px;
-        border-bottom: 1px dashed #3b3b3b;
     }
 }
 
@@ -1018,7 +1010,6 @@ button.mfp-arrow:active {
         height: calc(100% + 20px);
         top: 0;
         left: 170px;
-        border-left: 1px dashed #484848;
     }
 }
 
@@ -1103,7 +1094,6 @@ button.mfp-arrow:active {
     padding: 10px;
     width: 100%;
     background: transparent;
-    border: 1px solid #6e6e6e;
     border-radius: 0px;
 }
 
@@ -1218,7 +1208,6 @@ button.mfp-arrow:active {
     font-weight: 700;
     text-align: center;
     border-radius: 4px;
-    box-shadow: 3px 3px 10px #0d0c0d;
 }
 
 .circle-chart .item > h4 {
@@ -1301,7 +1290,6 @@ button.mfp-arrow:active {
     width: 100%;
     height: 55px;
     text-align: center;
-    border-bottom: 2px solid #970837;
     opacity: 0.8;
 }
 
