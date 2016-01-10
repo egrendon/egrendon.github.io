@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 	];
 
 	var destination_app_file = '../dist/app.js';
-	var cssFiles = ['../../assets/css/main.css', '../../assets/css/green.css'];
+	var cssFiles = ['../../assets/css/main.css', '../../assets/css/color.css'];
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
