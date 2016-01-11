@@ -39,8 +39,6 @@ module.exports = function(grunt) {
 	];
 
 	var app_js_file_path = '../dist/app.js';
-	var app_js_min_file_path = '../dist/app.min.js';
-	var app_js_map_file_path = '../dist/app.min.js.map';
 	var cssFiles = ['../../assets/css/main.css', '../../assets/css/color.css'];
 	var scssFiles = {
 		'../dist/css/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
@@ -77,7 +75,7 @@ module.exports = function(grunt) {
 			},
 			app: {
 				files: {
-					app_js_min_file_path: [app_js_file_path]
+					'../dist/app.min.js': [app_js_file_path]
 				}
 			}
 		},
@@ -117,19 +115,16 @@ module.exports = function(grunt) {
 		},
 		// replace 'app' refrences with unique guid
 		replace: {
-			view: {
+			view_js: {
 				src: ['index.html'],
 				overwrite: true,
 				replacements: [{
 					from: '<!-- TARGET -->',
 					to: '<script src="app/' + guid + '.js"></script>'
-				}, {
-					from: '<!-- CSSTARGET -->',
-					to: '<link rel="stylesheet" href="assets/css/' + guid + '.min.css">'
 				}]
 			},
-			mapfile: {
-				src: ['../../app/app.min.js.map'],
+			mapfile_js: {
+				src: ['../dist/app.min.js.map'],
 				overwrite: true,
 				replacements: [{
 					from: '"file":"app.min.js"',
@@ -139,12 +134,36 @@ module.exports = function(grunt) {
 					to: '"sources":["' + guid + '.js"]'
 				}]
 			},
-			mapurl: {
-				src: ['../../app/app.min.js'],
+			mapurl_js: {
+				src: ['../dist/app.min.js'],
 				overwrite: true,
 				replacements: [{
 					from: '//# sourceMappingURL=app.min.js.map',
 					to: '//# sourceMappingURL=' + guid + '.min.js.map'
+				}]
+			},
+			view_css: {
+				src: ['index.html'],
+				overwrite: true,
+				replacements: [{
+					from: '<!-- CSSTARGET -->',
+					to: '<link rel="stylesheet" href="assets/css/' + guid + '.min.css">'
+				}]
+			},
+			mapfile_css: {
+				src: ['../dist/css/main.min.css.map'],
+				overwrite: true,
+				replacements: [{
+					from: '"sources":["../../assets/css/main.css","../../assets/css/color.css"]',
+					to: '"sources":["' + guid + '.min.css"]'
+				}]
+			},
+			mapurl_css: {
+				src: ['../dist/css/main.min.css'],
+				overwrite: true,
+				replacements: [{
+					from: '/*# sourceMappingURL=main.min.css.map',
+					to: '/*# sourceMappingURL=' + guid + '.min.css.map'
 				}]
 			}
 		},
@@ -155,11 +174,11 @@ module.exports = function(grunt) {
 				dest: '../dist/' + guid + '.js'
 			},
 			app_js_min: {
-				src: app_js_min_file_path,
+				src: '../dist/app.min.js',
 				dest: '../dist/' + guid + '.min.js'
 			},
 			app_js_map: {
-				src: app_js_map_file_path,
+				src: '../dist/app.min.js.map',
 				dest: '../dist/' + guid + '.min.js.map'
 			},
 			css_min: {
@@ -191,8 +210,8 @@ module.exports = function(grunt) {
 	//
 	// Targets
 	//
-	grunt.registerTask('buildcss', ['sass', 'cssmin', 'rename:css_min']);
-	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
+	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min']);
+	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
 	grunt.registerTask('default', ['build']);
 
