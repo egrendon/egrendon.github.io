@@ -85,7 +85,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-mocha');
 
-
+	//
+	// Targets
+	//
 	grunt.registerTask('testClient', ['concat:target', 'concat:tests', 'mocha:local']);
 	grunt.registerTask('testJenkins', ['concat:target', 'concat:tests', 'mocha:jenkins']);
 	grunt.registerTask('default', ['testClient']);

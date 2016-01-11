@@ -40,6 +40,9 @@ module.exports = function(grunt) {
 
 	var destination_app_file = '../dist/app.js';
 	var cssFiles = ['../../assets/css/main.css', '../../assets/css/color.css'];
+	var scssFiles = {
+		'../dist/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
+	};
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -85,6 +88,16 @@ module.exports = function(grunt) {
 				files: {
 					'../dist/app.min.js': [destination_app_file]
 				}
+			}
+		},
+		// convert scass to css file
+		sass: {
+			options: {
+				//sourceMap: true,
+        		sourceComments: true
+			},
+			dist: {
+				files: scssFiles // Dictionary of files
 			}
 		},
 		// minify css
@@ -154,6 +167,7 @@ module.exports = function(grunt) {
 			},
 			js: ["../dist/app.templates.js"]
 		},
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -164,8 +178,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-angular-templates');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-sass');
 
 
+	//
+	// Targets
+	//
+	grunt.registerTask('buildcss', ['sass', ]);
 	grunt.registerTask('buildjs', ['cssmin', 'ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename', 'clean']);
 	grunt.registerTask('default', ['buildjs']);
 
