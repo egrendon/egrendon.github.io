@@ -184,8 +184,9 @@ module.exports = function(grunt) {
 	//
 	// Targets
 	//
-	grunt.registerTask('buildcss', ['sass', ]);
-	grunt.registerTask('buildjs', ['cssmin', 'ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename', 'clean']);
+	grunt.registerTask('buildcss', ['sass', 'cssmin']);
+	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename', 'clean']);
+	grunt.registerTask('build', ['buildjs', 'buildcss']);
 	grunt.registerTask('default', ['buildjs']);
 
 };
