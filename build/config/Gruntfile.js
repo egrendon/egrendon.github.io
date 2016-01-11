@@ -150,19 +150,19 @@ module.exports = function(grunt) {
 		},
 		// rename 'app' file names with unique guid
 		rename: {
-			app_JS: {
+			app_js: {
 				src: app_js_file_path,
 				dest: '../dist/' + guid + '.js'
 			},
-			app_JS_min: {
+			app_js_min: {
 				src: app_js_min_file_path,
 				dest: '../dist/' + guid + '.min.js'
 			},
-			app_JS_map: {
+			app_js_map: {
 				src: app_js_map_file_path,
 				dest: '../dist/' + guid + '.min.js.map'
 			},
-			css: {
+			css_min: {
 				src: '../dist/assets/css/main.min.css',
 				dest: '../dist/assets/css/' + guid + '.min.css'
 			}
@@ -191,8 +191,8 @@ module.exports = function(grunt) {
 	//
 	// Targets
 	//
-	grunt.registerTask('buildcss', ['sass', 'cssmin']);
-	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename', 'clean']);
+	grunt.registerTask('buildcss', ['sass', 'cssmin', 'rename:css_min']);
+	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
 	grunt.registerTask('default', ['build']);
 
