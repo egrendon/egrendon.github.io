@@ -38,7 +38,9 @@ module.exports = function(grunt) {
 		'../../app/featureSets/home/home.service.js',
 	];
 
-	var destination_app_file = '../dist/app.js';
+	var app_js_file_path = '../dist/app.js';
+	var app_js_min_file_path = '../dist/app.min.js';
+	var app_js_map_file_path = '../dist/app.min.js.map';
 	var cssFiles = ['../../assets/css/main.css', '../../assets/css/color.css'];
 	var scssFiles = {
 		'../dist/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
@@ -52,7 +54,7 @@ module.exports = function(grunt) {
 			// all js files for jenkins build and deploy
 			buildjs: {
 				src: appFiles,
-				dest: destination_app_file
+				dest: app_js_file_path
 			}
 		},
 		// register angular templates in the $templateCache
@@ -75,7 +77,7 @@ module.exports = function(grunt) {
 			},
 			app: {
 				files: {
-					'../dist/app.min.js': [destination_app_file]
+					app_js_min_file_path: [app_js_file_path]
 				}
 			}
 		},
@@ -86,7 +88,7 @@ module.exports = function(grunt) {
 			},
 			my_target: {
 				files: {
-					'../dist/app.min.js': [destination_app_file]
+					'../dist/app.min.js': [app_js_file_path]
 				}
 			}
 		},
@@ -94,7 +96,7 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				//sourceMap: true,
-        		sourceComments: true
+				sourceComments: true
 			},
 			dist: {
 				files: scssFiles // Dictionary of files
@@ -102,6 +104,11 @@ module.exports = function(grunt) {
 		},
 		// minify css
 		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: -1,
+				sourceMap: true
+			},
 			target: {
 				files: {
 					'../dist/assets/css/main.min.css': cssFiles
@@ -143,16 +150,16 @@ module.exports = function(grunt) {
 		},
 		// rename 'app' file names with unique guid
 		rename: {
-			app: {
-				src: destination_app_file,
+			app_JS: {
+				src: app_js_file_path,
 				dest: '../dist/' + guid + '.js'
 			},
-			appmin: {
-				src: '../dist/app.min.js',
+			app_JS_min: {
+				src: app_js_min_file_path,
 				dest: '../dist/' + guid + '.min.js'
 			},
-			map: {
-				src: '../dist/app.min.js.map',
+			app_JS_map: {
+				src: app_js_map_file_path,
 				dest: '../dist/' + guid + '.min.js.map'
 			},
 			css: {
@@ -186,7 +193,7 @@ module.exports = function(grunt) {
 	//
 	grunt.registerTask('buildcss', ['sass', 'cssmin']);
 	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace', 'rename', 'clean']);
-	grunt.registerTask('build', ['buildjs', 'buildcss']);
-	grunt.registerTask('default', ['buildjs']);
+	grunt.registerTask('build', ['buildcss', 'buildjs']);
+	grunt.registerTask('default', ['build']);
 
 };
