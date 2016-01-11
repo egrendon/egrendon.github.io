@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 	var app_js_map_file_path = '../dist/app.min.js.map';
 	var cssFiles = ['../../assets/css/main.css', '../../assets/css/color.css'];
 	var scssFiles = {
-		'../dist/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
+		'../dist/css/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
 	};
 
 	grunt.initConfig({
@@ -111,7 +111,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				files: {
-					'../dist/assets/css/main.min.css': cssFiles
+					'../dist/css/main.min.css': cssFiles
 				}
 			}
 		},
@@ -163,8 +163,8 @@ module.exports = function(grunt) {
 				dest: '../dist/' + guid + '.min.js.map'
 			},
 			css_min: {
-				src: '../dist/assets/css/main.min.css',
-				dest: '../dist/assets/css/' + guid + '.min.css'
+				src: '../dist/css/main.min.css',
+				dest: '../dist/css/' + guid + '.min.css'
 			}
 		},
 		// remove angular templates file after concatenation
