@@ -73,10 +73,7 @@ body {
 
 a {
     outline: none;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    @include transition(all 0.2s ease-in-out);
 }
 
 a:hover,
@@ -337,10 +334,7 @@ We will only do the fixed background for desktop mode.
     display: table-cell;
     vertical-align: middle;
     padding: 80px 30px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    @include transition(all 0.2s ease-in-out);
 }
 
 /*---------------------------------------------------------------------*/
@@ -711,10 +705,7 @@ We will only do the fixed background for desktop mode.
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    @include transition(all 0.2s ease-in-out);
 }
 
 .portfolio .item > .project-wrapper:hover > .project-link {
@@ -849,9 +840,7 @@ button.mfp-arrow:active {
 
 .mfp-fade.mfp-bg {
     opacity: 0;
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
+    @include transition(all 0.15s ease-in-out);
 }
 
 .mfp-fade.mfp-bg.mfp-ready {
@@ -864,9 +853,7 @@ button.mfp-arrow:active {
 
 .mfp-fade.mfp-wrap .mfp-content {
     opacity: 0;
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
+    @include transition(all 0.15s ease-in-out);
 }
 
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
@@ -1371,10 +1358,7 @@ footer.footer ul.social-icons > li > .item img {
     margin: 0 auto;
     margin-top: 12px;
     opacity: 0.5;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    @include transition(all 0.2s ease-in-out);
 }
 
 footer.footer .copyright {
