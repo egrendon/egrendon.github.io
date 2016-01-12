@@ -9,7 +9,6 @@
 
 2. COMPONENTS
         2.1. BUTTON
-        2.2. DIVIDER
         2.4. SELECT BOXES CUSTOM
 
 3. PRELOADER - jQuery jpreloader plugin
@@ -52,7 +51,7 @@
 /*---------------------------------------------------------------------*/
 body {
     background-color: #0d0c0d;
-    color: #ffffff;
+    color: $white;
 }
 
 /*---------------------------------------------------------------------*/
@@ -63,7 +62,7 @@ body {
 }
 
 .colored-text {
-  color: #00a69a;
+  color: $persian-green;
 }
 
 
@@ -71,12 +70,12 @@ body {
 /*  1.3. ANCHOR
 /*---------------------------------------------------------------------*/
 a {
-  color: #00a69a;
+  color: $persian-green;
 }
 
 a:hover,
 a:focus {
-  color: #00a69a;
+  color: $persian-green;
 }
 
 
@@ -85,8 +84,8 @@ a:focus {
 /*  2.1. BUTTON
 /*---------------------------------------------------------------------*/
 .btn.btn-custom {
-  background-color: #00a69a;
-  color: #ffffff;
+  background-color: $persian-green;
+  color: $white;
   box-shadow: 0 3px 0 #00736b;
 }
 
@@ -95,19 +94,12 @@ a:focus {
 }
 
 
-/*---------------------------------------------------------------------*/
-/*  2.2. DIVIDER
-/*---------------------------------------------------------------------*/
-span.divider {
-  background-color: #00a69a;
-}
-
 
 /*---------------------------------------------------------------------*/
 /*  2.4. SELECT BOXES CUSTOM
 /*---------------------------------------------------------------------*/
 .select2-dropdown-custom .select2-results > .select2-results__options > .select2-results__option[aria-selected=true] {
-  background-color: #00a69a;
+  background-color: $persian-green;
 }
 
 
@@ -119,7 +111,7 @@ span.divider {
 }
 
 #jpreBar {
-  background-color: #00a69a;
+  background-color: $persian-green;
 }
 
 /*---------------------------------------------------------------------*/
@@ -130,19 +122,19 @@ header.hero .bg-img-table-cell .hero-text {
 }
 
 header.hero .bg-img-table-cell .hero-text h1.small {
-    color: #ffffff;
+    color: $white;
 }
 
 /*---------------------------------------------------------------------*/
 /*  5. NAVIGATION
 /*---------------------------------------------------------------------*/
 .navbar.navbar-fixed-top {
-    background-color: #171717;
-    border-bottom: 1px solid #282428;
+    background-color: $cod-gray;
+    border-bottom: 1px solid $thunder;
 }
 
 .navbar.navbar-fixed-top .navbar-container {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 .navbar.navbar-fixed-top .navbar-brand {
@@ -155,51 +147,51 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 
 .navbar.navbar-fixed-top .navbar-nav > li > a:focus,
 .navbar.navbar-fixed-top .navbar-nav > li > a:hover {
-    background-color: #171717;
-    color: #ffffff;
+    background-color: $cod-gray;
+    color: $white;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.active > a {
-  background-color: #171717;
-  color: #00a69a;
-  border-bottom: 1px solid #00a69a;
+  background-color: $cod-gray;
+  color: $persian-green;
+  border-bottom: 1px solid $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.active > a:hover {
-  background-color: #171717;
-  color: #00a69a;
+  background-color: $cod-gray;
+  color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.active > a:focus {
-  background-color: #171717;
-  color: #00a69a;
+  background-color: $cod-gray;
+  color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown > a:hover {
-    color: #ffffff;
+    color: $white;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a {
-    background-color: #171717;
-    color: #ffffff;
+    background-color: $cod-gray;
+    color: $white;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a:focus {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.active > a,
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.active.open > a {
-  color: #00a69a;
+  color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.active > a:hover,
 .navbar.navbar-fixed-top .navbar-nav > li.dropdown.active.open > a:hover {
-  color: #00a69a;
+  color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a {
@@ -207,31 +199,31 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:hover {
-    background-color: #171717;
-    color: #ffffff;
+    background-color: $cod-gray;
+    color: $white;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:focus {
-    background-color: #171717;
+    background-color: $cod-gray;
     color: #a1a1a1;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
-  color: #00a69a;
+  color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:hover,
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:focus {
-    background-color: #171717;
-    color: #00a69a;
+    background-color: $cod-gray;
+    color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-toggle {
-  background-color: #00a69a;
+  background-color: $persian-green;
 }
 
 .navbar.navbar-fixed-top .navbar-toggle .icon-bar {
@@ -240,7 +232,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 
 @media (max-width: 991px) {
     .navbar.navbar-fixed-top .navbar-collapse {
-        border-bottom: 1px solid #282428;
+        border-bottom: 1px solid $thunder;
     }
 }
 
@@ -270,7 +262,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*  6.2. SECTION - PORTFOLIO
 /*---------------------------------------------------------------------*/
 #portfolio {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 .portfolio .item > .project-wrapper:before {
@@ -285,11 +277,11 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .portfolio .item > .project-wrapper > .project-link > a {
-    color: #ffffff;
+    color: $white;
 }
 
 .portfolio .item > .project-wrapper > .project-link > a.external-link {
-  background-color: #00a69a;
+  background-color: $persian-green;
 }
 
 .portfolio .item > .project-wrapper > .project-link > a.zoom {
@@ -331,7 +323,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
 #resume {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 @media (min-width: 768px) {
@@ -349,11 +341,11 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .panel-group.resume .resume-item .resume-btn {
-    background-color: #00a69a;
+    background-color: $persian-green;
 }
 
 .panel-group.resume .resume-item .resume-btn > a:hover {
-    background-color: #00a69a;
+    background-color: $persian-green;
 }
 
 .panel-group.resume .resume-item .resume-btn > a:hover {
@@ -361,7 +353,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .panel-group.resume .resume-item .resume-btn > a:before {
-    color: #ffffff;
+    color: $white;
 }
 
 /*---------------------------------------------------------------------*/
@@ -372,7 +364,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .circle-chart .item > .percent {
-  background-color: #00a69a;
+  background-color: $persian-green;
 }
 
 .circle-chart .item > .circle {
@@ -407,7 +399,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*  7. MAP
 /*---------------------------------------------------------------------*/
 #map > .address {
-  background-color: #00a69a;
+  background-color: $persian-green;
   border-bottom: 2px solid #00736b;
 }
 
@@ -415,13 +407,13 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*  8. FOOTER
 /*---------------------------------------------------------------------*/
 footer.footer {
-    background-color: #171717;
+    background-color: $cod-gray;
 }
 
 footer.footer .page-scroll > a {
-    background-color: #00a69a;
+    background-color: $persian-green;
     box-shadow: 0 3px 0 #00736b;
-    color: #ffffff;
+    color: $white;
 }
 
 

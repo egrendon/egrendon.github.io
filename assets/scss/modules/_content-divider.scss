@@ -1,0 +1,39 @@
+
+
+/*---------------------------------------------------------------------*/
+/*  A CONTENT DIVIDER
+/*---------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------*/
+/*  2.2. DIVIDER
+/*---------------------------------------------------------------------*/
+.divider {
+  background-color: $persian-green;
+}
+
+.divider {
+    display: block;
+    margin: 35px 0px;
+    width: 150px;
+    height: 2px;
+}
+
+.divider.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media (max-width: 767px) {
+    #profile .profile-text .divider {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+#contact .contact-details span.divider {
+    margin-bottom: 20px;
+    width: 60px;
+    height: 4px;
+}
