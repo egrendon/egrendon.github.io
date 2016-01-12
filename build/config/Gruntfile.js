@@ -47,6 +47,13 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		// watcher to automatically build during dev
+		watch: {
+			js: {
+				files: ['../../**/*.js', '../specs/**/*.js', '../../**/*.scss' ],
+				tasks: ['build']
+			}
+		},
 		// concatenate files into bundles
 		concat: {
 			// all js files for jenkins build and deploy
@@ -196,6 +203,7 @@ module.exports = function(grunt) {
 
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-text-replace');
