@@ -108,7 +108,7 @@ h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 3px;
+    @include roundcorners(4px);
 }
 
 .btn.btn-custom > i {
@@ -128,7 +128,7 @@ h6 {
     height: 48px;
     line-height: 46px;
     padding: 0;
-    border-radius: 50%;
+    @include roundcorners(50%);
     box-shadow: none;
 }
 
@@ -178,10 +178,10 @@ span.divider.center {
 }
 
 #jpreBar {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    @include roundcornerTL(20px);
+    @include roundcornerTR(20px);
+    @include roundcornerBL(20px);
+    @include roundcornerBR(20px);
 }
 
 
@@ -410,7 +410,7 @@ We will only do the fixed background for desktop mode.
 }
 
 .navbar.navbar-fixed-top .navbar-toggle {
-    border-radius: 3px;
+    @include roundcorners(4px);
     margin-top: 18px;
 }
 
@@ -1020,7 +1020,7 @@ button.mfp-arrow:active {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 4px;
+    @include roundcorners(4px);
 }
 
 @media (min-width: 568px) {
@@ -1039,7 +1039,7 @@ button.mfp-arrow:active {
     left: 150px;
     width: 40px;
     height: 40px;
-    border-radius: 4px;
+    @include roundcorners(4px);
 }
 
 @media (max-width: 767px) {
@@ -1081,7 +1081,7 @@ button.mfp-arrow:active {
     padding: 10px;
     width: 100%;
     background: transparent;
-    border-radius: 0px;
+    @include roundcorners(0px);
 }
 
 @media (min-width: 568px) {
@@ -1179,7 +1179,7 @@ button.mfp-arrow:active {
     content: "";
     width: 108px;
     height: 108px;
-    border-radius: 106px;
+    @include roundcorners(106px);
 }
 
 .circle-chart .item > .percent {
@@ -1194,7 +1194,7 @@ button.mfp-arrow:active {
     font-size: 14px;
     font-weight: 700;
     text-align: center;
-    border-radius: 4px;
+    @include roundcorners(4px);
 }
 
 .circle-chart .item > h4 {
@@ -1319,7 +1319,7 @@ footer.footer .page-scroll > a {
     margin-left: -24px;
     font-size: 24px;
     text-align: center;
-    border-radius: 4px;
+    @include roundcorners(4px);
 }
 
 footer.footer ul.social-icons {
@@ -1340,7 +1340,7 @@ footer.footer ul.social-icons > li > .item {
     position: relative;
     width: 48px;
     height: 48px;
-    border-radius: 4px;
+    @include roundcorners(4px);
 }
 
 footer.footer ul.social-icons > li > .item > a {
