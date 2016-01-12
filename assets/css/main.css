@@ -1243,6 +1243,13 @@ button.mfp-arrow:active {
     margin: auto;
 }
 
+#contact .contact-details .speech-bubble > a {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    font-size: 170px;
+}
+
 #contact .contact-details .speech-bubble > i {
     display: block;
     position: absolute;
