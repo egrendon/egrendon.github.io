@@ -1,0 +1,12 @@
+
+/* Cross browser opacity
+
+This mixin ensures cross browser opacity all the way down to Internet Explorer 5.
+ Though if you have to optomize for IE5, you have a lot bigger problems than opacity, 
+ godspeed my friend. */
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
