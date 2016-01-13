@@ -50,7 +50,7 @@
 /*  1.1 GENERAL STYLES
 /*---------------------------------------------------------------------*/
 body {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
     color: $white;
 }
 
@@ -58,7 +58,7 @@ body {
 /*  1.2. TEXT COLOR
 /*---------------------------------------------------------------------*/
 .text-grey {
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 .colored-text {
@@ -86,11 +86,11 @@ a:focus {
 .btn.btn-custom {
   background-color: $persian-green;
   color: $white;
-  box-shadow: 0 3px 0 #00736b;
+  box-shadow: 0 3px 0 darken($pine-green, 1.5%);
 }
 
 .btn.btn-custom:hover {
-  background-color: #008d82;
+  background-color: $teal;
 }
 
 
@@ -98,7 +98,9 @@ a:focus {
 /*---------------------------------------------------------------------*/
 /*  2.4. SELECT BOXES CUSTOM
 /*---------------------------------------------------------------------*/
-.select2-dropdown-custom .select2-results > .select2-results__options > .select2-results__option[aria-selected=true] {
+.select2-dropdown-custom .select2-results > 
+.select2-results__options > 
+.select2-results__option[aria-selected=true] {
   background-color: $persian-green;
 }
 
@@ -107,7 +109,7 @@ a:focus {
 /*  3. PRELOADER - jQuery jpreloader plugin
 /*---------------------------------------------------------------------*/
 #jpreOverlay {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
 }
 
 #jpreBar {
@@ -118,7 +120,8 @@ a:focus {
 /*  4. HOME
 /*---------------------------------------------------------------------*/
 header.hero .bg-img-table-cell .hero-text {
-    color: rgba(255, 255, 255, 0.9);
+    /* color: darken($white, 1.5%); */
+    color: rgba($white, 0.7);
 }
 
 header.hero .bg-img-table-cell .hero-text h1.small {
@@ -138,11 +141,11 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .navbar.navbar-fixed-top .navbar-brand {
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li > a {
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 .navbar.navbar-fixed-top .navbar-nav > li > a:focus,
@@ -195,7 +198,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a {
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:hover {
@@ -205,7 +208,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:focus {
     background-color: $cod-gray;
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
@@ -227,7 +230,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .navbar.navbar-fixed-top .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: $white;
 }
 
 @media (max-width: 991px) {
@@ -242,20 +245,20 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /* 6. SECTION
 /*---------------------------------------------------------------------*/
 .section .section-subtitle {
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 /*---------------------------------------------------------------------*/
 /*  6.1. SECTION - PROFILE
 /*---------------------------------------------------------------------*/
 #profile {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
 }
 /*---------------------------------------------------------------------*/
 /*  6.1.3. PROFILE PICTURE
 /*---------------------------------------------------------------------*/
 #profile .pp-wrapper .profile-picture.style-two .title {
-    background-color: #2e2e2e;
+    background-color: $mine-shaft;
 }
 
 /*---------------------------------------------------------------------*/
@@ -265,15 +268,13 @@ header.hero .bg-img-table-cell .hero-text h1.small {
     background-color: $cod-gray;
 }
 
+/** Make wrapper gray before **/
 .portfolio .item > .project-wrapper:before {
-    background-color: rgba(0, 0, 0, 0);
-    /** Make wrapper gray before **/
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba($dove-gray, 0.7);
 }
-
+/** Make wrapper opacity 100% for before on hover **/
 .portfolio .item > .project-wrapper:hover:before {
-    /** Make wrapper opacity 100% for before **/
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba($dove-gray, 0);
 }
 
 .portfolio .item > .project-wrapper > .project-link > a {
@@ -285,38 +286,38 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .portfolio .item > .project-wrapper > .project-link > a.zoom {
-    background-color: #2e2e2e;
+    background-color: $mine-shaft;
 }
 
 /*---------------------------------------------------------------------*/
 /*  6.2.1. MAGNIFIC POP UP CUSTOM
 /*---------------------------------------------------------------------*/
 .mfp-bg {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
 }
 
 /*---------------------------------------------------------------------*/
 /*  6.3. SECTION - SERVICES
 /*---------------------------------------------------------------------*/
 #services {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
 }
 
 @media (min-width: 768px) {
     .services .item.dark-bg {
-        background-color: #080708;
+        background-color: darken($cod-gray, 2.5%);
     }
 }
 
 @media (min-width: 768px) {
     .services .item:after {
-        border-right: 1px solid #3b3b3b;
+        border-right: 1px solid darken($mine-shaft, 1.5%);
     }
 }
 
 @media (min-width: 768px) {
     .services .item.top:before {
-        border-bottom: 1px dashed #3b3b3b;
+        border-bottom: 1px dashed darken($mine-shaft, 1.5%);
     }
 }
 /*---------------------------------------------------------------------*/
@@ -328,16 +329,16 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 
 @media (min-width: 768px) {
     .panel-group.resume .resume-item:before {
-        border-left: 1px dashed #484848;
+        border-left: 1px dashed $tundora;
     }
 }
 
 .panel-group.resume .resume-item .panel {
-    border: 1px solid #6e6e6e;
+    border: 1px solid $dove-gray;
 }
 
 .panel-group.resume .resume-item .resume-year {
-  background-color: #2e2e2e;
+  background-color: $mine-shaft;
 }
 
 .panel-group.resume .resume-item .resume-btn {
@@ -349,7 +350,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .panel-group.resume .resume-item .resume-btn > a:hover {
-    background-color: #008d82;
+    background-color: $teal;
 }
 
 .panel-group.resume .resume-item .resume-btn > a:before {
@@ -360,7 +361,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*  6.7. SECTION - SKILLS
 /*---------------------------------------------------------------------*/
 #skills {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
 }
 
 .circle-chart .item > .percent {
@@ -368,15 +369,15 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .circle-chart .item > .circle {
-    background-color: #a1a1a1;
+    background-color: $silver-chalice;
 }
 
 .circle-chart .item > .circle > .item-progress:before {
-    background-color: #3b3b3b;
+    background-color: $mine-shaft;
 }
 
 .circle-chart .item > .percent {
-    box-shadow: 3px 3px 10px #0d0c0d;
+    box-shadow: 3px 3px 10px darken($cod-gray, 2.5%);
 }
 
 /*---------------------------------------------------------------------*/
@@ -384,7 +385,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*---------------------------------------------------------------------*/
 
 #contact {
-    background-color: #0d0c0d;
+    background-color: darken($cod-gray, 2.5%);
 }
 
 /*---------------------------------------------------------------------*/
@@ -392,7 +393,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*---------------------------------------------------------------------*/
 
 #contact .contact-details .speech-bubble > i {
-    color: #a1a1a1;
+    color: $silver-chalice;
 }
 
 /*---------------------------------------------------------------------*/
@@ -400,7 +401,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 /*---------------------------------------------------------------------*/
 #map > .address {
   background-color: $persian-green;
-  border-bottom: 2px solid #00736b;
+  border-bottom: 2px solid $pine-green;
 }
 
 /*---------------------------------------------------------------------*/
@@ -412,20 +413,20 @@ footer.footer {
 
 footer.footer .page-scroll > a {
     background-color: $persian-green;
-    box-shadow: 0 3px 0 #00736b;
+    box-shadow: 0 3px 0 $pine-green;
     color: $white;
 }
 
 
 footer.footer ul.social-icons > li > .item {
-    background-color: #2e2e2e;
-    box-shadow: 0 3px 0 #212121;
+    background-color: $mine-shaft;
+    box-shadow: 0 3px 0 darken($mine-shaft, 2.5%);
 }
 
 footer.footer ul.social-icons > li > .item > a {
-    color: rgba(255, 255, 255, 0.5);
+    color: darken($white, 50%);
 }
 
 footer.footer ul.social-icons > li > .item > a:hover {
-    color: rgba(255, 255, 255, 0.7);
+   color: darken($white, 20%);
 }
