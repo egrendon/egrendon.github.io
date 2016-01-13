@@ -2,11 +2,18 @@
 // SCSS MIXINS
 //----------------------------------*/
 
-@import 'mixins/_vendor.scss';
+@import 'mixins/_browserFixes.scss';
 @import 'mixins/_position.scss';
 @import 'mixins/_transition.scss';
 @import 'mixins/_roundcorners.scss';
 @import 'mixins/_opacity.scss';
+@import 'mixins/_typography.scss';
+@import 'mixins/_misc.scss';
+@import 'mixins/_center.scss';
+@import 'mixins/_shadows.scss';
+@import 'mixins/_gradient.scss';
+@import 'mixins/_position.scss';
+@import 'mixins/_images.scss';
 
 //----------------------------------*\
 // CONFIG MODULES
@@ -18,6 +25,9 @@
 @import 'modules/_normalize.scss';
 @import 'modules/_defaults.scss';
 @import 'modules/_content-divider.scss';
+@import 'modules/_links.scss';
+@import 'modules/_buttons.scss';
+
 
 //----------------------------------*\
 // PARTIALS
@@ -45,11 +55,9 @@
 @import 'modules/_print.scss';
 
 //----------------------------------*\
-// VENDOR
+// VENDOR 3rd Party Library Styles 
 //----------------------------------*/
-
-@import 'vendor/_external.scss';
-
+@import 'vendor/_jpreloader.scss';
 
 //----------------------------------*\
 // TEMP OLD FILES

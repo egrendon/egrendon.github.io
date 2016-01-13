@@ -1,0 +1,42 @@
+/// Mixin helper to output browser vendor-prefixed CSS
+/// @access private
+/// @author HugoGiraudel
+/// @param {String} $property - Unprefixed CSS property
+/// @param {*} $value - Raw CSS value
+/// @param {List} $prefixes [()] - List of prefixes to output
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+
+/* 
+Since the dawn of CSS, the box model has worked like this by default:
+
+width + padding + border = actual visible/rendered width of an element's box
+
+height + padding + border = actual visible/rendered height of an element's box
+
+This can be a little counter-intuitive, since the width and height you set for 
+an element both go out the window as soon as you start adding padding and borders 
+to the element. 
+*/
+/// Box-sizing helper
+/// @access public
+/// @param {String} $type - Either `border-box`, `padding-box` or `content-box`
+/// @example scss - Usage
+///   .foo {
+///     @include box-sizing(border-box);
+///   }
+/// @example css - Result
+///   .foo {
+///     -moz-box-sizing: border-box;
+///     box-sizing: border-box;
+///   }
+@mixin box-sizing($type) {
+    @include prefix(box-sizing, $type, 'moz');
+}
+

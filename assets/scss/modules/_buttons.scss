@@ -1,0 +1,126 @@
+
+
+/*---------------------------------------------------------------------*/
+/*  2. COMPONENTS
+/*  2.1. BUTTON
+/*---------------------------------------------------------------------*/
+.btn.btn-custom {
+  background-color: $persian-green;
+  color: $white;
+  box-shadow: 0 3px 0 darken($pine-green, 1.5%);
+}
+
+.btn.btn-custom:hover {
+  background-color: $teal;
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*  2. COMPONENTS
+/*  2.1. BUTTON
+/*---------------------------------------------------------------------*/
+
+.btn.btn-custom {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include roundcorners(4px);
+}
+
+.btn.btn-custom > i {
+    padding-right: 2px;
+}
+
+@media (max-width: 767px) {
+    .btn.btn-lg.btn-custom {
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.42857143;
+    }
+}
+
+.btn.btn-custom.btn-circle {
+    width: 48px;
+    height: 48px;
+    line-height: 46px;
+    padding: 0;
+    @include roundcorners(50%);
+    box-shadow: none;
+}
+
+.btn.btn-sm.btn-custom.btn-circle {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+}
+
+.btn.btn-lg.btn-custom.btn-circle {
+    width: 54px;
+    height: 54px;
+    line-height: 52px;
+}
+
+
+.panel-group.resume .resume-item .resume-btn {
+    background-color: $persian-green;
+}
+
+.panel-group.resume .resume-item .resume-btn > a:hover {
+    background-color: $persian-green;
+}
+
+.panel-group.resume .resume-item .resume-btn > a:hover {
+    background-color: $teal;
+}
+
+.panel-group.resume .resume-item .resume-btn > a:before {
+    color: $white;
+}
+
+
+.panel-group.resume .resume-item .resume-btn {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 150px;
+    width: 40px;
+    height: 40px;
+    @include roundcorners(4px);
+}
+
+@media (max-width: 767px) {
+    .panel-group.resume .resume-item .resume-btn {
+        display: none;
+    }
+}
+
+.panel-group.resume .resume-item .resume-btn > a {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.panel-group.resume .resume-item .resume-btn > a:before {
+    display: block;
+    position: absolute;
+    z-index: 15;
+    content: '-';
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.panel-group.resume .resume-item .resume-btn > a.collapsed:before {
+    content: '+';
+}

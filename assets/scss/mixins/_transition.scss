@@ -1,5 +1,32 @@
+/// Forces browsers to use hardware acceleration for transforms
+/// @access public
+/// @example scss - Usage
+///   .foo {
+///     @include ha;
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-transform: translate3d(0, 0, 0);
+///     -moz-transform: translate3d(0, 0, 0);
+///     transform: translate3d(0, 0, 0);
+///   }
+@mixin ha {
+    @include prefix(transform, translate3d(0, 0, 0), 'webkit' 'ms');
+}
 
 
+/// Automatically prefix transition
+/// @example scss - Usage
+///   .foo {
+///     @include transition(all 0.2s ease-in-out);
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-transition: all 0.2s ease-in-out;
+///     -moz-transition: all 0.2s ease-in-out;
+///     -o-transition: all 0.2s ease-in-out;
+/// 	transition: all 0.2s ease-in-out;
+///   }
 
 @mixin transition($args...) {
     -webkit-transition: $args;
@@ -10,8 +37,153 @@
 }
 
 
+/// Automatically prefix any transform
+/// @access public
+/// @param {String} $transformation - The transform to apply
+/// @example scss - Usage
+///   .foo {
+///     @include transform(translateX(10px));
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-transform: translateX(10px);
+///     -ms-transform: translateX(10px);
+///     transform: translateX(10px);
+///   }
+@mixin transform($transformation){
+  @include prefix(transform, $transformation, 'webkit' 'ms');
+}
 
-// -webkit-transition: all 0.2s ease-in-out;
-// -moz-transition: all 0.2s ease-in-out;
-// -o-transition: all 0.2s ease-in-out;
-// transition: all 0.2s ease-in-out;
+
+/// Generates a grow-then-shrink (or shrink-then-grow) animation using transform(scale).
+/// @access public
+/// @param {Number} $scale-change [1.1] - The amount to scale by.
+/// @param {List} $animation-properties - Animation properties to apply.
+/// @example scss - Usage
+///   .foo {
+///     @include scale(0.5, 3s ease infinite alternate);
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-animation: "scale-0-5" 3s ease infinite alternate;
+///     animation: "scale-0-5" 3s ease infinite alternate;
+///   }
+///  // -webkit- prefixed @keyframes are also generated
+///  @keyframes scale-0-5 {
+///    from, to {
+///      -webkit-transform: scale(1);
+///      -ms-transform: scale(1);
+///      transform: scale(1);
+///    }
+///    50% {
+///      -webkit-transform: scale(0.5);
+///      -ms-transform: scale(0.5);
+///      transform: scale(0.5);
+///    }
+///  }
+@mixin scale($scale-change:1.1, $animation-properties: 1s ease-in-out) {
+  $alias: 'scale-' + str-replace($scale-change + '', '.', '-');
+
+  @include keyframes($alias){
+    0%, 100% {
+      @include transform(scale(1));
+    }
+    50% {
+      @include transform(scale($scale-change));
+    }
+  }
+
+  @include prefix(animation, $alias $animation-properties, 'webkit');
+}
+
+
+/// Given two opacity values, animates an element between those opacity values.
+/// @access public
+/// @param {Number} $fade-from [0] - The beginning opacity value.
+/// @param {Number} $fade-to [1] - The final opacity value.
+/// @param {List} $animation-properties [1s ease] - The animation properties to apply.
+/// @example scss - Usage
+///   .foo {
+///     @include fade(.8, .2, 3s linear);
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-animation: fade-0-8-0-2 3s linear;
+///     animation: fade-0-8-0-2 3s linear;
+///   }
+/// // (the @keyframes are also generated with a -webkit- vendor prefix)
+///   @keyframes fade-0-8-0-2 {
+///     from {
+///       opacity: 0.8;
+///       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+///     }
+///     to {
+///       opacity: 0.2;
+///       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+///     }
+///   }
+@mixin fade($fade-from: 0, $fade-to: 1, $animation-properties: 1s ease) {
+    $alias: fade- + str-replace($fade-from + '', '.', '-') + '-' + str-replace($fade-to + '', '.', '-');
+    @include keyframes($alias){
+    from {
+      @include opacity($fade-from);
+    }
+    to {
+      @include opacity($fade-to);
+    }
+  }
+  @include prefix(animation, $alias $animation-properties, 'webkit');
+}
+
+
+/// Slide-in-from creates and calls an animation that slides an element on a given axis for a given amount of space. The offset is measured in the distance from the location the element would naturally fall in, were transforms not applied to it.
+/// @access public
+/// @param {String} $slide-axis [x] - The axis on which to slide; 'x' or 'y'.
+/// @param {Length} $slide-offset [-100px] - The offset from the natural element position from which to begin the animation.
+/// @param {List} $animation-properties [3s ease-out] - Any animation properties to be included.
+/// @example scss - Usage
+///   .foo {
+///     @include slide-in-from(y, -200px, 3s ease alternate infinite);
+///   }
+/// @example css - Result
+///   .foo {
+///     -webkit-animation: slide-in-y--200px 3s linear infinite alternate;
+///     animation: slide-in-y--200px 3s linear infinite alternate;
+///   }
+///
+/// // (the @keyframes are also generated with a -webkit- vendor prefix)
+///   @keyframes slide-in-y--200px {
+///     0% {
+///       opacity: 0;
+///       -webkit-transform: translateY(-200px);
+///       -ms-transform: translateY(-200px);
+///       transform: translateY(-200px);
+///     }
+///     75% {
+///       -webkit-transform: translateY(0);
+///       -ms-transform: translateY(0);
+///       transform: translateY(0);
+///     }
+///     100% {
+///       opacity: 1;
+///     }
+///   }
+@mixin slide-in-from($slide-axis: x, $slide-offset: -100px, $animation-properties: 3s ease-out) {
+  $slide-start: if($slide-axis == x, translateX($slide-offset), translateY($slide-offset));
+  $slide-end: if($slide-axis == x, translateX(0), translateY(0));
+
+  @include keyframes(slide-in-#{$slide-axis}-#{$slide-offset}){
+    0% {
+      @include opacity(0);
+      @include transform($slide-start);
+    }
+    75% {
+      @include transform($slide-end);
+    }
+    100% {
+      @include opacity(1);
+    }
+  }
+
+  @include prefix(animation, slide-in-#{$slide-axis}-#{$slide-offset} $animation-properties, 'webkit');
+}

@@ -1,0 +1,16 @@
+/*---------------------------------------------------------------------*/
+/*  Global ANCHOR
+/*---------------------------------------------------------------------*/
+
+a {
+	color: $persian-green;
+    outline: none;
+    @include transition(all 0.2s ease-in-out);
+}
+
+a:hover,
+a:focus {
+	color: $persian-green;
+    outline: none;
+    text-decoration: none;
+}

@@ -1,0 +1,22 @@
+
+/*---------------------------------------------------------------------*/
+/*  3. PRELOADER - jQuery jpreloader plugin
+/*---------------------------------------------------------------------*/
+
+
+#jpreOverlay {
+    background-color: darken($cod-gray, 2.5%);
+}
+
+#jpreLoader {
+    width: 100%;
+    height: 20px;
+}
+
+#jpreBar {
+	background-color: $persian-green;
+    @include roundcornerTL(20px);
+    @include roundcornerTR(20px);
+    @include roundcornerBL(20px);
+    @include roundcornerBR(20px);
+}
