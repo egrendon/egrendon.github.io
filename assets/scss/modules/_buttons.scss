@@ -1,32 +1,20 @@
-
-
 /*---------------------------------------------------------------------*/
-/*  2. COMPONENTS
-/*  2.1. BUTTON
-/*---------------------------------------------------------------------*/
-.btn.btn-custom {
-  background-color: $persian-green;
-  color: $white;
-  box-shadow: 0 3px 0 darken($pine-green, 1.5%);
-}
-
-.btn.btn-custom:hover {
-  background-color: $teal;
-}
-
-
-
-/*---------------------------------------------------------------------*/
-/*  2. COMPONENTS
 /*  2.1. BUTTON
 /*---------------------------------------------------------------------*/
 
 .btn.btn-custom {
+    background-color: $persian-green;
+    color: $white;
+    box-shadow: 0 3px 0 darken($pine-green, 1.5%);
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     @include roundcorners(4px);
+}
+
+.btn.btn-custom:hover {
+    background-color: $teal;
 }
 
 .btn.btn-custom > i {
@@ -60,67 +48,4 @@
     width: 54px;
     height: 54px;
     line-height: 52px;
-}
-
-
-.panel-group.resume .resume-item .resume-btn {
-    background-color: $persian-green;
-}
-
-.panel-group.resume .resume-item .resume-btn > a:hover {
-    background-color: $persian-green;
-}
-
-.panel-group.resume .resume-item .resume-btn > a:hover {
-    background-color: $teal;
-}
-
-.panel-group.resume .resume-item .resume-btn > a:before {
-    color: $white;
-}
-
-
-.panel-group.resume .resume-item .resume-btn {
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 150px;
-    width: 40px;
-    height: 40px;
-    @include roundcorners(4px);
-}
-
-@media (max-width: 767px) {
-    .panel-group.resume .resume-item .resume-btn {
-        display: none;
-    }
-}
-
-.panel-group.resume .resume-item .resume-btn > a {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-}
-
-.panel-group.resume .resume-item .resume-btn > a:before {
-    display: block;
-    position: absolute;
-    z-index: 15;
-    content: '-';
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.panel-group.resume .resume-item .resume-btn > a.collapsed:before {
-    content: '+';
 }
