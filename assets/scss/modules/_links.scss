@@ -19,13 +19,6 @@ a:focus {
 /*---------------------------------------------------------------------*/
 /*  Resume ANCHOR Button
 /*---------------------------------------------------------------------*/
-
-
-.resume-btn > a:before {
-    color: $white;
-}
-
-
 .resume-btn {
 	background-color: $persian-green;
     z-index: 5;
@@ -36,14 +29,12 @@ a:focus {
     @include roundcorners(4px);
 }
 
-.resume-btn > a:hover {
-    background-color: $teal;
+.resume-btn > a:before {
+    color: $white;
 }
 
-@media (max-width: 767px) {
-    .resume-btn {
-        display: none;
-    }
+.resume-btn > a:hover {
+    background-color: $teal;
 }
 
 .resume-btn > a {
@@ -61,7 +52,7 @@ a:focus {
     width: 40px;
     height: 40px;
     line-height: 38px;
-    font-size: 30px;
+    @include font-size($font-size-1); 
     font-weight: 700;
     text-align: center;
     @include position(absolute, $top: 0px, $left: 0px);
