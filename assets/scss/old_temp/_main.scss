@@ -57,7 +57,7 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    @include font-size($font-size-16);
     line-height: 25px;
     overflow-x: hidden;
 }
@@ -141,45 +141,45 @@ header.hero .pattern-overlay {
 }
 
 header.hero .bg-img-table-cell .hero-text h1 {
-    font-size: 48px;
+    @include font-size($font-size-48);
     font-weight: 700;
     letter-spacing: -4px;
 }
 
 @media (min-width: 600px) {
     header.hero .bg-img-table-cell .hero-text h1 {
-        font-size: 58px;
+        @include font-size($font-size-58);
     }
 }
 
 @media (min-width: 768px) {
     header.hero .bg-img-table-cell .hero-text h1 {
-        font-size: 68px;
+        @include font-size($font-size-68);
     }
 }
 
 header.hero .bg-img-table-cell .hero-text h1.small {
-    font-size: 45px;
+    @include font-size($font-size-45);
     font-weight: 400;
     letter-spacing: -1px;
 }
 
 @media (min-width: 600px) {
     header.hero .bg-img-table-cell .hero-text h1.small {
-        font-size: 58px;
+        @include font-size($font-size-58);
     }
 }
 
 @media (min-width: 768px) {
     header.hero .bg-img-table-cell .hero-text h1.small {
-        font-size: 66px;
+        @include font-size($font-size-66);
     }
 }
 
 
 header.hero .bg-img-table-cell .hero-text p {
     margin-top: 10px;
-    font-size: 20px;
+    @include font-size($font-size-20);
 }
 
 header.hero .bg-img-table-cell .hero-text .page-scroll {
@@ -254,7 +254,7 @@ We will only do the fixed background for desktop mode.
 
 .navbar.navbar-fixed-top .navbar-brand {
     font-family: 'Raleway', sans-serif;
-    font-size: 28px;
+    @include font-size($font-size-28);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -269,7 +269,7 @@ We will only do the fixed background for desktop mode.
     height: 40px;
     line-height: 40px;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    @include font-size($font-size-14);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -298,7 +298,7 @@ We will only do the fixed background for desktop mode.
     height: 35px;
     line-height: 35px;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    @include font-size($font-size-14);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -355,13 +355,13 @@ We will only do the fixed background for desktop mode.
 
 .section .section-title {
     margin-bottom: 20px;
-    font-size: 35px;
+    @include font-size($font-size-35);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .section .section-subtitle {
-    font-size: 18px;
+    @include font-size($font-size-18);
     font-style: italic;
 }
 
@@ -482,25 +482,25 @@ We will only do the fixed background for desktop mode.
 
 #profile .contact-details h4 {
     margin-bottom: 15px;
-    font-size: 18px;
+    @include font-size($font-size-18);
     text-transform: uppercase;
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
     #profile .contact-details h4 {
-        font-size: 22px;
+        @include font-size($font-size-22);
     }
 }
 
 #profile .contact-details ul.list-unstyled > li {
     padding: 2px 0px;
-    font-size: 16px;
+    @include font-size($font-size-16);
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
     #profile .contact-details ul.list-unstyled > li {
         padding: 5px 0px;
-        font-size: 20px;
+        @include font-size($font-size-20);
     }
 }
 
@@ -635,7 +635,7 @@ We will only do the fixed background for desktop mode.
     width: 48px;
     height: 48px;
     line-height: 48px;
-    font-size: 20px;
+    @include font-size($font-size-20);
     text-align: center;
     @include roundcorners(50%);
 }
@@ -664,98 +664,6 @@ We will only do the fixed background for desktop mode.
 }
 
 
-/*---------------------------------------------------------------------*/
-/*  6.2.1. MAGNIFIC POP UP CUSTOM
-/*---------------------------------------------------------------------*/
-
-.mfp-bg {
-    /*background-color: #0d0c0d;*/
-}
-
-button.mfp-arrow {
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: 90px;
-    height: 60px;
-    line-height: 20px;
-    margin-top: -30px;
-}
-
-button.mfp-arrow:active {
-    margin-top: -30px;
-}
-
-.mfp-arrow-left:before {
-    border-right: none;
-    margin: 0;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 90px;
-    height: 60px;
-    line-height: 20px;
-    margin-top: -30px;
-    content: '\ea26';
-    font-family: 'icomoon';
-    font-size: 50px;
-}
-
-.mfp-arrow-left:after {
-    border-right: none;
-}
-
-.mfp-arrow-right:before {
-    border-left: none;
-    margin: 0;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 90px;
-    height: 60px;
-    line-height: 20px;
-    margin-top: -30px;
-    content: '\ebf9';
-    font-family: 'icomoon';
-    font-size: 50px;
-}
-
-.mfp-arrow-right:after {
-    border-left: none;
-}
-
-
-/*---------------------------------------------------------------------*/
-/*  6.2.2. MAGNIFIC POP CUSTOM - FADE EFFECT
-/*---------------------------------------------------------------------*/
-
-.mfp-fade.mfp-bg {
-    @include opacity(0);
-    @include transition(all 0.15s ease-in-out);
-}
-
-.mfp-fade.mfp-bg.mfp-ready {
-    @include opacity(0.8);
-}
-
-.mfp-fade.mfp-bg.mfp-removing {
-    @include opacity(0);
-}
-
-.mfp-fade.mfp-wrap .mfp-content {
-    @include opacity(0);
-    @include transition(all 0.15s ease-in-out);
-}
-
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-    @include opacity(1);
-}
-
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-    @include opacity(0);
-}
 
 
 /*---------------------------------------------------------------------*/
@@ -813,7 +721,7 @@ button.mfp-arrow:active {
 }
 
 .services .item > .inner-content > i {
-    font-size: 38px;
+    @include font-size($font-size-38);
 }
 
 .services .item > .inner-content > h4 {
@@ -1040,7 +948,7 @@ button.mfp-arrow:active {
     line-height: 40px;
     margin-top: -40px;
     margin-left: -20px;
-    font-size: 14px;
+    @include font-size($font-size-14);
     font-weight: 700;
     text-align: center;
     @include roundcorners(4px);
@@ -1083,19 +991,19 @@ button.mfp-arrow:active {
     display: block;
     position: absolute;
     z-index: 5;
-    font-size: 170px;
+    @include font-size($font-size-170);
 }
 
 #contact .contact-details .speech-bubble > i {
     display: block;
     position: absolute;
     z-index: 5;
-    font-size: 170px;
+    @include font-size($font-size-170);
 }
 
 #contact .contact-details .speech-bubble h4 {
     padding-top: 50px;
-    font-size: 30px;
+    @include font-size($font-size-30);
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -1104,7 +1012,7 @@ button.mfp-arrow:active {
 
 #contact .contact-details h2 {
     margin-top: 20px;
-    font-size: 40px;
+    @include font-size($font-size-40);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1161,7 +1069,7 @@ footer.footer .page-scroll > a {
     line-height: 48px;
     margin-top: -94px;
     margin-left: -24px;
-    font-size: 24px;
+    @include font-size($font-size-24);
     text-align: center;
     @include roundcorners(4px);
 }
@@ -1195,7 +1103,7 @@ footer.footer ul.social-icons > li > .item > a {
     width: 48px;
     height: 48px;
     line-height: 48px;
-    font-size: 25px;
+    @include font-size($font-size-24);
 }
 
 footer.footer ul.social-icons > li > .item img {
@@ -1210,5 +1118,5 @@ footer.footer .copyright {
 }
 
 footer.footer .copyright p {
-    font-size: 14px;
+    @include font-size($font-size-14);
 }

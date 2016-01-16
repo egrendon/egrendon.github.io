@@ -39,7 +39,8 @@
   }
 
   font-size: $size;
-  font-size: ($size / $base-font-size) * 1rem;
+  //commented out on purpose (didnt work)
+  //font-size: ($size / $base-font-size) * 1rem;
 }
 
 

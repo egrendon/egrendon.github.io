@@ -1,0 +1,94 @@
+
+/*---------------------------------------------------------------------*/
+/*  6.2.1. MAGNIFIC POP UP CUSTOM plugin
+/*---------------------------------------------------------------------*/
+
+
+.mfp-bg {
+    background-color: darken($cod-gray, 5%);
+}
+
+button.mfp-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 90px;
+    height: 60px;
+    line-height: 20px;
+    margin-top: -30px;
+}
+
+button.mfp-arrow:active {
+    margin-top: -30px;
+}
+
+.mfp-arrow-left:before {
+    border-right: none;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 90px;
+    height: 60px;
+    line-height: 20px;
+    margin-top: -30px;
+    content: '\ea26';
+    font-family: 'icomoon';
+    @include font-size($font-size-50);
+}
+
+.mfp-arrow-left:after {
+    border-right: none;
+}
+
+.mfp-arrow-right:before {
+    border-left: none;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 90px;
+    height: 60px;
+    line-height: 20px;
+    margin-top: -30px;
+    content: '\ebf9';
+    font-family: 'icomoon';
+    @include font-size($font-size-50);
+}
+
+.mfp-arrow-right:after {
+    border-left: none;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  6.2.2. MAGNIFIC POP CUSTOM - FADE EFFECT
+/*---------------------------------------------------------------------*/
+
+.mfp-fade.mfp-bg {
+    @include opacity(0);
+    @include transition(all 0.15s ease-in-out);
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+    @include opacity(0.8);
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+    @include opacity(0);
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+    @include opacity(0);
+    @include transition(all 0.15s ease-in-out);
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    @include opacity(1);
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    @include opacity(0);
+}
