@@ -100,34 +100,6 @@ header.hero .bg-img-table-cell .hero-text h1.small {
     background-color: $mine-shaft;
 }
 
-/*---------------------------------------------------------------------*/
-/*  6.2. SECTION - PORTFOLIO
-/*---------------------------------------------------------------------*/
-#portfolio {
-    background-color: $cod-gray;
-}
-
-/** Make wrapper gray before **/
-.portfolio .item > .project-wrapper:before {
-    background-color: rgba($black, 0.7);
-}
-/** Make wrapper opacity 100% for before on hover **/
-.portfolio .item > .project-wrapper:hover:before {
-    background-color: rgba($black, 0);
-}
-
-.portfolio .item > .project-wrapper > .project-link > a {
-    color: $white;
-}
-
-.portfolio .item > .project-wrapper > .project-link > a.external-link {
-  background-color: $persian-green;
-}
-
-.portfolio .item > .project-wrapper > .project-link > a.zoom {
-    background-color: $mine-shaft;
-}
-
 
 /*---------------------------------------------------------------------*/
 /*  6.3. SECTION - SERVICES
