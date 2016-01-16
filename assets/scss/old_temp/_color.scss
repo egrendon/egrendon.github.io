@@ -169,27 +169,4 @@ header.hero .bg-img-table-cell .hero-text h1.small {
     box-shadow: 3px 3px 10px darken($cod-gray, 5%);
 }
 
-/*---------------------------------------------------------------------*/
-/*  6.12. SECTION - CONTACT
-/*---------------------------------------------------------------------*/
-
-#contact {
-    background-color: darken($cod-gray, 5%);
-}
-
-/*---------------------------------------------------------------------*/
-/*  6.12.2. CONTACT DETAILS
-/*---------------------------------------------------------------------*/
-
-#contact .contact-details .speech-bubble > i {
-    color: $silver-chalice;
-}
-
-/*---------------------------------------------------------------------*/
-/*  7. MAP
-/*---------------------------------------------------------------------*/
-#map > .address {
-  background-color: $persian-green;
-  border-bottom: 2px solid $pine-green;
-}
 

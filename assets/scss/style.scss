@@ -39,6 +39,8 @@
 @import 'partials/_topNavMenu_media_large.scss';
 @import 'partials/_portfolio.scss';
 @import 'partials/_portfolio_media_small.scss';
+@import 'partials/_contact.scss';
+@import 'partials/_googleMapSection.scss';
 @import 'partials/_footer.scss';
 
 //----------------------------------*\
@@ -53,8 +55,7 @@
 @import 'modules/_app.scss';
 
 // Enhancement modules
-@import 'modules/_breakpoints.scss';
-@import 'modules/_print.scss';
+@import 'modules/_media_print.scss';
 
 //----------------------------------*\
 // VENDOR 3rd Party Library Styles 
