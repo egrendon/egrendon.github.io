@@ -1,7 +1,6 @@
 //----------------------------------*\
 // SCSS MIXINS
 //----------------------------------*/
-
 @import 'mixins/_browserFixes.scss';
 @import 'mixins/_position.scss';
 @import 'mixins/_transition.scss';
@@ -18,22 +17,28 @@
 //----------------------------------*\
 // CONFIG MODULES
 //----------------------------------*/
-
-// Config modules
 @import 'modules/_vars.scss';
 @import 'modules/_clearfix.scss';
 @import 'modules/_normalize.scss';
 @import 'modules/_defaults.scss';
+@import 'modules/_headers.scss';
 @import 'modules/_content-divider.scss';
 @import 'modules/_links.scss';
 @import 'modules/_links_media_medium.scss';
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
 @import 'modules/_buttons.scss';
 @import 'modules/_buttons_media_medium.scss';
+@import 'modules/_inputs.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_typography.scss';
+@import 'modules/_print_media.scss';
 
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
-
 @import 'partials/_header.scss';
 @import 'partials/_topNavMenu.scss';
 @import 'partials/_topNavMenu_media_large.scss';
@@ -44,20 +49,6 @@
 @import 'partials/_footer.scss';
 
 //----------------------------------*\
-// OBJECTS & MODULES
-//----------------------------------*/
-
-@import 'modules/_buttons.scss';
-@import 'modules/_inputs.scss';
-@import 'modules/_lists.scss';
-@import 'modules/_typography.scss';
-@import 'modules/_misc.scss';
-@import 'modules/_app.scss';
-
-// Enhancement modules
-@import 'modules/_media_print.scss';
-
-//----------------------------------*\
 // VENDOR 3rd Party Library Styles 
 //----------------------------------*/
 @import 'vendor/_jpreloader.scss';
@@ -66,6 +57,5 @@
 //----------------------------------*\
 // TEMP OLD FILES
 //----------------------------------*/
-
 @import 'old_temp/_main.scss';
 @import 'old_temp/_color.scss';
