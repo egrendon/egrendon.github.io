@@ -1,3 +1,99 @@
-.footer {
+/*---------------------------------------------------------------------*/
+/*  8. FOOTER
+/*---------------------------------------------------------------------*/
+footer.footer {
+    background-color: $cod-gray;
+}
 
+footer.footer .page-scroll > a {
+    background-color: $persian-green;
+    box-shadow: 0 3px 0 $pine-green;
+    color: $white;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*  8. FOOTER
+/*---------------------------------------------------------------------*/
+
+footer.footer {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+footer.footer .page-scroll > a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 48px;
+    height: 46px;
+    line-height: 48px;
+    margin-top: -94px;
+    margin-left: -24px;
+    @include font-size($font-size-24);
+    text-align: center;
+    @include roundcorners(4px);
+}
+
+footer.footer ul.social-icons {
+    margin: 0;
+    text-align: center;
+}
+
+footer.footer ul.social-icons > li {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+footer.footer ul.social-icons > li > .item {
+    background-color: $mine-shaft;
+    box-shadow: 0 3px 0 darken($mine-shaft, 2.5%);
+}
+
+
+footer.footer ul.social-icons > li:hover > .item img {
+    @include opacity(0.7);
+}
+
+footer.footer ul.social-icons > li > .item {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    @include roundcorners(4px);
+}
+
+footer.footer ul.social-icons > li > .item > a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    @include font-size($font-size-24);
+    color: darken($white, 50%);
+}
+
+footer.footer ul.social-icons > li > .item > a:hover {
+   color: darken($white, 20%);
+}
+
+
+footer.footer ul.social-icons > li > .item img {
+    margin: 0 auto;
+    margin-top: 12px;
+    @include opacity(0.5);
+    @include transition(all 0.2s ease-in-out);
+}
+
+footer.footer .copyright {
+    margin-top: 20px;
+}
+
+footer.footer .copyright p {
+    @include font-size($font-size-14);
 }

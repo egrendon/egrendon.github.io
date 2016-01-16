@@ -1,0 +1,171 @@
+/*---------------------------------------------------------------------*/
+/*  5. NAVIGATION Colors
+/*---------------------------------------------------------------------*/
+.navbar.navbar-fixed-top {
+    background-color: $cod-gray;
+    border-bottom: 1px solid $thunder;
+}
+
+.navbar.navbar-fixed-top .navbar-container {
+    background-color: $cod-gray;
+}
+
+.navbar.navbar-fixed-top .navbar-brand {
+    color: $silver-chalice;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li > a {
+    color: $silver-chalice;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li > a:focus,
+.navbar.navbar-fixed-top .navbar-nav > li > a:hover {
+    background-color: $cod-gray;
+    color: $white;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.active > a {
+  background-color: $cod-gray;
+  color: $persian-green;
+  border-bottom: 1px solid $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.active > a:hover {
+  background-color: $cod-gray;
+  color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.active > a:focus {
+  background-color: $cod-gray;
+  color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown > a:hover {
+    color: $white;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a {
+    background-color: $cod-gray;
+    color: $white;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.open > a:focus {
+    background-color: $cod-gray;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.active > a,
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.active.open > a {
+  color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.active > a:hover,
+.navbar.navbar-fixed-top .navbar-nav > li.dropdown.active.open > a:hover {
+  color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu {
+    background-color: $cod-gray;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a {
+    color: $silver-chalice;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:hover {
+    background-color: $cod-gray;
+    color: $white;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a:focus {
+    background-color: $cod-gray;
+    color: $silver-chalice;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
+    background-color: $cod-gray;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a {
+  color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:hover,
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li.active a:focus {
+    background-color: $cod-gray;
+    color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-toggle {
+  background-color: $persian-green;
+}
+
+.navbar.navbar-fixed-top .navbar-toggle .icon-bar {
+    background-color: $white;
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*  5. NAVIGATION Styles
+/*---------------------------------------------------------------------*/
+
+.navbar.navbar-fixed-top {
+    margin: 0;
+    border: 0;
+    height: 66px;
+}
+
+.navbar.navbar-fixed-top .navbar-brand {
+    font-family: 'Raleway', sans-serif;
+    @include font-size($font-size-28);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    height: 65px;
+    line-height: 65px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar.navbar-fixed-top .navbar-nav > li > a {
+    padding-top: 0px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'Raleway', sans-serif;
+    @include font-size($font-size-14);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu {
+    min-width: 180px;
+    padding: 10px 0px;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a {
+    height: 35px;
+    line-height: 35px;
+    font-family: 'Raleway', sans-serif;
+    @include font-size($font-size-14);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar.navbar-fixed-top .navbar-nav .caret {
+    margin-top: -4px;
+}
+
+.navbar.navbar-fixed-top .navbar-toggle {
+    @include roundcorners(4px);
+    margin-top: 18px;
+}
+
+.navbar.navbar-fixed-top .navbar-collapse {
+    border: 0;
+    max-height: 500px;
+    /* default 340px */
+}
+
+
