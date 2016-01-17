@@ -1,0 +1,22 @@
+
+//---------------------------------------------------------------------*/
+//  HOME
+//---------------------------------------------------------------------*/
+@media (max-width: 991px) {
+    header.hero {
+        margin-top: 65px;
+    }
+}
+
+@media (min-width: 992px) {
+    header.hero {
+        height: calc(100% - 65px);
+    }
+}
+
+
+@media (min-width: 992px) {
+    header.hero .bg-img-table-cell {
+        padding: 0px;
+    }
+}

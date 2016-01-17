@@ -25,14 +25,17 @@
 @import 'modules/_content-divider.scss';
 @import 'modules/_links.scss';
 @import 'modules/_links_media_medium.scss';
+@import 'modules/_buttons.scss';
+@import 'modules/_buttons_media_medium.scss';
+@import 'modules/_text-colors.scss';
+@import 'modules/_textFields.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
 //----------------------------------*/
-@import 'modules/_buttons.scss';
-@import 'modules/_buttons_media_medium.scss';
-@import 'modules/_inputs.scss';
 @import 'modules/_lists.scss';
+@import 'modules/_bg-image-container.scss';
+@import 'modules/_bg-image-container_media_medium.scss';
 @import 'modules/_circle_chart.scss';
 @import 'modules/_circle_chart_media_medium.scss';
 @import 'modules/_section.scss';
@@ -45,6 +48,10 @@
 @import 'partials/_header.scss';
 @import 'partials/_topNavMenu.scss';
 @import 'partials/_topNavMenu_media_large.scss';
+@import 'partials/_hero.scss';
+@import 'partials/_hero_media_small.scss';
+@import 'partials/_hero_media_medium.scss';
+@import 'partials/_hero_media_large.scss';
 @import 'partials/_profile.scss';
 //NOTE THE ORDER OF MEDIA MATTERS
 @import 'partials/_profile_media_medium.scss';
@@ -60,6 +67,7 @@
 @import 'partials/_resume_media_small.scss';
 @import 'partials/_resume_media_medium.scss';
 @import 'partials/_skills.scss';
+@import 'partials/_strengths.scss';
 @import 'partials/_contact.scss';
 @import 'partials/_googleMapSection.scss';
 @import 'partials/_footer.scss';
@@ -70,8 +78,3 @@
 @import 'vendor/_jpreloader.scss';
 @import 'vendor/_magnificPopUp.scss';
 
-//----------------------------------*\
-// TEMP OLD FILES
-//----------------------------------*/
-@import 'old_temp/_main.scss';
-@import 'old_temp/_color.scss';

@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------*/
+//  HOME
+//---------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+    header.hero .bg-img-table-cell .hero-text h1.small {
+        @include font-size($font-size-66);
+    }
+}
+
+@media (min-width: 768px) {
+    header.hero .bg-img-table-cell {
+        padding: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    header.hero .bg-img-table-cell .hero-text h1 {
+        @include font-size($font-size-68);
+    }
+}

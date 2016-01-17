@@ -1,0 +1,67 @@
+//---------------------------------------------------------------------*/
+//  HOME Color
+//---------------------------------------------------------------------*/
+header.hero .bg-img-table-cell .hero-text {
+    /* color: darken($white, 1.5%); */
+    color: rgba($white, 0.7);
+}
+
+header.hero .bg-img-table-cell .hero-text h1.small {
+    color: $white;
+}
+
+//---------------------------------------------------------------------*/
+//  HOME
+//---------------------------------------------------------------------*/
+header.hero {    
+    display: block;
+}
+
+header.hero:before {
+    position: absolute;
+    content: '';
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header.hero .pattern-overlay {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg-pattern.png');
+    background-repeat: repeat;
+}
+
+header.hero .bg-img-table-cell .hero-text h1 {
+    @include font-size($font-size-48);
+    font-weight: 700;
+    letter-spacing: -4px;
+}
+
+header.hero .bg-img-table-cell .hero-text h1.small {
+    @include font-size($font-size-45);
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+header.hero .bg-img-table-cell .hero-text p {
+    margin-top: 10px;
+    @include font-size($font-size-20);
+}
+
+header.hero .bg-img-table-cell .hero-text .page-scroll {
+    margin-top: 40px;
+}
+
+/*---------------------------------------------------------------------*/
+/*  4.1. HERO Background Image
+/*---------------------------------------------------------------------*/
+
+header.hero-bg-img {    
+    background-image: url('../images/bg-hero.png');
+}
+
+

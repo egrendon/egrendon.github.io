@@ -1,0 +1,16 @@
+
+
+/*---------------------------------------------------------------------*/
+/*  Background Image Cover 
+/*---------------------------------------------------------------------*/
+
+/*
+Because of Safari and IOS display issues we need to declare 
+background-attachment: scroll for mobile view. 
+We will only do the fixed background for desktop mode.
+*/
+@media (max-width: 768px) {
+    .bg-img-container {
+        background-attachment: scroll;
+    }
+}

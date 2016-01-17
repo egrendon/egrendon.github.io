@@ -34,8 +34,9 @@ $(function() {
     var imageTextCallback = function() {
         $(".bg-img-table-cell").each(function(index, element) {
             $(element).css("display", "table-cell");
-            $(element).addClass( "animated pulse" );
+            $(element).addClass("animated pulse");
         });
         return true;
     };
+    
 });
