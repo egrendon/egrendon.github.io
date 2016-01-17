@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+    .circle-chart {
+        margin-top: -30px;
+    }
+}
+@media (min-width: 768px) {
+    .circle-chart .item {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

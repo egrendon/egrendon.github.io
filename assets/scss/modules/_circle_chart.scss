@@ -1,0 +1,76 @@
+/*---------------------------------------------------------------------*/
+/*  Circle Module Colors
+/*---------------------------------------------------------------------*/
+.circle-chart .item > .percent {
+  background-color: $persian-green;
+}
+
+.circle-chart .item > .circle {
+    background-color: $silver-chalice;
+}
+
+.circle-chart .item > .circle > .item-progress:before {
+    background-color: $mine-shaft;
+}
+
+.circle-chart .item > .percent {
+    @include box-shadow(3px, 3px, 10px, darken($cod-gray, 5%));
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  Circle Module
+/*---------------------------------------------------------------------*/
+.circle-chart .item {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+
+.circle-chart .item > .circle {
+    position: relative;
+    margin: 0 auto;
+    padding: 6px;
+    width: 120px;
+    height: 120px;
+    @include roundcorners(50%);
+    @include rotate(180deg);
+}
+
+.circle-chart .item > .circle > .item-progress {
+    display: inline-block;
+    position: relative;
+    width: 108px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.circle-chart .item > .circle > .item-progress:before {
+    display: block;
+    content: "";
+    width: 108px;
+    height: 108px;
+    @include roundcorners(106px);
+}
+
+.circle-chart .item > .percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -40px;
+    margin-left: -20px;
+    @include font-size($font-size-14);
+    font-weight: 700;
+    text-align: center;
+    @include roundcorners(4px);
+}
+
+.circle-chart .item > h4 {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

@@ -146,27 +146,5 @@ header.hero .bg-img-table-cell .hero-text h1.small {
   background-color: $mine-shaft;
 }
 
-/*---------------------------------------------------------------------*/
-/*  6.7. SECTION - SKILLS
-/*---------------------------------------------------------------------*/
-#skills {
-    background-color: darken($cod-gray, 5%);
-}
-
-.circle-chart .item > .percent {
-  background-color: $persian-green;
-}
-
-.circle-chart .item > .circle {
-    background-color: $silver-chalice;
-}
-
-.circle-chart .item > .circle > .item-progress:before {
-    background-color: $mine-shaft;
-}
-
-.circle-chart .item > .percent {
-    @include box-shadow(3px, 3px, 10px, darken($cod-gray, 5%));
-}
 
 
