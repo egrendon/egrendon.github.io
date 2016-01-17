@@ -177,6 +177,7 @@ section#strengths.bg-img-container-image {
     background-size: cover;
     -o-background-size: cover;
     background-attachment: fixed;
+    background-position: center center;
 }
 /*
 Because of Safari and IOS display issues we need to declare 
@@ -207,85 +208,6 @@ We will only do the fixed background for desktop mode.
 
 
 
-/*---------------------------------------------------------------------*/
-/* 6. SECTION
-/*---------------------------------------------------------------------*/
-
-.section .section-wrapper > .section-content {
-    padding: 80px 0px;
-}
-
-@media (min-width: 768px) {
-    .section .section-wrapper > .section-content {
-        padding: 100px 0px;
-    }
-}
-
-.section .section-title {
-    margin-bottom: 20px;
-    @include font-size($font-size-35);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.section .section-subtitle {
-    @include font-size($font-size-18);
-    font-style: italic;
-}
-
-.section.bg-image-yes {
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-@media (min-width: 1280px) {
-    .section.bg-image-yes {
-        background-attachment: fixed;
-    }
-}
-
-.section.bg-image-yes .container-fluid.section-wrapper {
-    position: relative;
-}
-
-.section.bg-image-yes .container-fluid.section-wrapper > .section-content {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media (min-width: 768px) {
-    .section.bg-image-yes .container-fluid.section-wrapper > .section-content {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    .section.bg-image-yes .container-fluid.section-wrapper > .section-content {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .section.bg-image-yes .container-fluid.section-wrapper > .section-content {
-        width: 1170px;
-    }
-}
-
-.section.bg-image-yes .container-fluid.section-wrapper > .section-content:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
 
 
 /*---------------------------------------------------------------------*/
@@ -429,96 +351,6 @@ We will only do the fixed background for desktop mode.
     letter-spacing: 2px;
 }
 
-
-
-
-
-
-/*---------------------------------------------------------------------*/
-/*  6.3. SECTION - SERVICES
-/*---------------------------------------------------------------------*/
-
-@media (min-width: 768px) {
-    .services {
-        margin-top: 30px;
-    }
-}
-
-.services .item {
-    padding: 0px;
-}
-
-@media (max-width: 767px) {
-    .services .item {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 768px) {
-    .services .item:after {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: 0;
-        width: 1px;
-        height: 100%;
-    }
-}
-
-.services .item > .inner-content {
-    position: relative;
-    padding: 25px 15px 15px 15px;
-}
-
-@media (min-width: 480px) {
-    .services .item > .inner-content {
-        padding: 25px 78px 15px 78px;
-    }
-}
-
-@media (min-width: 640px) {
-    .services .item > .inner-content {
-        padding: 25px 118px 15px 118px;
-    }
-}
-
-@media (min-width: 768px) {
-    .services .item > .inner-content {
-        padding: 25px 28px 15px 28px;
-    }
-}
-
-.services .item > .inner-content > i {
-    @include font-size($font-size-38);
-}
-
-.services .item > .inner-content > h4 {
-    margin-top: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.services .item > .inner-content > p {
-    margin: 0px;
-    margin-top: 8px;
-}
-
-@media (min-width: 768px) {
-    .services .item.top:before {
-        position: absolute;
-        content: '';
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-    }
-}
-
-@media (min-width: 768px) {
-    .services .item.top > .inner-content {
-        padding: 15px 28px 25px 28px;
-    }
-}
 
 
 /*---------------------------------------------------------------------*/

@@ -1,0 +1,85 @@
+/*---------------------------------------------------------------------*/
+/* 6. SECTION
+/*---------------------------------------------------------------------*/
+
+.section .section-wrapper > .section-content {
+    padding: 80px 0px;
+}
+
+@media (min-width: 768px) {
+    .section .section-wrapper > .section-content {
+        padding: 100px 0px;
+    }
+}
+
+.section .section-title {
+    color: $silver-chalice;
+    margin-bottom: 20px;
+    @include font-size($font-size-35);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section .section-subtitle {
+    @include font-size($font-size-18);
+    font-style: italic;
+}
+
+/*---------------------------------------------------------------------*/
+/* 6. SECTION For Images (not used yet)
+/*---------------------------------------------------------------------*/
+/* 
+.section.bg-image-yes {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+@media (min-width: 1280px) {
+    .section.bg-image-yes {
+        background-attachment: fixed;
+    }
+}
+
+.section.bg-image-yes .container-fluid.section-wrapper {
+    position: relative;
+}
+
+.section.bg-image-yes .container-fluid.section-wrapper > .section-content {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .section.bg-image-yes .container-fluid.section-wrapper > .section-content {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .section.bg-image-yes .container-fluid.section-wrapper > .section-content {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section.bg-image-yes .container-fluid.section-wrapper > .section-content {
+        width: 1170px;
+    }
+}
+
+.section.bg-image-yes .container-fluid.section-wrapper > .section-content:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+ */

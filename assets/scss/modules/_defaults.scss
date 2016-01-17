@@ -16,6 +16,8 @@ html {
 }
 
 body {
+    background-color: darken($cod-gray, 5%);
+    color: $white;
     @include font-setter($font-lato);
     @include font-size($font-size-16);
     line-height: 25px;

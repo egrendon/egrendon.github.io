@@ -35,7 +35,8 @@
 @import 'modules/_lists.scss';
 @import 'modules/_circle_chart.scss';
 @import 'modules/_circle_chart_media_medium.scss';
-@import 'modules/_typography.scss';
+@import 'modules/_section.scss';
+@import 'modules/_section_media_medium.scss';
 @import 'modules/_print_media.scss';
 
 //----------------------------------*\
@@ -46,6 +47,9 @@
 @import 'partials/_topNavMenu_media_large.scss';
 @import 'partials/_portfolio.scss';
 @import 'partials/_portfolio_media_small.scss';
+@import 'partials/_services.scss';
+@import 'partials/_services_media_medium.scss';
+@import 'partials/_services_media_small.scss';
 @import 'partials/_skills.scss';
 @import 'partials/_contact.scss';
 @import 'partials/_googleMapSection.scss';

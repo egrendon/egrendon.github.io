@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------------*/
+/*  6.3. SECTION - SERVICES Colors
+/*---------------------------------------------------------------------*/
+#services {
+    background-color: darken($cod-gray, 5%);
+}
+.services .item.dark-bg {
+    background-color: darken($cod-gray, 5%);
+}
+
+.services .item:after {
+    border-right: 1px solid darken($mine-shaft, 1.5%);
+}
+
+.services .item.top:before {
+    border-bottom: 1px dashed darken($mine-shaft, 1.5%);
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  6.3. SECTION - SERVICES
+/*---------------------------------------------------------------------*/
+
+.services .item {
+    padding: 0px;
+}
+
+.services .item > .inner-content {
+    position: relative;
+    padding: 25px 15px 15px 15px;
+}
+
+.services .item > .inner-content > i {
+    @include font-size($font-size-38);
+}
+
+.services .item > .inner-content > h4 {
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services .item > .inner-content > p {
+    margin: 0px;
+    margin-top: 8px;
+}

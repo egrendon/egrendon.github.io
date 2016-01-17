@@ -41,14 +41,7 @@
 
 
 
-/*---------------------------------------------------------------------*/
-/*  1. GLOBAL STYLES
-/*  1.1 GENERAL STYLES
-/*---------------------------------------------------------------------*/
-body {
-    background-color: darken($cod-gray, 5%);
-    color: $white;
-}
+
 
 /*---------------------------------------------------------------------*/
 /*  1.2. TEXT COLOR
@@ -81,13 +74,6 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 
 
 /*---------------------------------------------------------------------*/
-/* 6. SECTION
-/*---------------------------------------------------------------------*/
-.section .section-subtitle {
-    color: $silver-chalice;
-}
-
-/*---------------------------------------------------------------------*/
 /*  6.1. SECTION - PROFILE
 /*---------------------------------------------------------------------*/
 #profile {
@@ -101,30 +87,6 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 
-/*---------------------------------------------------------------------*/
-/*  6.3. SECTION - SERVICES
-/*---------------------------------------------------------------------*/
-#services {
-    background-color: darken($cod-gray, 5%);
-}
-
-@media (min-width: 768px) {
-    .services .item.dark-bg {
-        background-color: darken($cod-gray, 5%);
-    }
-}
-
-@media (min-width: 768px) {
-    .services .item:after {
-        border-right: 1px solid darken($mine-shaft, 1.5%);
-    }
-}
-
-@media (min-width: 768px) {
-    .services .item.top:before {
-        border-bottom: 1px dashed darken($mine-shaft, 1.5%);
-    }
-}
 /*---------------------------------------------------------------------*/
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
