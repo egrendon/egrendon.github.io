@@ -39,7 +39,6 @@ module.exports = function(grunt) {
 	];
 
 	var app_js_file_path = '../dist/app.js';
-	var cssFiles = ['../../assets/css/main.css', '../../assets/css/color.css'];
 	var scssFiles = {
 		'../dist/css/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
 	};
@@ -116,7 +115,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				files: {
-					'../dist/css/main.min.css': cssFiles
+					'../dist/css/main.min.css': ['../dist/css/bundle.css'] //dest : source
 				}
 			}
 		},
