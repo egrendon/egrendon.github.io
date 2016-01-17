@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    @include font-setter($font-lato);
     @include font-size($font-size-16);
     line-height: 25px;
     overflow-x: hidden;

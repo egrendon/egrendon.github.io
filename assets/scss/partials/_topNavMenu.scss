@@ -116,9 +116,8 @@
 }
 
 .navbar.navbar-fixed-top .navbar-brand {
-    font-family: 'Raleway', sans-serif;
+    @include font-setter($font-raleway, 700);
     @include font-size($font-size-28);
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     height: 65px;
@@ -131,9 +130,8 @@
     padding-top: 0px;
     height: 40px;
     line-height: 40px;
-    font-family: 'Raleway', sans-serif;
+    @include font-setter($font-raleway, 700);
     @include font-size($font-size-14);
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -146,9 +144,8 @@
 .navbar.navbar-fixed-top .navbar-nav .dropdown-menu > li a {
     height: 35px;
     line-height: 35px;
-    font-family: 'Raleway', sans-serif;
+    @include font-setter($font-raleway, 700);
     @include font-size($font-size-14);
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }

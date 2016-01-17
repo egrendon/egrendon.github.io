@@ -34,7 +34,7 @@ button.mfp-arrow:active {
     line-height: 20px;
     margin-top: -30px;
     content: '\ea26';
-    font-family: 'icomoon';
+    @include font-setter($font-icomoon);
     @include font-size($font-size-50);
 }
 
@@ -54,7 +54,7 @@ button.mfp-arrow:active {
     line-height: 20px;
     margin-top: -30px;
     content: '\ebf9';
-    font-family: 'icomoon';
+    @include font-setter($font-icomoon);
     @include font-size($font-size-50);
 }
 
