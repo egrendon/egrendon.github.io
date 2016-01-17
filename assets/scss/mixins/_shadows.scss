@@ -1,19 +1,20 @@
-
-
-
-
-@mixin text-shadow( $top: 3px, $left: 3px, $blur: 3px , $colour: $black) {
-  -webkit-text-shadow:$top $left $blur $colour; 
-  -moz-text-shadow:$top $left $blur $colour; 
-  -o-text-shadow:$top $left $blur $colour; 
-  text-shadow:$top $left $blur $colour; 
+@mixin text-shadow( $top: 3px, $left: 3px, $blur: 3px, $color: $black) {
+    -webkit-text-shadow: $top $left $blur $color;
+    -moz-text-shadow: $top $left $blur $color;
+    -o-text-shadow: $top $left $blur $color;
+    text-shadow: $top $left $blur $color;
 }
 
 // @include box-shadow(3px, 3px, 4px, $black) 
-@mixin box-shadow($top: 3px, $left: 3px, $blur: 4px, $colour: $black, $inset:"") {
-  -webkit-box-shadow: #{$inset} $top $left $blur $colour;
-  -moz-box-shadow:  #{$inset} $top $left $blur $colour;
-  box-shadow: #{$inset} $top $left $blur $colour;
+@mixin box-shadow($top: 3px, $left: 3px, $blur: 4px, $color: $black, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
 }
-
-
