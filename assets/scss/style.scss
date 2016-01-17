@@ -40,7 +40,7 @@
 @import 'modules/_print_media.scss';
 
 //----------------------------------*\
-// PARTIALS
+// PARTIALS - PAGES
 //----------------------------------*/
 @import 'partials/_header.scss';
 @import 'partials/_topNavMenu.scss';
@@ -50,6 +50,9 @@
 @import 'partials/_services.scss';
 @import 'partials/_services_media_medium.scss';
 @import 'partials/_services_media_small.scss';
+@import 'partials/_resume.scss';
+@import 'partials/_resume_media_medium.scss';
+@import 'partials/_resume_media_small.scss';
 @import 'partials/_skills.scss';
 @import 'partials/_contact.scss';
 @import 'partials/_googleMapSection.scss';

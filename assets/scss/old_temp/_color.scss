@@ -40,9 +40,6 @@
 /*---------------------------------------------------------------------*/
 
 
-
-
-
 /*---------------------------------------------------------------------*/
 /*  1.2. TEXT COLOR
 /*---------------------------------------------------------------------*/
@@ -53,11 +50,6 @@
 .colored-text {
   color: $persian-green;
 }
-
-
-
-
-
 
 /*---------------------------------------------------------------------*/
 /*  4. HOME
@@ -71,8 +63,6 @@ header.hero .bg-img-table-cell .hero-text h1.small {
     color: $white;
 }
 
-
-
 /*---------------------------------------------------------------------*/
 /*  6.1. SECTION - PROFILE
 /*---------------------------------------------------------------------*/
@@ -85,28 +75,4 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 #profile .pp-wrapper .profile-picture.style-two .title {
     background-color: $mine-shaft;
 }
-
-
-/*---------------------------------------------------------------------*/
-/*  6.5. SECTION - RESUME
-/*---------------------------------------------------------------------*/
-#resume {
-    background-color: $cod-gray;
-}
-
-@media (min-width: 768px) {
-    .panel-group.resume .resume-item:before {
-        border-left: 1px dashed $tundora;
-    }
-}
-
-.panel-group.resume .resume-item .panel {
-    border: 1px solid $dove-gray;
-}
-
-.panel-group.resume .resume-item .resume-year {
-  background-color: $mine-shaft;
-}
-
-
 

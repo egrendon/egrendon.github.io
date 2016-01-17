@@ -1,0 +1,33 @@
+
+/*---------------------------------------------------------------------*/
+/*  6.5. SECTION - RESUME
+/*---------------------------------------------------------------------*/
+@media (min-width: 768px) {
+    .panel-group.resume .resume-item:before {
+        border-left: 1px dashed $tundora;
+    }
+}
+
+@media (min-width: 768px) {
+    #resume h3 {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .panel-group.resume .resume-item:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: calc(100% + 20px);
+        top: 0;
+        left: 170px;
+    }
+}
+
+@media (min-width: 768px) {
+    .panel-group.resume .resume-item .panel {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+    }
+}

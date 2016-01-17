@@ -1,0 +1,92 @@
+
+/*---------------------------------------------------------------------*/
+/*  6.5. SECTION - RESUME
+/*---------------------------------------------------------------------*/
+#resume {
+    background-color: $cod-gray;
+}
+
+.panel-group.resume .resume-item .panel {
+    border: 1px solid $dove-gray;
+}
+
+.panel-group.resume .resume-item .resume-year {
+  background-color: $mine-shaft;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*  6.5. SECTION - RESUME
+/*---------------------------------------------------------------------*/
+#resume h3 {
+    text-align: center;
+}
+
+#resume .education {
+    margin-top: 30px;
+}
+
+#resume .work-experience {
+    margin-top: 50px;
+}
+
+.panel-group.resume {
+    position: relative;
+    margin-top: 30px;
+}
+
+.panel-group.resume .resume-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.panel-group.resume .resume-item:last-child {
+    margin-bottom: 0px;
+}
+
+.panel-group.resume .resume-item:last-child:before {
+    display: none;
+}
+
+.panel-group.resume .resume-item .resume-year {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 40px;
+    margin-bottom: -20px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include roundcorners(4px);
+}
+
+.panel-group.resume .resume-item .panel {
+    padding: 10px;
+    width: 100%;
+    background: transparent;
+    @include roundcorners(0px);
+}
+
+.panel-group.resume .resume-item .panel .panel-heading {
+    position: relative;
+}
+
+.panel-group.resume .resume-item .panel .panel-heading .panel-title {
+    text-transform: uppercase;
+}
+
+.panel-group.resume .resume-item .panel .panel-collapse .panel-body {
+    padding-top: 5px;
+    border-top: none;
+}
+
+.panel-group.resume .resume-item .panel .panel-collapse .panel-body p {
+    margin-bottom: 0px;
+}
+
+
+
+
