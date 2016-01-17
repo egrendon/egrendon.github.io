@@ -126,7 +126,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: '<!-- JS_BUNDLE_TARGET -->',
-					to: '<script src="app/' + guid + '.js"></script>'
+					to: '<script src="app/bundle_' + guid + '.js"></script>'
 				}]
 			},
 			mapfile_js: {
@@ -134,10 +134,10 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: '"file":"app.min.js"',
-					to: '"file":"' + guid + '.min.js"'
+					to: '"file":"bundle_' + guid + '.min.js"'
 				}, {
 					from: '"sources":["app.js"]',
-					to: '"sources":["' + guid + '.js"]'
+					to: '"sources":["bundle_' + guid + '.js"]'
 				}]
 			},
 			mapurl_js: {
@@ -145,7 +145,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: '//# sourceMappingURL=app.min.js.map',
-					to: '//# sourceMappingURL=' + guid + '.min.js.map'
+					to: '//# sourceMappingURL=bundle_' + guid + '.min.js.map'
 				}]
 			},
 			view_css: {
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: '<!-- CSS_BUNDLE_TARGET -->',
-					to: '<link rel="stylesheet" href="assets/css/' + guid + '.min.css">'
+					to: '<link rel="stylesheet" href="assets/css/bundle_' + guid + '.min.css">'
 				}]
 			},
 			mapfile_css: {
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: '"sources":["../dist/css/bundle.css"]',
-					to: '"sources":["' + guid + '.min.css"]'
+					to: '"sources":["bundle_' + guid + '.min.css"]'
 				}]
 			},
 			mapurl_css: {
@@ -169,7 +169,7 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					from: '/*# sourceMappingURL=bundle.min.css.map',
-					to: '/*# sourceMappingURL=' + guid + '.min.css.map'
+					to: '/*# sourceMappingURL=bundle_' + guid + '.min.css.map'
 				}]
 			}
 		},
@@ -177,23 +177,23 @@ module.exports = function(grunt) {
 		rename: {
 			app_js: {
 				src: app_js_file_path,
-				dest: '../dist/' + guid + '.js'
+				dest: '../dist/bundle.js'
 			},
 			app_js_min: {
 				src: '../dist/app.min.js',
-				dest: '../dist/' + guid + '.min.js'
+				dest: '../dist/bundle_' + guid + '.min.js'
 			},
 			app_js_map: {
 				src: '../dist/app.min.js.map',
-				dest: '../dist/' + guid + '.min.js.map'
+				dest: '../dist/bundle_' + guid + '.min.js.map'
 			},
 			css_min: {
 				src: '../dist/css/bundle.min.css',
-				dest: '../dist/css/' + guid + '.min.css'
+				dest: '../dist/css/bundle_' + guid + '.min.css'
 			},
 			css_map: {
 				src: '../dist/css/bundle.min.css.map',
-				dest: '../dist/css/' + guid + '.min.css.map'
+				dest: '../dist/css/bundle_' + guid + '.min.css.map'
 			}
 		},
 		// remove angular templates file after concatenation
