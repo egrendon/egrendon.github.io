@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				files: {
-					'../dist/css/main.min.css': ['../dist/css/bundle.css'] //dest : source
+					'../dist/css/bundle.min.css': ['../dist/css/bundle.css'] //dest : source
 				}
 			}
 		},
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 				src: ['index.html'],
 				overwrite: true,
 				replacements: [{
-					from: '<!-- TARGET -->',
+					from: '<!-- JS_BUNDLE_TARGET -->',
 					to: '<script src="app/' + guid + '.js"></script>'
 				}]
 			},
@@ -152,23 +152,23 @@ module.exports = function(grunt) {
 				src: ['index.html'],
 				overwrite: true,
 				replacements: [{
-					from: '<!-- CSSTARGET -->',
+					from: '<!-- CSS_BUNDLE_TARGET -->',
 					to: '<link rel="stylesheet" href="assets/css/' + guid + '.min.css">'
 				}]
 			},
 			mapfile_css: {
-				src: ['../dist/css/main.min.css.map'],
+				src: ['../dist/css/bundle.min.css.map'],
 				overwrite: true,
 				replacements: [{
-					from: '"sources":["../../assets/css/main.css","../../assets/css/color.css"]',
+					from: '"sources":["../dist/css/bundle.css"]',
 					to: '"sources":["' + guid + '.min.css"]'
 				}]
 			},
 			mapurl_css: {
-				src: ['../dist/css/main.min.css'],
+				src: ['../dist/css/bundle.min.css'],
 				overwrite: true,
 				replacements: [{
-					from: '/*# sourceMappingURL=main.min.css.map',
+					from: '/*# sourceMappingURL=bundle.min.css.map',
 					to: '/*# sourceMappingURL=' + guid + '.min.css.map'
 				}]
 			}
@@ -188,8 +188,12 @@ module.exports = function(grunt) {
 				dest: '../dist/' + guid + '.min.js.map'
 			},
 			css_min: {
-				src: '../dist/css/main.min.css',
+				src: '../dist/css/bundle.min.css',
 				dest: '../dist/css/' + guid + '.min.css'
+			},
+			css_map: {
+				src: '../dist/css/bundle.min.css.map',
+				dest: '../dist/css/' + guid + '.min.css.map'
 			}
 		},
 		// remove angular templates file after concatenation
@@ -217,7 +221,7 @@ module.exports = function(grunt) {
 	//
 	// Targets
 	//
-	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min']);
+	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min', 'rename:css_map']);
 	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
 	grunt.registerTask('default', ['build']);
