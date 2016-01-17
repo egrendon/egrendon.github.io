@@ -3,29 +3,29 @@
 /*  6.5. SECTION - RESUME
 /*---------------------------------------------------------------------*/
 @media (min-width: 568px) {
-    .panel-group.resume .resume-item {
-        margin-bottom: 20px;
-    }
+  .panel-group.resume .resume-item {
+      margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 568px) {
-    .panel-group.resume .resume-item .resume-year {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-    }
+  .panel-group.resume .resume-item .resume-year {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+  }
 }
 
 @media (min-width: 568px) {
-    .panel-group.resume .resume-item .panel {
-        width: calc(100% - 140px);
-        margin-left: 140px;
-    }
+  .panel-group.resume .resume-item .panel {
+      width: calc(100% - 140px);
+      margin-left: 140px;
+  }
 }
 
 @media (max-width: 567px) {
-    .panel-group.resume .resume-item .panel .panel-heading .panel-title {
-        padding-top: 20px;
-    }
+  .panel-group.resume .resume-item .panel .panel-heading .panel-title {
+      padding-top: 20px;
+  }
 }

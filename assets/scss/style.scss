@@ -46,16 +46,19 @@
 @import 'partials/_topNavMenu.scss';
 @import 'partials/_topNavMenu_media_large.scss';
 @import 'partials/_profile.scss';
-@import 'partials/_profile_media_large.scss';
+//NOTE THE ORDER OF MEDIA MATTERS
 @import 'partials/_profile_media_medium.scss';
+@import 'partials/_profile_media_large.scss';
 @import 'partials/_portfolio.scss';
 @import 'partials/_portfolio_media_small.scss';
 @import 'partials/_services.scss';
-@import 'partials/_services_media_medium.scss';
+//NOTE THE ORDER OF MEDIA MATTERS
 @import 'partials/_services_media_small.scss';
+@import 'partials/_services_media_medium.scss';
 @import 'partials/_resume.scss';
-@import 'partials/_resume_media_medium.scss';
+//NOTE THE ORDER OF MEDIA MATTERS
 @import 'partials/_resume_media_small.scss';
+@import 'partials/_resume_media_medium.scss';
 @import 'partials/_skills.scss';
 @import 'partials/_contact.scss';
 @import 'partials/_googleMapSection.scss';
