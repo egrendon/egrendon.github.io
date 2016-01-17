@@ -166,7 +166,7 @@ header.hero .bg-img-table-cell .hero-text h1.small {
 }
 
 .circle-chart .item > .percent {
-    box-shadow: 3px 3px 10px darken($cod-gray, 5%);
+    @include box-shadow(3px, 3px, 10px, darken($cod-gray, 5%));
 }
 
 

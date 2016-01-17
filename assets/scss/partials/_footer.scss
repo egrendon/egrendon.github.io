@@ -7,7 +7,7 @@ footer.footer {
 
 footer.footer .page-scroll > a {
     background-color: $persian-green;
-    box-shadow: 0 3px 0 $pine-green;
+    @include box-shadow(0px, 3px, 0px, $pine-green);
     color: $white;
 }
 
@@ -51,7 +51,7 @@ footer.footer ul.social-icons > li {
 
 footer.footer ul.social-icons > li > .item {
     background-color: $mine-shaft;
-    box-shadow: 0 3px 0 darken($mine-shaft, 2.5%);
+    @include box-shadow(0px, 3px, 0px, darken($mine-shaft, 2.5%));
 }
 
 

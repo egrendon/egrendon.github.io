@@ -1,33 +1,19 @@
 
 
 
-/// Adds a thin black line above the element, and a thin gray line below the element, creating an inlay effect.
-/// @access public
-/// @example scss - Usage
-///   .foo {
-///     @include outline;
-///   }
-/// @example css - Result
-///   .foo {
-///     box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, inset rgba(0, 0, 0, 0.75) 0 1px 0;
-///   }
-@mixin outline {
-    box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, inset rgba(0, 0, 0, 0.75) 0 1px 0;
+
+@mixin text-shadow( $top: 3px, $left: 3px, $blur: 3px , $colour: $black) {
+  -webkit-text-shadow:$top $left $blur $colour; 
+  -moz-text-shadow:$top $left $blur $colour; 
+  -o-text-shadow:$top $left $blur $colour; 
+  text-shadow:$top $left $blur $colour; 
 }
 
-
-/// Embossing text shadow
-/// @access public
-/// @param {Float} $value - Opacity value
-/// @example scss - Usage
-///   .foo {
-///     @include text-shadow(0.5);
-///   }
-/// @example css - Result
-///   .foo {
-///     text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
-///   }
-@mixin text-shadow($value: 1) {
-    text-shadow: rgba(255, 255, 255, $value) 0 1px 0;
+// @include box-shadow(3px, 3px, 4px, $black) 
+@mixin box-shadow($top: 3px, $left: 3px, $blur: 4px, $colour: $black, $inset:"") {
+  -webkit-box-shadow: #{$inset} $top $left $blur $colour;
+  -moz-box-shadow:  #{$inset} $top $left $blur $colour;
+  box-shadow: #{$inset} $top $left $blur $colour;
 }
+
 

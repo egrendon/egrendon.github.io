@@ -686,9 +686,7 @@ We will only do the fixed background for desktop mode.
     width: 120px;
     height: 120px;
     @include roundcorners(50%);
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    @include rotate(180deg);
 }
 
 .circle-chart .item > .circle > .item-progress {
