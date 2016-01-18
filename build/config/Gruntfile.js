@@ -152,7 +152,7 @@ module.exports = function(grunt) {
 				src: ['../../index.html'],
 				overwrite: true,
 				replacements: [{
-					from: '<!-- CSS_BUNDLE_TARGET -->',
+					from: 'href="assets/scss/bundle_*.min.css"',
 					to: '<link rel="stylesheet" href="assets/css/bundle_' + guid + '.min.css">'
 				}]
 			},
