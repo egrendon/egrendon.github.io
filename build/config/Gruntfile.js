@@ -144,9 +144,9 @@ module.exports = function(grunt) {
 					//to: '<script src="app/bundle_' + guid + '.js"></script>'
 
 					//find string that 
-					//starts with: 'assets/js/bundle_'
+					//starts with: 'assets/js_auto/bundle_'
 					//ends with: '.min.js'
-					from: /assets\/js\/bundle_.*\.min\.js/g,
+					from: /assets\/js_auto\/bundle_.*\.min\.js/g,
 					to: 'assets/js_auto/bundle_' + guid + '.min.js'
 				}]
 			},
@@ -174,9 +174,9 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [{
 					//find string that 
-					//starts with: 'assets/scss/bundle_'
+					//starts with: 'assets/scss_auto/bundle_'
 					//ends with: '.min.css'
-					from: /assets\/scss\/bundle_.*\.min\.css/g,
+					from: /assets\/scss_auto\/bundle_.*\.min\.css/g,
 					to: 'assets/scss_auto/bundle_' + guid + '.min.css'
 				}]
 			},
