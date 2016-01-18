@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 		// watcher to automatically build during dev
 		watch: {
 			js: {
-				files: ['../../app/*.js', '../../assets/**/*.js', '../../assets/scss/**/*.scss', '../../assets/scss/*.scss' ],
+				files: ['../../app/*.js', '../../assets/**/*.js', '../../assets/scss/**/*.scss', '../../assets/scss/*.scss'],
 				tasks: ['build']
 			}
 		},
@@ -233,13 +233,15 @@ module.exports = function(grunt) {
 	//
 	// Targets
 	//
-	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 
-		'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min', 'rename:css_map', 
-		'clean:delete_old_css','rename:move_css_min', 'rename:move_css_map']);
+	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css',
+		'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min', 'rename:css_map',
+		'clean:delete_old_css', 'rename:move_css_min', 'rename:move_css_map'
+	]);
 
-	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 
-		'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js', 
-		'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean:js']);
+	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate',
+		'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js',
+		'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean:js'
+	]);
 
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
 	grunt.registerTask('default', ['build']);
