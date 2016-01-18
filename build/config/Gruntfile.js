@@ -211,7 +211,9 @@ module.exports = function(grunt) {
 			options: {
 				force: true
 			},
-			js: ["../dist/app.templates.js"]
+			js: ["../dist/app.templates.js"],
+			delete_old_css: ["../../assets/scss/bundle_*.*"],
+			//delete_old_js: ["../../assets/scss/bundle_*.*"],
 		},
 
 	});
@@ -233,11 +235,11 @@ module.exports = function(grunt) {
 	//
 	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 
 		'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min', 'rename:css_map', 
-		'rename:move_css_min', 'rename:move_css_map']);
+		'clean:delete_old_css','rename:move_css_min', 'rename:move_css_map']);
 
 	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 
 		'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js', 
-		'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
+		'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean:js']);
 
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
 	grunt.registerTask('default', ['build']);
