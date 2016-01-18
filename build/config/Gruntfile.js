@@ -173,7 +173,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		// rename 'app' file names with unique guid
+		// rename file names with unique guid
 		rename: {
 			app_js: {
 				src: app_js_file_path,
@@ -194,6 +194,16 @@ module.exports = function(grunt) {
 			css_map: {
 				src: '../dist/css/bundle.min.css.map',
 				dest: '../dist/css/bundle_' + guid + '.min.css.map'
+			},
+			//MOVE THE FILE
+			move_css_min: {
+				src: '../dist/css/bundle_' + guid + '.min.css',
+				dest: '../../assets/scss/bundle_' + guid + '.min.css'
+			},
+			//MOVE THE FILE
+			move_css_map: {
+				src: '../dist/css/bundle_' + guid + '.min.css.map',
+				dest: '../../assets/scss/bundle_' + guid + '.min.css.map'
 			}
 		},
 		// remove angular templates file after concatenation
@@ -221,8 +231,14 @@ module.exports = function(grunt) {
 	//
 	// Targets
 	//
-	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min', 'rename:css_map']);
-	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
+	grunt.registerTask('buildcss', ['sass', 'cssmin', 'replace:view_css', 
+		'replace:mapfile_css', 'replace:mapurl_css', 'rename:css_min', 'rename:css_map', 
+		'rename:move_css_min', 'rename:move_css_map']);
+
+	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate', 
+		'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js', 
+		'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean']);
+
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
 	grunt.registerTask('default', ['build']);
 
