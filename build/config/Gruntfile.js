@@ -127,6 +127,12 @@ module.exports = function(grunt) {
 				replacements: [{
 					from: '<!-- JS_BUNDLE_TARGET -->',
 					to: '<script src="app/bundle_' + guid + '.js"></script>'
+					//TODO: Do something like this instead....
+					//find string that 
+					//starts with: 'assets/scss/bundle_'
+					//ends with: '.min.css'
+					//from: /assets\/scss\/bundle_.*\.min\.css/g,
+					//to: 'assets/scss/bundle_' + guid + '.min.css'
 				}]
 			},
 			mapfile_js: {
@@ -152,8 +158,11 @@ module.exports = function(grunt) {
 				src: ['../../index.html'],
 				overwrite: true,
 				replacements: [{
-					from: 'href="assets/scss/bundle_*.min.css"',
-					to: '<link rel="stylesheet" href="assets/css/bundle_' + guid + '.min.css">'
+					//find string that 
+					//starts with: 'assets/scss/bundle_'
+					//ends with: '.min.css'
+					from: /assets\/scss\/bundle_.*\.min\.css/g,
+					to: 'assets/scss/bundle_' + guid + '.min.css'
 				}]
 			},
 			mapfile_css: {
