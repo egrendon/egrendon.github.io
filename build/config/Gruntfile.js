@@ -9,7 +9,6 @@ module.exports = function(grunt) {
 	var appFiles = [
 		'../../app/app.module.js',
 		'../../app/app.routes.js',
-		//'../../app/app.templates.js',
 		'../../app/core/core.module.js',
 		'../../app/core/constants.js',
 		'../../app/core/directives/directives.module.js',
@@ -36,9 +35,11 @@ module.exports = function(grunt) {
 		'../../app/featureSets/home/home.module.js',
 		'../../app/featureSets/home/home.controller.js',
 		'../../app/featureSets/home/home.service.js',
+
+		'../dist/js/app.templates.js',
 	];
 
-	var app_js_file_path = '../dist/app.js';
+	var app_js_file_path = '../dist/js/app.js';
 	var scssFiles = {
 		'../dist/css/bundle.css': '../../assets/scss/style.scss', // 'destination': 'source'
 	};
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
 			app: {
 				cwd: '../../',
 				src: 'app/**/*.html',
-				dest: '../dist/app.templates.js',
+				dest: '../dist/js/app.templates.js',
 				options: {
 					module: 'myFirstApp',
 					//String to prefix template URLs with. Defaults to ''
@@ -81,7 +82,7 @@ module.exports = function(grunt) {
 			},
 			app: {
 				files: {
-					'../dist/app.min.js': [app_js_file_path]
+					'../dist/js/app.min.js': [app_js_file_path]
 				}
 			}
 		},
@@ -92,7 +93,7 @@ module.exports = function(grunt) {
 			},
 			my_target: {
 				files: {
-					'../dist/app.min.js': [app_js_file_path]
+					'../dist/js/app.min.js': [app_js_file_path]
 				}
 			}
 		},
@@ -136,7 +137,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			mapfile_js: {
-				src: ['../dist/app.min.js.map'],
+				src: ['../dist/js/app.min.js.map'],
 				overwrite: true,
 				replacements: [{
 					from: '"file":"app.min.js"',
@@ -147,7 +148,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			mapurl_js: {
-				src: ['../dist/app.min.js'],
+				src: ['../dist/js/app.min.js'],
 				overwrite: true,
 				replacements: [{
 					from: '//# sourceMappingURL=app.min.js.map',
@@ -186,15 +187,15 @@ module.exports = function(grunt) {
 		rename: {
 			app_js: {
 				src: app_js_file_path,
-				dest: '../dist/bundle.js'
+				dest: '../dist/js/bundle.js'
 			},
 			app_js_min: {
-				src: '../dist/app.min.js',
-				dest: '../dist/bundle_' + guid + '.min.js'
+				src: '../dist/js/app.min.js',
+				dest: '../dist/js/bundle_' + guid + '.min.js'
 			},
 			app_js_map: {
-				src: '../dist/app.min.js.map',
-				dest: '../dist/bundle_' + guid + '.min.js.map'
+				src: '../dist/js/app.min.js.map',
+				dest: '../dist/js/bundle_' + guid + '.min.js.map'
 			},
 			css_min: {
 				src: '../dist/css/bundle.min.css',
@@ -220,7 +221,8 @@ module.exports = function(grunt) {
 			options: {
 				force: true
 			},
-			js: ["../dist/app.templates.js"],
+			//js: ["../dist/js/app.templates.js"],
+			delete_old_js: ["../dist/js/bundle_*.*"],
 			delete_old_css: ["../../assets/scss/bundle_*.*"],
 			//delete_old_js: ["../../assets/scss/bundle_*.*"],
 		},
@@ -249,7 +251,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate',
 		'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js',
-		'rename:app_js', 'rename:app_js_min', 'rename:app_js_map', 'clean:js'
+		'clean:delete_old_js', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map'
 	]);
 
 	grunt.registerTask('build', ['buildcss', 'buildjs']);
