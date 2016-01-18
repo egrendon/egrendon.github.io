@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 		// replace 'app' refrences with unique guid
 		replace: {
 			view_js: {
-				src: ['index.html'],
+				src: ['../../index.html'],
 				overwrite: true,
 				replacements: [{
 					from: '<!-- JS_BUNDLE_TARGET -->',
@@ -149,7 +149,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			view_css: {
-				src: ['index.html'],
+				src: ['../../index.html'],
 				overwrite: true,
 				replacements: [{
 					from: '<!-- CSS_BUNDLE_TARGET -->',
