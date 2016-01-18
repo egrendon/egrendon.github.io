@@ -9,6 +9,8 @@
 		.module('myFirstApp.directives')
 		.directive('egrStickyMenu', egrStickyMenu);
 
+	egrStickyMenu.$inject = ['$window'];
+
 	function egrStickyMenu($window) {
 		var directive = {
 			restrict: 'AE',
@@ -24,38 +26,40 @@
 				throw new Error("Missing a required attribute 'id'.");
 			}
 
-            // Initial LOAD: when the element has finished loading 
-            element.ready(function(){
-            	stickyMenuHelper();
-            });
-
-
-            // On browser window resize event
-            angular.element($window).bind('resize', function(){
+			// Initial LOAD: when the element has finished loading 
+			element.ready(function() {
 				stickyMenuHelper();
-	       	});
+			});
 
-		    /*-------------------------------------------------------------------*/
-		    /*  5. Make navigation menu on your page always stay visible.
-		    /*  Requires jQuery-Sticky plugin.
-		    /*-------------------------------------------------------------------*/
-		    var stickyMenuHelper = function(){
-		    	var jQueryElementID = "#"+attrs.id
-		        var ww = Math.max($(window).width(), window.innerWidth),
-		        nav = $(jQueryElementID);
 
-		        if ($.fn.unstick){
-		            nav.unstick();
-		        }
-		        
-		        if ($.fn.sticky && ww >= 992){
-		            nav.sticky({topSpacing: 0});
-		        }
-		    };
+			// On browser window resize event
+			angular.element($window).bind('resize', function() {
+				stickyMenuHelper();
+			});
+
+			/*-------------------------------------------------------------------*/
+			/*  5. Make navigation menu on your page always stay visible.
+			/*  Requires jQuery-Sticky plugin.
+			/*-------------------------------------------------------------------*/
+			var stickyMenuHelper = function() {
+				var jQueryElementID = "#" + attrs.id
+				var ww = Math.max($(window).width(), window.innerWidth),
+					nav = $(jQueryElementID);
+
+				if ($.fn.unstick) {
+					nav.unstick();
+				}
+
+				if ($.fn.sticky && ww >= 992) {
+					nav.sticky({
+						topSpacing: 0
+					});
+				}
+			};
 		}
 
-//      function controller($scope) {
-//	
-//		}
+		//      function controller($scope) {
+		//	
+		//		}
 	}
 })();

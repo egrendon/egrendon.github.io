@@ -9,6 +9,8 @@
 		.module('myFirstApp.directives')
 		.directive('egrMatchHeight', egrMatchHeight);
 
+    egrMatchHeight.$inject = ['$window'];
+
 	function egrMatchHeight($window) {
 		var directive = {
 			restrict: 'AE',

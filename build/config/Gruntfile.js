@@ -59,8 +59,12 @@ module.exports = function(grunt) {
 		// watcher to automatically build during dev
 		watch: {
 			js: {
-				files: ['../../app/*.js', '../../assets/**/*.js', '../../assets/scss/**/*.scss', '../../assets/scss/*.scss'],
-				tasks: ['build']
+				files: ['../../app/*.js', '../../assets/js/*.js'],
+				tasks: ['buildjs']
+			},
+			scss: {
+				files: ['../../assets/scss/**/*.scss', '../../assets/scss/*.scss'],
+				tasks: ['buildcss']
 			}
 		},
 		// concatenate files into bundles
@@ -99,7 +103,7 @@ module.exports = function(grunt) {
 		uglify: {
 			options: {
 				sourceMap: true,
-				mangle: false, // this option is needed because of angular injection error
+				mangle: true, //uglyify params
 			},
 			my_target: {
 				files: {
@@ -140,10 +144,10 @@ module.exports = function(grunt) {
 					//to: '<script src="app/bundle_' + guid + '.js"></script>'
 
 					//find string that 
-					//starts with: 'assets/scss/bundle_'
-					//ends with: '.min.css'
+					//starts with: 'assets/js/bundle_'
+					//ends with: '.min.js'
 					from: /assets\/js\/bundle_.*\.min\.js/g,
-					to: 'assets/js/bundle_' + guid + '.min.js'
+					to: 'assets/js_auto/bundle_' + guid + '.min.js'
 				}]
 			},
 			mapfile_js: {
@@ -173,7 +177,7 @@ module.exports = function(grunt) {
 					//starts with: 'assets/scss/bundle_'
 					//ends with: '.min.css'
 					from: /assets\/scss\/bundle_.*\.min\.css/g,
-					to: 'assets/scss/bundle_' + guid + '.min.css'
+					to: 'assets/scss_auto/bundle_' + guid + '.min.css'
 				}]
 			},
 			mapfile_css: {
@@ -208,19 +212,14 @@ module.exports = function(grunt) {
 				dest: '../dist/js/bundle_' + guid + '.min.js.map'
 			},
 			//MOVE THE FILE
-			move_js: {
-				src: '../dist/js/bundle.js',
-				dest: '../../assets/js/bundle.js'
-			},
-			//MOVE THE FILE
 			move_js_min: {
 				src: '../dist/js/bundle_' + guid + '.min.js',
-				dest: '../../assets/js/bundle_' + guid + '.min.js'
+				dest: '../../assets/js_auto/bundle_' + guid + '.min.js'
 			},
 			//MOVE THE FILE
 			move_js_map: {
 				src: '../dist/js/bundle_' + guid + '.min.js.map',
-				dest: '../../assets/js/bundle_' + guid + '.min.js.map'
+				dest: '../../assets/js_auto/bundle_' + guid + '.min.js.map'
 			},
 			css_min: {
 				src: '../dist/css/bundle.min.css',
@@ -233,12 +232,12 @@ module.exports = function(grunt) {
 			//MOVE THE FILE
 			move_css_min: {
 				src: '../dist/css/bundle_' + guid + '.min.css',
-				dest: '../../assets/scss/bundle_' + guid + '.min.css'
+				dest: '../../assets/scss_auto/bundle_' + guid + '.min.css'
 			},
 			//MOVE THE FILE
 			move_css_map: {
 				src: '../dist/css/bundle_' + guid + '.min.css.map',
-				dest: '../../assets/scss/bundle_' + guid + '.min.css.map'
+				dest: '../../assets/scss_auto/bundle_' + guid + '.min.css.map'
 			}
 		},
 		// remove angular templates file after concatenation
@@ -247,8 +246,8 @@ module.exports = function(grunt) {
 				force: true
 			},
 			//js: ["../dist/js/app.templates.js"],
-			delete_old_js: ["../../assets/js/bundle*.*"],
-			delete_old_css: ["../../assets/scss/bundle_*.*"],
+			delete_old_js: ["../../assets/js_auto/bundle*.*"],
+			delete_old_css: ["../../assets/scss_auto/bundle_*.*"],
 			//delete_old_js: ["../../assets/scss/bundle_*.*"],
 		},
 
@@ -277,7 +276,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('buildjs', ['ngtemplates', 'concat:buildjs', 'ngAnnotate',
 		'uglify', 'replace:view_js', 'replace:mapfile_js', 'replace:mapurl_js',
 		'clean:delete_old_js', 'rename:app_js', 'rename:app_js_min', 'rename:app_js_map',
-		'rename:move_js', 'rename:move_js_min', 'rename:move_js_map'
+		'rename:move_js_min', 'rename:move_js_map'
 	]);
 
 	grunt.registerTask('build', ['buildcss', 'buildjs']);

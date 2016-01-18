@@ -10,6 +10,8 @@
         .module('myFirstApp.directives')
         .directive('egrAnimateInView', egrAnimateInView);
 
+    egrAnimateInView.$inject = ['$window', '$timeout'];
+
     function egrAnimateInView($window, $timeout) {
         var directive = {
             restrict: 'AE',

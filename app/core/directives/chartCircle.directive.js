@@ -10,6 +10,8 @@
         .module('myFirstApp.directives')
         .directive('egrChartCircle', egrChartCircle);
 
+    egrChartCircle.$inject = ['$window'];
+
     function egrChartCircle($window) {
         var directive = {
             restrict: 'AE',
@@ -18,14 +20,14 @@
                 "value": "@"
             },
             template: '<div class="col-sm-4 col-md-2">' +
-                        '<div class="item">' +
-                            '<div class="circle">' +
-                                '<span class="item-progress" data-percent="{{percent}}"></span>' +
-                            '</div>' +
-                            '<span class="percent">{{percent}}%</span>' +
-                            '<h4 class="text-center">{{value}}</h4>' +
-                        '</div>' +
-                    '</div>',
+                '<div class="item">' +
+                '<div class="circle">' +
+                '<span class="item-progress" data-percent="{{percent}}"></span>' +
+                '</div>' +
+                '<span class="percent">{{percent}}%</span>' +
+                '<h4 class="text-center">{{value}}</h4>' +
+                '</div>' +
+                '</div>',
             replace: true, //element to which the directive declared should be replaced with template
             link: link
         };
@@ -59,9 +61,9 @@
             });
 
 
-           function addStylesToElement() {
+            function addStylesToElement() {
                 itemElement.addClass('animated fadeIn ');
-                itemElement.css('height', newHeight+"px");
+                itemElement.css('height', newHeight + "px");
             }
         }
     }
