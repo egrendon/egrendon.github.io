@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 		// watcher to automatically build during dev
 		watch: {
 			js: {
-				files: ['../../app/*.js', '../../assets/js/*.js'],
+				files: ['../../app/*.js', '../../app/**/*.js'],
 				tasks: ['buildjs']
 			},
 			scss: {
