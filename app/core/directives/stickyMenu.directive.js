@@ -42,16 +42,16 @@
 			/*  Requires jQuery-Sticky plugin.
 			/*-------------------------------------------------------------------*/
 			var stickyMenuHelper = function() {
-				var jQueryElementID = "#" + attrs.id
-				var ww = Math.max($(window).width(), window.innerWidth),
-					nav = $(jQueryElementID);
+				var jQueryElementID = "#" + attrs.id;
+				var navElement = $(jQueryElementID);
+				var maxWidth = Math.max($(window).width(), window.innerWidth);
 
 				if ($.fn.unstick) {
-					nav.unstick();
+					navElement.unstick();
 				}
 
-				if ($.fn.sticky && ww >= 992) {
-					nav.sticky({
+				if ($.fn.sticky && maxWidth >= 992) {
+					navElement.sticky({
 						topSpacing: 0
 					});
 				}
