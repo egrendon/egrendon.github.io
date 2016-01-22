@@ -32,7 +32,7 @@
     <!-- Bundle CSS USE TO DEBUG -->
     <link href="build/dist/css/bundle.css" rel="stylesheet" type="text/css"> 
     <!-- Bundle CSS -->
-    <!-- <link href="assets/scss_auto/bundle_cc0ea2ac-53f0-49b3-af75-fdecb532c9ec.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="assets/scss_auto/bundle_e8f2c878-1a64-4f0d-ab4a-ad4c9da8221c.min.css" rel="stylesheet" type="text/css"> -->
     <!-- ************************************************************************** -->
  
 
@@ -42,37 +42,15 @@
 
 </head>
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="66">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="66" ng-app="myFirstApp">
     <!--[if lt IE 10]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-
-    <!-- HERO START -->
-    <header id="home" class="hero hero-bg-img bg-img-container">
-        <div class="bg-img-table-container">
-            <div class="bg-img-table-cell" style="display:none;">
-                <div class="hero-text text-center">
-                    <h1>Ernesto Rendon</h1>
-                    <h1 class="small">Software Developer</h1>
-                    <p>front, middle, and backend development</p>
-                    <div class="page-scroll">
-                        <a href="#profile" class="btn btn-lg btn-custom">Know Me Better</a>
-                    </div>
-                    <!-- //.page-scroll -->
-                </div>
-                <!-- //.hero-text -->
-            </div>
-            <!-- //.bg-img-table-cell -->
-        </div>
-        <!-- //.bcg -->
-    </header>
-    <!-- //HERO END -->
-
-	<div ng-app="myFirstApp">
-        <section ui-view></section>
-	</div>
+    <!-- header content area -->
+    <ui-view name="header"></ui-view>
+    <!-- default content area -->
+    <section ui-view></section>
 
 
     <!-- ************************************************************************** -->
@@ -105,7 +83,7 @@
     <!-- Bundle Application USE TO DEBUG -->
     <script src="build/dist/js/bundle.js"></script>
     <!-- Bundle Application USE TO DEBUG -->
-    <!-- <script src="assets/js_auto/bundle_1ff86b6c-7f6d-496c-9913-b765d1119336.min.js"></script> -->
+    <!-- <script src="assets/js_auto/bundle_0ee371aa-307e-4d91-a9ff-c0c92ea07f34.min.js"></script> -->
     <!-- ************************************************************************** -->
 </body>
 
