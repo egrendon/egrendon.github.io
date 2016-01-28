@@ -24,22 +24,30 @@
     routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function routeConfig($stateProvider, $urlRouterProvider) {
-        
-    	//
-    	// Define default page
-    	//
-    	$urlRouterProvider.otherwise("/home");
 
-    	//
-    	// Define routes
-    	//
+        //
+        // Define default page
+        //
+        $urlRouterProvider.otherwise("/home");
+
+        //
+        // Define routes
+        //
         $stateProvider
-			.state('home', {
-				url:'/home',
-				templateUrl: '/app/featureSets/home/home.html',
-				controller: 'HomeCtrlAs',
-				controllerAs: 'vm'
-			})
+            .state('home', {
+                url: '/home',
+                /** because we have 2 'ui-view' directives on the index.html page **/
+                views: {
+                    "": {
+                        templateUrl: '/app/featureSets/home/home.html'
+                    },
+                    "header": {
+                        templateUrl: '/app/featureSets/home/hero.html'
+                    }
+                },
+                controller: 'HomeCtrlAs',
+                controllerAs: 'vm'
+            })
             .state('/globalWeather', {
                 url: '/globalWeather',
                 templateUrl: '/app/featureSets/globalWeather/global-weather.html',
@@ -114,6 +122,8 @@
         .module('myFirstApp.directives')
         .directive('egrAnimateInView', egrAnimateInView);
 
+    egrAnimateInView.$inject = ['$window', '$timeout'];
+
     function egrAnimateInView($window, $timeout) {
         var directive = {
             restrict: 'AE',
@@ -180,6 +190,8 @@
         .module('myFirstApp.directives')
         .directive('egrChartCircle', egrChartCircle);
 
+    egrChartCircle.$inject = ['$window'];
+
     function egrChartCircle($window) {
         var directive = {
             restrict: 'AE',
@@ -188,14 +200,14 @@
                 "value": "@"
             },
             template: '<div class="col-sm-4 col-md-2">' +
-                        '<div class="item">' +
-                            '<div class="circle">' +
-                                '<span class="item-progress" data-percent="{{percent}}"></span>' +
-                            '</div>' +
-                            '<span class="percent">{{percent}}%</span>' +
-                            '<h4 class="text-center">{{value}}</h4>' +
-                        '</div>' +
-                    '</div>',
+                '<div class="item">' +
+                '<div class="circle">' +
+                '<span class="item-progress" data-percent="{{percent}}"></span>' +
+                '</div>' +
+                '<span class="percent">{{percent}}%</span>' +
+                '<h4 class="text-center">{{value}}</h4>' +
+                '</div>' +
+                '</div>',
             replace: true, //element to which the directive declared should be replaced with template
             link: link
         };
@@ -229,9 +241,9 @@
             });
 
 
-           function addStylesToElement() {
+            function addStylesToElement() {
                 itemElement.addClass('animated fadeIn ');
-                itemElement.css('height', newHeight+"px");
+                itemElement.css('height', newHeight + "px");
             }
         }
     }
@@ -451,6 +463,8 @@
 	angular
 		.module('myFirstApp.directives')
 		.directive('egrMatchHeight', egrMatchHeight);
+
+    egrMatchHeight.$inject = ['$window'];
 
 	function egrMatchHeight($window) {
 		var directive = {
@@ -673,7 +687,7 @@
 		             * on one of the menu items.
 		             */
 		            if(!$(this).parent().hasClass('dropdown')){
-		                $('.berg-collapse').collapse('hide');
+		                $('.egr-collapse').collapse('hide');
 		            }
 		        });
 		    };
@@ -744,6 +758,8 @@
 		.module('myFirstApp.directives')
 		.directive('egrStickyMenu', egrStickyMenu);
 
+	egrStickyMenu.$inject = ['$window'];
+
 	function egrStickyMenu($window) {
 		var directive = {
 			restrict: 'AE',
@@ -759,39 +775,41 @@
 				throw new Error("Missing a required attribute 'id'.");
 			}
 
-            // Initial LOAD: when the element has finished loading 
-            element.ready(function(){
-            	stickyMenu();
-            });
+			// Initial LOAD: when the element has finished loading 
+			element.ready(function() {
+				stickyMenuHelper();
+			});
 
 
-            // On browser window resize event
-            angular.element($window).bind('resize', function(){
-				stickyMenu();
-	       	});
+			// On browser window resize event
+			angular.element($window).bind('resize', function() {
+				stickyMenuHelper();
+			});
 
-		    /*-------------------------------------------------------------------*/
-		    /*  5. Make navigation menu on your page always stay visible.
-		    /*  Requires jQuery-Sticky plugin.
-		    /*-------------------------------------------------------------------*/
-		    var stickyMenu = function(){
-		    	var jQueryElementID = "#"+attrs.id
-		        var ww = Math.max($(window).width(), window.innerWidth),
-		        nav = $(jQueryElementID);
+			/*-------------------------------------------------------------------*/
+			/*  5. Make navigation menu on your page always stay visible.
+			/*  Requires jQuery-Sticky plugin.
+			/*-------------------------------------------------------------------*/
+			var stickyMenuHelper = function() {
+				var jQueryElementID = "#" + attrs.id;
+				var navElement = $(jQueryElementID);
+				var maxWidth = Math.max($(window).width(), window.innerWidth);
 
-		        if ($.fn.unstick){
-		            nav.unstick();
-		        }
-		        
-		        if ($.fn.sticky && ww >= 992){
-		            nav.sticky({topSpacing: 0});
-		        }
-		    };
+				if ($.fn.unstick) {
+					navElement.unstick();
+				}
+
+				if ($.fn.sticky && maxWidth >= 992) {
+					navElement.sticky({
+						topSpacing: 0
+					});
+				}
+			};
 		}
 
-//      function controller($scope) {
-//	
-//		}
+		//      function controller($scope) {
+		//	
+		//		}
 	}
 })();
 
