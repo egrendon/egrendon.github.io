@@ -20,6 +20,7 @@
         $stateProvider
             .state('home', {
                 url: '/home',
+                /** because we have 2 'ui-view' directives on the index.html page **/
                 views: {
                     "": {
                         templateUrl: '/app/featureSets/home/home.html'
