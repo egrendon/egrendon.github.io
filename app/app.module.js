@@ -9,6 +9,7 @@
         /*
          * Feature Sets
          */
+        'myFirstApp.topNavMenuModule',
         'myFirstApp.homeModule'
     ]);
 

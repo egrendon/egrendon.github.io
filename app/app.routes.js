@@ -22,15 +22,17 @@
                 url: '/home',
                 /** because we have 2 'ui-view' directives on the index.html page **/
                 views: {
-                    "": {
-                        templateUrl: '/app/featureSets/home/home.html'
-                    },
                     "header": {
-                        templateUrl: '/app/featureSets/home/hero.html'
+                        templateUrl: '/app/featureSets/home/hero.html',
+                        controller: 'TopNavMenuCtrlAs',
+                        controllerAs: 'vm'
+                    },
+                    "": {
+                        templateUrl: '/app/featureSets/home/home.html',
+                        controller: 'HomeCtrlAs',
+                        controllerAs: 'vm'
                     }
                 },
-                controller: 'HomeCtrlAs',
-                controllerAs: 'vm'
             })
             .state('/globalWeather', {
                 url: '/globalWeather',

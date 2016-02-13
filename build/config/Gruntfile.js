@@ -40,6 +40,8 @@ module.exports = function(grunt) {
 		'../../app/core/services/underscore.service.js',
 
 		// featureSets files
+		'../../app/featureSets/topNavMenu/topNavMenu.module.js',
+		'../../app/featureSets/topNavMenu/topNavMenu.controller.js',
 		'../../app/featureSets/home/home.module.js',
 		'../../app/featureSets/home/home.controller.js',
 		'../../app/featureSets/home/home.service.js',
