@@ -1,15 +1,14 @@
 
-//
+
 // Command to Install
-//
 sudo npm install -g live-server
 
-//
 // STEPS to RUN
-//
-Issue the command live-server in your project's directory. Alternatively you can add the path to serve as a command line parameter.
+Go to some folder that has a <SOME_PATH> index.html
 
-This will automatically launch the default browser (you should have index.html present). When you make a change to any file, the browser will reload the page - unless it was a CSS file in which case the changes are applied without a reload.
+// STEPS to RUN
+then run command 'live-server'
+
 
 Command line parameters:
 
